@@ -1,0 +1,247 @@
+\documentclass[a4paper]{article} % A4 paper and 11pt font size
+
+\usepackage{braket}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\usepackage{tikz}
+%\usepackage{pgfornament}
+\usepackage{pgfplots}
+\usepackage{pgffor}
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{gensymb}
+\usepackage{framed}
+\usepackage{cancel}
+\usepackage{slashed}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{yfonts}
+\usepackage{calc}
+\usepackage{cite}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+\newcommand{\goth}[1]{{\Huge\textfrak{#1}}}
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand{\exercise}[1]
+{
+\begin{framed}
+\textbf{Exercise:} #1 
+\end{framed}
+}
+
+
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=28mm,
+ right=28mm,
+ top=30mm,
+ bottom=40mm,
+ }
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+
+\pagenumbering{arabic}
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{titlepage}
+
+    \begin{center}
+        \textsc{\large SN: 587623}\\[6cm]
+
+        \HRule \\[0.5cm]
+		\Huge \textbf{PHYC90012 General Relativity}\\[0.5cm]
+        \huge \textbf{Course Summary}\\[0.5cm] 
+        \HRule \\[1.5cm]
+        \begin{minipage}{0.4\textwidth}
+        \begin{center}
+
+        \large By \\[0.75cm]
+        \huge Braden \scshape Moore \\[0.5cm]
+        \normalsize \normalfont Master of Science \\
+        The University of Melbourne \\
+
+        \end{center}
+        \end{minipage}
+
+        \vfill
+
+        \large \today
+    \end{center}
+
+
+\newpage
+\end{titlepage}
+%----------------------------------------------------------------------------------------
+\pagestyle{empty}
+%\tableofcontents
+%\newpage
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\rfoot{\textsc{Braden Moore, 587623}}
+\lfoot{\textsc{\today}}
+\lhead{\textsc{Semester 1, 2016}}
+\rhead{\textsc{PHYC90012 General Relativity}}
+\setcounter{page}{1}
+\section{Syllabus}
+\subsection{Part I}
+\begin{enumerate}
+\item Introduction to gravity
+\begin{itemize}
+\item Order of magnitude estimates
+\item Small amount of quantum gravity
+\end{itemize}
+\item Equivalence principle + experimental foundations
+\item Geometric objects
+\begin{itemize}
+\item Need to understand geomtric components of GR
+\item Vectors, metric, etc. that live on manifolds
+\item Laws of nature do not depend on coordinates chosen
+\item Hence can write laws of nature in terms of geometric objects w/o reference to coordinates
+\end{itemize}
+\item Kinematics
+\begin{itemize}
+\item Time dilation, length contraction in GR framework
+\end{itemize}
+\item Calculus in curvilinear coordinates
+\begin{itemize}
+\item Mass and energy curve spacetime
+\item Hence geometric objects moved on curved manifolds
+\item Distances are not only spatial but temporal; need to use mathematics of small change = calculus
+\item Uses the covariant derivative (a geomtetric object; independent of basis/coordinate independent)
+\item This point of the course we will not be considering curved space, but instead only curvilinear coords 
+\begin{itemize}
+\item A flat space can be covered (represented?) by curved coordinates, but an intrinsically curved surface cannot be covered by flat coordinates
+\end{itemize}
+\end{itemize}
+\item Curved spaces
+\begin{itemize}
+\item Manifolds 
+\item How to calculate lengths, volumes, angles in curved spaces
+\item Introduces the idea of parallel transport $\Rightarrow$ leads to curvature
+\item Define the Riemann tensor, and its children etc. Ricci tensor, ...; these satisfy the Bianchi identities
+\end{itemize}
+\item Einsten's field equations
+\begin{itemize}
+\item Stress-energy tensor
+\end{itemize}
+\item Weak-field limit
+\begin{itemize}
+\item Gauge transformations
+\end{itemize}
+\subsection{Part II - Applications}
+\item GR phenomena revisited 
+\begin{itemize}
+\item GPS, Mercury's orbit, gravitational lensing, gravittional redshift, ...
+\end{itemize}
+\item Gravitational waves
+\begin{itemize}
+\item Propagation (phase speed, polarisation, ...)
+\item Generation*
+\item Detection*
+\begin{itemize}
+\item * = ``antenna problem"
+\end{itemize}
+\end{itemize}
+\item Relativisitic stars
+\begin{itemize}
+\item neutron stars
+\item equation of state (cannot study on Earth because largest nuclei only have 200 elements or so; need more density)
+\end{itemize}
+\item Black holes
+\begin{itemize}
+\item Event horizons, singularities, ...
+\end{itemize}
+\item Cosmology
+\begin{itemize}
+\item Friedman-Robertson-Walker (FRW) metric - describes a homogeneous, isotropic universe
+\begin{itemize}
+\item We will derive this and the Friedman equations
+\end{itemize}
+\end{itemize}
+
+\end{enumerate}
+
+
+\section{Introduction to gravity}
+\subsection{Strength of gravity}
+\begin{itemize}
+\item Weak! Weakest of all fundamental forces
+\item Long-ranged force (like EM)
+\item Weakness determined by coupling constant
+\item Coupling constant = Newton's gravitational constant
+\end{itemize}
+\begin{equation}
+\vec{F}=\frac{Gm_1 m_2}{r_{12}^2}\hat{r}
+\end{equation}
+\begin{itemize}
+\item G is hard to measure; least well known of coupling constants
+\end{itemize}
+In 1797-98, Cavendish used torsion balls (1.8m torsion balance) with rod of big masses and rod of small masses. 
+\begin{itemize}
+\item Spring constant of torsion balance was measuredfrom free oscillation
+\item ten introduced 158kg balls
+\item measured delfection angle of balance $\Rightarrow$ force
+\begin{itemize}
+\item using a mini-telescope against Vernier scale
+\end{itemize}
+\item rearrange Newton's law to get G
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/cavendish-torsion-balance.png}
+\end{figure}
+
+\exercise{Show that Cavendish also measured density if Earth as a bonus at the same time}
+
+\begin{itemize}
+\item Modern $G=6.67384(80)\times 10^{-11} Nm^2kg^{-2}=kg^{-1}m^3 s^{-2}$\\
+\item Product GM is known to 1 part in $~10^{10}$ from astrophysics observations
+\begin{itemize}
+\item[$\Rightarrow$] mass is hard to measure gravitationally
+\end{itemize}
+\item We need a dimensionless number to characterise strength
+\item Newton: $\Phi=\frac{GM}{r}$ (potential)
+\item In free fall: $\frac{KE}{mass}$, $v^2 ~ \frac{GM}{r}$
+\item We claim gravity is strong is free-fall is relativistic, i.e. $v~c$
+\item This is an order of magnitude estimate
+\end{itemize}
+
+
+
+
+
+
+
+
+\pagebreak
+
+%-----------------------------------------
+\end{document}
+
+
+
+
+
+
+
