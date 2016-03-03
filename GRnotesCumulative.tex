@@ -26,8 +26,9 @@
 \usepackage{yfonts}
 \usepackage{calc}
 \usepackage{cite}
+\usepackage{siunitx}
 
-\setlength{\parindent}{2em}
+\setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 \newcommand{\goth}[1]{{\Huge\textfrak{#1}}}
 \renewcommand{\baselinestretch}{1.1}
@@ -36,6 +37,12 @@
 {
 \begin{framed}
 \textbf{Exercise:} #1 
+\end{framed}
+}
+\newcommand{\example}[2]
+{
+\begin{framed}
+\textbf{Example #1:} #2
 \end{framed}
 }
 
@@ -228,8 +235,73 @@ In 1797-98, Cavendish used torsion balls (1.8m torsion balance) with rod of big 
 \end{itemize}
 
 
+\subsection{Strong vs. weak gravity}
+\begin{itemize}
+\item Quasi-Newtonian:
+\begin{itemize}
+\item characterticstic speed of body in free fall: $v^2\sim \frac{GM}{r}$
+\end{itemize}
+\item Strong gravity leads to relativistic free fall, i.e. $\frac{GM}{Rc^2}\geq 1$ where M is the total mass and R is th characteristic size
+\end{itemize}
 
+\begin{table}
+\centering
+\begin{tabular}{c|cc} 
+ & $\frac{GM}{Rc^2} \lll 1$ & $\frac{GM}{Rc^2}\geq 1$\\
+\hline $v \ll c$ & Newtonian & CAN'T EXIST \\
+$v\sim c$ & special rel. & full GR (difficult)
+\end{tabular}
+\end{table}
 
+\example{1.1}{
+$M=M_{\odot}$ (mass of the Sun)
+\begin{align*}
+R & \sim \frac{GM}{c^2} \text{\quad boundary of strong regime}\\
+&\sim \frac{10^{-10}10^{30}}{10^{17}}\\
+&\sim \text{km}
+\end{align*}
+cf. Schwarz radius of black hole $=\frac{2GM}{c^2}$
+}
+\example{1.2}{
+Density of black hole with mass of $M_\odot$
+\begin{align*}
+&\sim \frac{M}{R^3}\sim\frac{10^{30}kg}{(km)^3}\\
+&\sim 10^{21}kgm^{-3}
+\end{align*}
+How does this density compare to maximum density of (say) nuclear matter? Let's compare.
+\begin{align*}
+\frac{m_n}{(1fm)^3}\sim \frac{10^{-27}kg}{10^{-45}m^3}\sim 10^{18}kgm^{-3}
+\end{align*}
+We see a black hole is more dense that a nuclei. The characteristic size of a particle $1fm\sim\Delta x\sim \frac{\hbar}{\Delta p}\sim \frac{\hbar}{m_n c}$, due to Heisenberg's uncertainty principle, and also the Pauli exclusion principle.
+}
+More generally: density of material that froms black hole $\sim\frac{M}{R^3}$, but note $M=\frac{c^2R}{G}$ density $\rho \propto \frac{1}{R^2}$. This means that denser black holes are smaller.
+
+\exercise{Estimate the strength of gravity $\frac{GM}{Rc^2}$ on Earth.}
+
+\example{2}
+{
+The Universe is composed of 5\% baryons + 25\% dark matter + 70\% dark energy. Estimate M and R.\\
+$R\sim \SI{10}{Gpc}$
+\begin{itemize}
+\item Mass of baryons 
+\begin{itemize}
+\item $10^{11}$ stars in Milky Way
+\item $(10^4)^3$ galaxies in Universe
+\item $\Rightarrow M_{\text{baryons}}\sim10^{23}M_\odot\sim 10^{53}kg$
+\end{itemize}
+\end{itemize} 
+\begin{equation}
+\frac{GM_tot}{Rc^2}\sim\frac{10^{-10}\dot 10^{53}\dot 10}{10^{27} \dot 10^{17}}\sim 1
+\end{equation}
+\begin{align*}
+\text{Density }\rho\sim\frac{M_{tot}}{R_{tot}^3}&\sim\frac{c^2}{R^2G}\text{, use }\frac{GM}{Rc^2}\sim 1\\
+&\sim\frac{1}{G\times(\text{age of universe})^2}
+\end{align*}
+cf. critical density from Friedmann equations $\rho_{crit}=\frac{3H_0^2}{8\pi G}$.\\
+Recall Hubble constant $H_0\sim \frac{1}{\text{age}}$.
+}
+The critical density is the density of the universe at which expansion will asymptotically slow. Too dense leads to big crunch, too low leads to unbounded expansion.
+\exercise{How do we reconcile a ``flat" universe from critical density with the ``curved" universe?}
 
 
 
