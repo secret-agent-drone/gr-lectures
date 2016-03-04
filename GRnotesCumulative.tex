@@ -33,10 +33,11 @@
 \newcommand{\goth}[1]{{\Huge\textfrak{#1}}}
 \renewcommand{\baselinestretch}{1.1}
 
-\newcommand{\exercise}[1]
+\newcommand{\exercise}[2]
 {
 \begin{framed}
-\textbf{Exercise:} #1 
+\textbf{Exercise:} #1 \\\hrule
+#2
 \end{framed}
 }
 \newcommand{\example}[2]
@@ -158,7 +159,7 @@
 \subsection{Part II - Applications}
 \item GR phenomena revisited 
 \begin{itemize}
-\item GPS, Mercury's orbit, gravitational lensing, gravittional redshift, ...
+\item GPS, Mercury's orbit, gravitational lensing, gravitational redshift, ...
 \end{itemize}
 \item Gravitational waves
 \begin{itemize}
@@ -166,7 +167,7 @@
 \item Generation*
 \item Detection*
 \begin{itemize}
-\item * = ``antenna problem"
+\item[*] = together these form the ``antenna problem"
 \end{itemize}
 \end{itemize}
 \item Relativisitic stars
@@ -205,9 +206,9 @@
 \end{itemize}
 In 1797-98, Cavendish used torsion balls (1.8m torsion balance) with rod of big masses and rod of small masses. 
 \begin{itemize}
-\item Spring constant of torsion balance was measuredfrom free oscillation
-\item ten introduced 158kg balls
-\item measured delfection angle of balance $\Rightarrow$ force
+\item Spring constant of torsion balance was measured from free oscillation
+\item then introduced 158kg balls
+\item measured deflection angle of balance $\Rightarrow$ can calculate force
 \begin{itemize}
 \item using a mini-telescope against Vernier scale
 \end{itemize}
@@ -219,18 +220,32 @@ In 1797-98, Cavendish used torsion balls (1.8m torsion balance) with rod of big 
 \includegraphics[width=0.5\textwidth]{images/cavendish-torsion-balance.png}
 \end{figure}
 
-\exercise{Show that Cavendish also measured density if Earth as a bonus at the same time}
+\exercise{Show that Cavendish also measured density of Earth as a bonus at the same time.}
+{Mass of Earth $M_{\oplus}= \rho V$ where $V=\frac{4}{3}\pi R^3$ assuming the Earth is a sphere. How does calculating $G$ also calculate $\rho$? Well, we have $\vec{F}=\frac{Gm_1 m_2}{r_{12}^2}\hat{r}$. Let's take $m_1 = M_\oplus$ as the mass of the Earth, and $m_2 = m$ as some small object mass. Let's imagine the smaller object falling to the center of the Earth. We'll take $r_{12}$ as the distance from the object to the Earth's center, which we can approximate as Earth's radius, i.e. $r_{12}=R$. This force should be equivalent to $F=ma$.\\
+\\
+So we have
+\begin{align*}
+\frac{GM_\oplus m}{R^2}&=mg\\
+\frac{G\rho \frac{4}{3}\pi R^3}{R^2}&=g\\
+\frac{4G \rho \pi R}{3}&=g\\
+\Rightarrow \rho &=\frac{3g}{4\pi GR}\\
+&=\frac{3\times \SI{9.8}{ms^{-2}}}{4\pi\times \SI{6.67384d-11}{\kg^{-1}\m^3 \s^{-2}}\times \SI{6370}{km}}\\
+&=\frac{3\times 9.8}{4\pi\times 6.67384\times 10^{-11}\times 6370\times 10^3}\si{\kg.m^{-3}}\\
+&=\SI{5503}{kg.m^{-3}}
+\end{align*}
+}
+
 
 \begin{itemize}
-\item Modern $G=6.67384(80)\times 10^{-11} Nm^2kg^{-2}=kg^{-1}m^3 s^{-2}$\\
-\item Product GM is known to 1 part in $~10^{10}$ from astrophysics observations
+\item Modern $G=6.67384(80)\times \SI{d-11}{Nm^{-2}.\kg^{-2}}=\si{\kg^{-1}.\m^3.\s^{-2}}$
+\item Product GM is known to 1 part in $\sim 10^{10}$ from astrophysics observations
 \begin{itemize}
 \item[$\Rightarrow$] mass is hard to measure gravitationally
 \end{itemize}
 \item We need a dimensionless number to characterise strength
 \item Newton: $\Phi=\frac{GM}{r}$ (potential)
-\item In free fall: $\frac{KE}{mass}$, $v^2 ~ \frac{GM}{r}$
-\item We claim gravity is strong is free-fall is relativistic, i.e. $v~c$
+\item In free fall: $\frac{KE}{mass}$, $v^2 \sim \frac{GM}{r}$
+\item We claim gravity is strong is free-fall is relativistic, i.e. $v\sim c$
 \item This is an order of magnitude estimate
 \end{itemize}
 
@@ -265,7 +280,7 @@ cf. Schwarz radius of black hole $=\frac{2GM}{c^2}$
 \example{1.2}{
 Density of black hole with mass of $M_\odot$
 \begin{align*}
-&\sim \frac{M}{R^3}\sim\frac{10^{30}kg}{(km)^3}\\
+&\sim \frac{M}{R^3}\sim\frac{\SI{d30}{kg}}{\si{(km)^3}}\\
 &\sim 10^{21}kgm^{-3}
 \end{align*}
 How does this density compare to maximum density of (say) nuclear matter? Let's compare.
@@ -280,18 +295,18 @@ More generally: density of material that froms black hole $\sim\frac{M}{R^3}$, b
 
 \example{2}
 {
-The Universe is composed of 5\% baryons + 25\% dark matter + 70\% dark energy. Estimate M and R.\\
+The Universe is composed of 5\% baryons + 25\% dark matter + 70\% dark energy. Estimate M and R.\\\hrule
 $R\sim \SI{10}{Gpc}$
 \begin{itemize}
 \item Mass of baryons 
 \begin{itemize}
 \item $10^{11}$ stars in Milky Way
 \item $(10^4)^3$ galaxies in Universe
-\item $\Rightarrow M_{\text{baryons}}\sim10^{23}M_\odot\sim 10^{53}kg$
+\item[$\Rightarrow$] $M_{\text{baryons}}\sim10^{23}M_\odot\sim \SI{d53}{kg}$
 \end{itemize}
 \end{itemize} 
 \begin{equation}
-\frac{GM_tot}{Rc^2}\sim\frac{10^{-10}\dot 10^{53}\dot 10}{10^{27} \dot 10^{17}}\sim 1
+\frac{GM_{tot}}{Rc^2}\sim\frac{10^{-10}\cdot 10^{53}\cdot 10}{10^{27} \cdot 10^{17}}\sim 1
 \end{equation}
 \begin{align*}
 \text{Density }\rho\sim\frac{M_{tot}}{R_{tot}^3}&\sim\frac{c^2}{R^2G}\text{, use }\frac{GM}{Rc^2}\sim 1\\
