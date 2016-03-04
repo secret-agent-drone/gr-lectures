@@ -100,8 +100,8 @@
 \end{titlepage}
 %----------------------------------------------------------------------------------------
 \pagestyle{empty}
-%\tableofcontents
-%\newpage
+\tableofcontents
+\newpage
 
 \pagestyle{fancy}
 \pagenumbering{arabic}
@@ -318,8 +318,54 @@ Recall Hubble constant $H_0\sim \frac{1}{\text{age}}$.
 The critical density is the density of the universe at which expansion will asymptotically slow. Too dense leads to big crunch, too low leads to unbounded expansion.
 \exercise{How do we reconcile a ``flat" universe from critical density with the ``curved" universe?}
 
+Important to remember: gravity is strong when $\frac{GM}{Rc^2}\sim 1$, which occurs around black holes, the universe at large. In a sense, cosmological results such as critical density, expansion of universe come from this.
 
+\subsection{Black hole oscillations}
+We can estimate the oscillation frequency of a ``black hole'' (i.e. something with $\frac{GM}{Rc^2}\sim 1$ as $\sim \frac{c}{R}$; that is, the time is takes light to travel the distance of the object. This is the natural frequency for this object. Using that ubioquitous expression we can express the oscillation frequency as $\sim \frac{c^3}{GM}$, e.g. $M=M_\odot \Rightarrow \text{frequency}\sim\SI{10}{kHz}$.
 
+Let's discuss charged black holes. It is difficult to astrophysically have charged black holes, because stars are not usually charged (due to the strength of the EM force, which would attract opposite charge and cancel out). So, these are artificial in nature. These have unusual geometry, and are called ``Reissner-Nordstrom'' black holes.
+\example{}{What is the maximum charge on a black hole?\\\hrule
+\begin{align*}
+\frac{Q^2}{4\pi\epsilon_0 R}&\leq \frac{GM^2}{R}\\
+Q&\leq (4\pi\epsilon_0 G)^{1/2} M
+\end{align*}
+Above, we relate Coloumb force to gravitational force. The gravitational force holding a black hole together must overcome the Coloumb force pushing it apart.
+}
+
+\subsection{Quantum Gravity}
+The problem wtih quantum gravity is that there is no theory... hence we must rely on numerology.
+
+We consider a hypothetical elementry excitation of a ``black hole'' (again, we mean a \emph{relativistic compact object}) of mass $M$. Hence the characteristic size, or ``wavelength'', of the excitation is $\frac{GM}{c^2}$ (fundamental excitation only). Introducing quantum mechanics: the Heisenberg uncertainty principle tells us that the zero-point motion associated with this excitation is
+\begin{equation}
+\lambda\sim\frac{\hbar}{\Delta p}\sim \underbrace{\frac{\hbar}{Mc}}_{\text{relativisitic}}
+\end{equation}
+Equating length scales $\Rightarrow M_{pl}\approx \left(\frac{\hbar c}{G}\right)^{1/2}$; this is the Planck mass, about $\SI{d-8}{kg}$ (the mass below which quantum gravity is important. 
+
+Given $M_{pl}$ we get $\lambda\sim\frac{\hbar}{M_{pl}c}\sim \SI{d-33}{m}$; the Planck length - the length where quantum gravity is important (e.g. just after Big Bang).
+
+\subsubsection{Hawking Radiation}
+Let's return to our elementary excittion with $\lambda\sim\frac{GM}{c^2}$, i.e. frequency $\sim \frac{c^3}{GM}=\frac{c}{\lambda}$. Heisenberg tells us there is an associated energy fluctation $\Delta E\sim h\times\text{frequency}\sim\frac{\hbar c^3}{GM}$. Suppose (note: this is a huge leap) energy fluctuation in the black hole sysytem is in thermal equilibrium with a bath at temperature $T$. Then $T\sim\frac{\Delta E}{k_B}$. This associates a temperature to a black hole.
+
+We call a black hole a blackbody! 
+\begin{align*}
+\text{Radiated power }&= k_B\times \text{area} \times T^4\\
+&=\sigma\times \underbrace{R^2}_{\left(\frac{GM}{c^2}\right)^2}\times \left(\frac{\hbar c^3}{GMk_b}\right)^4\\
+&\propto M^{-2}
+\end{align*}
+
+\exercise{Plug in numbers to this!}{}
+
+This shows that a black hole radiates energy $\Rightarrow$ eventually a black hole evaporates. We can estimate the time scale of this evaporation.
+\begin{equation}
+\text{time scale}\sim\frac{Mc^2}{\text{power}}\propto M^3
+\end{equation}
+$\Rightarrow$ small black holes evaporate fast!
+
+As an aside, we could consider the rate of energy accretion. For system outside a black hole with uniform density $\rho_{\text{out}}$, we have
+\begin{align*}
+\text{rate of mass accretion}&\sim \rho_\text{out}\cdot c \cdot 4\pi R^2\\
+\text{rate of energy accretion}&\sim c^2\cdot \text{rate of mass accretion}
+\end{align*}
 
 \pagebreak
 
