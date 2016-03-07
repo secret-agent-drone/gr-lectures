@@ -7,3 +7,7 @@
 \contentsline {subsection}{\numberline {2.3}Black hole oscillations}{6}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Quantum Gravity}{6}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Hawking Radiation}{7}{subsubsection.2.4.1}
+\contentsline {subsection}{\numberline {2.5}Black hole thermodynamics}{7}{subsection.2.5}
+\contentsline {section}{\numberline {3}Einstein equivalence principle}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Weak equivalence principle}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Strong equivalence principle}{9}{subsection.3.2}

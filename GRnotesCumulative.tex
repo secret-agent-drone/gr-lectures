@@ -366,6 +366,81 @@ As an aside, we could consider the rate of energy accretion. For system outside 
 \text{rate of mass accretion}&\sim \rho_\text{out}\cdot c \cdot 4\pi R^2\\
 \text{rate of energy accretion}&\sim c^2\cdot \text{rate of mass accretion}
 \end{align*}
+\hrule
+A short review:
+\begin{itemize}
+\item there is no theory of quantum gravity
+\item we consider a relativisitic elementary oscillation $\lambda\sim\frac{GM}{c^2}$
+\item we use Heisenberg to relate this to an enegy fluctutation in the system
+\item energy fluctuation can be converted to a temperature $T_H=\frac{\hbar c^3}{GMk_B}$, the Hawking temperature
+\item we find small block holes evaportate more quickly than large black holes
+\end{itemize}
+
+\hrule
+
+\subsection{Black hole thermodynamics}
+\textbf{1st law}: $dS=\frac{dQ}{T}$\quad system constant volume
+
+Hawking radiation: we lose a bit of heat $dQ$ due to blackbody radiation.
+\begin{equation}
+dS=\frac{GMk_b}{\hbar c^3} d(Mc^2)
+\end{equation}
+We see heat loss comes from rest energy
+\begin{equation}
+\frac{dS}{k_B}\approx \frac{1}{R^2_{\text{Planck}}}\underbrace{d(R^2)}_{R\sim\frac{GM}{c^2}}
+\end{equation}
+This result relates the entropy of a black hole to its area; Bekenstein-Hawking entropy - $S_{\text{black hole}}\propto\text{area of event horizon}$.
+\begin{equation}
+\frac{S}{k_B}=\frac{\text{area}}{4R^2_{\text{Planck}}}\footnote{In 1995, Maldacena also got this by counting microstates}
+\end{equation}
+
+However, there is a contradiction! Hawking radiation implies that $dA<0 \Rightarrow dS<0$.... this is bad.\footnote{See Ted Jacobson's lecture at University of Utrecht for a discussion on this.} One way to resolve this is by makung a generalised \textbf{2nd law}:
+\begin{equation}
+d\left(S_{\text{outside}}+\frac{\text{area}}{4R_{\text{Planck}}^2}\right)\geq 0
+\end{equation}
+Unfortunately this is not enough - there is still a contradiction. Consider a small box of radiation which we prepare far from a black hole. $S_{\text{box}}=\frac{4U_{\text{box}}}{3T_\text{box}}$. We can make photons very long wavelength, so that $U_{\text{box}}\approx 0$ byt $S_{\text{box}}\neq 0$. Then $dS_{\text{out}}=-S_{\text{box}}<0$. $d(\text{area})=0$ because energy in box $=0$, i.e. $d(Mc^2)=0$.\footnote{Beware the Unruh radiation.}
+
+\exercise{Resolve the box paradox!}{}
+
+\textbf{3rd law of BH thermodynamics}: can't reduce $T$ to zero.\footnote{If you are curious: Verlinde, 
+\href{arXiv.org/abs/1001.0785}{arXiv:1001.0785}, \emph{On the Origin of Gravity and the Laws of Newton}, in which the idea of emph{gravity is an entropic force} is discussed.}
+
+In heating a rubber band, it shrinks; this is because a shrunken arrangement of the molecules is a state of more entropy (more disordered)
+
+\begin{center}
+{
+\begin{tikzpicture}
+\node at (0,0) {BH};
+\end{tikzpicture}
+}
+\end{center}
+
+																					
+\section{Einstein equivalence principle}
+We will define this (the weak and strong equivalence principles), and some of the tests been performed.
+
+\subsection{Weak equivalence principle}
+Trajectory of body in free fall is independent of its mass and $\underbrace{\text{composition}}_{\text{binding energy}}$ (as per Galileo, feather vs. brick). Note that this is not equivalent for electric fields (the movement of a charged particle through an electric field depends on its charge).
+
+\subsection{Strong equivalence principle}
+\begin{enumerate}
+\item weak equivalence principle is valid
+\item results of any non-gravitational (e.g. EM, \underline{not} Cavendish expt) experiment is independent of velocity fo freely falling frame
+\begin{itemize}
+\item this is \emph{local lorentz invariance}
+\end{itemize}
+\item results of non-gravitational experimental are indepent of where and when it is performed
+\begin{itemize}
+\item this is \emph{local position invariance}
+\end{itemize}
+\end{enumerate}
+
+The Einstein equivalence principle (EEP) $\equiv$ strong implies: existence of a ``curved spacetime'' with:
+\begin{enumerate}
+\item[\textbf{i.}] symmetric metric
+\item[\textbf{ii}.] trajectories of free-falling bodies are geodesicas of metric
+\item[\textbf{iii.}] the laws of physics in a freely-falling frame can be written in the lnaguage of special relativity
+\end{enumerate}
 
 \pagebreak
 
@@ -375,6 +450,12 @@ As an aside, we could consider the rate of energy accretion. For system outside 
 
 
 
+%\begin{tikzpicture}[line width=0.7 pt, xscale = 3, yscale = 3]
+
+%\draw [fermion] (0,0)--(1.5,0);
+%	\node at (0.75,0.3) {$\tau$};
+
+%\end{tikzpicture}
 
 
 
