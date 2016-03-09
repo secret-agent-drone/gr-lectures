@@ -40,11 +40,41 @@
 #2
 \end{framed}
 }
+
 \newcommand{\example}[2]
 {
 \begin{framed}
 \textbf{Example #1:} #2
 \end{framed}
+}
+
+\newcommand{\review}[1]
+{
+\hrule
+A short review:
+
+#1
+\hrule
+}
+
+\renewcommand{\picture}[1]
+{
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{#1}
+\end{figure}
+}
+
+\newcommand{\bmx}[1]{
+\begin{bmatrix}
+#1
+\end{bmatrix}
+}
+
+\newcommand{\pmx}[1]{
+\begin{pmatrix}
+#1
+\end{pmatrix}
 }
 
 
@@ -215,11 +245,8 @@ In 1797-98, Cavendish used torsion balls (1.8m torsion balance) with rod of big 
 \item rearrange Newton's law to get G
 \end{itemize}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{images/cavendish-torsion-balance.png}
-\end{figure}
-
+\picture{images/cavendish-torsion-balance.png}
+ 
 \exercise{Show that Cavendish also measured density of Earth as a bonus at the same time.}
 {Mass of Earth $M_{\oplus}= \rho V$ where $V=\frac{4}{3}\pi R^3$ assuming the Earth is a sphere. How does calculating $G$ also calculate $\rho$? Well, we have $\vec{F}=\frac{Gm_1 m_2}{r_{12}^2}\hat{r}$. Let's take $m_1 = M_\oplus$ as the mass of the Earth, and $m_2 = m$ as some small object mass. Let's imagine the smaller object falling to the center of the Earth. We'll take $r_{12}$ as the distance from the object to the Earth's center, which we can approximate as Earth's radius, i.e. $r_{12}=R$. This force should be equivalent to $F=ma$.\\
 \\
@@ -441,6 +468,94 @@ The Einstein equivalence principle (EEP) $\equiv$ strong implies: existence of a
 \item[\textbf{ii}.] trajectories of free-falling bodies are geodesicas of metric
 \item[\textbf{iii.}] the laws of physics in a freely-falling frame can be written in the lnaguage of special relativity
 \end{enumerate}
+
+
+\review{
+Einstein equivalence principle:
+\begin{enumerate}
+\item universality of free fall
+\item local Lorentz invariance
+\item local position invariance
+\end{enumerate}
+Implications:
+\begin{enumerate}
+\item[3)] $\Rightarrow$ fundamental constant independent of $\vec{x}$, $t$
+\item[2)] $\Rightarrow$ laws of non-gravitational physics \underline{locally} independent of frame
+\item[1)] $\Rightarrow$ space is \underline{curved}
+\end{enumerate}
+
+Why is space curved? Locally straight trajectory in free yet \underline{yet} gravity producess curved trajectory (observed) $\Rightarrow$ only possible if coordinates change from one point to next
+}
+
+\section{Experimental tests}
+\subsection{Experimental tests of free fall}
+Inertial mass $m_i=\frac{\text{applied non-gravitational force}}{\text{measured acceleration}}$
+
+Gravitational mass $m_g=$ ``passive'' mass appearing in weight
+
+Look for $m_i \neq m_g$
+
+Write 
+\begin{equation}
+m_g=m_i + \sum_{\text{interactions A in body}}\eta^A \frac{E^A}{c^2}
+\end{equation} 
+Here $E=$ ``binding energy''/potential energy of interaction $A$.
+
+\underline{Tests:}
+\begin{enumerate}
+\item E{\"o}tv{\"o}s-type torsion balance experiements: two different materials may fall at difference rates (see Dicke, Braginsky)
+\item Colorado: U, Cu laser interferometer $\Rightarrow relativite acceleration$
+\item E{\"o}t-Wash experiements: fancy version of 1)
+\end{enumerate}
+
+Result:
+\begin{equation}
+\frac{|m_g-m_i|}{m_i}\leq 10^{-13}
+\end{equation}
+
+We test this, for eample, with aluminium (Al) and gold (Au) weights on a torsion balance. As the Sun moves from one side of the Earth to the other, if the gravitational mass of either differs from the other we will see diurnal oscillation in the balance.
+
+\picture{images/eotvos.png}
+
+\subsection{Tests of local Lorentz invariance}
+\begin{itemize}
+\item Michelson-Morley experiment (the aether)
+\item Rossi-Hall tests for lifetime of muons (time dilation $\Leftrightarrow$ LLI)
+\item Ives-Stiwell transverse Doppler shift
+\begin{itemize}
+\item laser travelling some vector $\vec{v}$
+\item we see perpendicular wave vector $\vec{k}$
+\item measure frequency when laser intersects line of sight
+\item Doppler shift arises due to time dilation
+\end{itemize}
+\end{itemize}
+
+Mathematically:
+\begin{equation}
+\bmx{\omega'/c\\k'_x\\k'_y\\k'_z}=
+\bmx{
+\gamma&\gamma v/c&0&0\\
+\gamma v/c&\gamma&0&0\\
+0&0&1&0\\
+0&0&0&1
+}
+\bmx{
+\omega/c\\0\\k_y\\0
+}=
+\bmx{
+\gamma\omega/c\\
+\gamma\omega v^2/c\\
+k_y\\
+0
+}
+\end{equation}
+
+\exercise{Compare with standard longitudinal Doppler:
+\begin{equation}
+\pmx{\\\text{same}\\\text{matrix}\\\\}\pmx{\omega/c\\k_x\\0\\0}
+\end{equation}
+}
+{}
 
 \pagebreak
 
