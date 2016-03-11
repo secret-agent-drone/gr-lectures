@@ -140,6 +140,7 @@ A short review:
 \lhead{\textsc{Semester 1, 2016}}
 \rhead{\textsc{PHYC90012 General Relativity}}
 \setcounter{page}{1}
+\setcounter{section}{-1}
 \section{Syllabus}
 \subsection{Part I}
 \begin{enumerate}
@@ -556,6 +557,98 @@ k_y\\
 \end{equation}
 }
 {}
+
+\review{Last lecture:
+\begin{itemize}
+\item tests of LPI
+\item Schiff's thought experiement (gravitational redshift)
+\end{itemize}
+}
+
+\subsection{Gravitational redshift}
+\begin{equation}
+\frac{h\nu'-h\nu}{h\nu}=\frac{(m_A g_A - m_B g_B)H}{(m_A-m_B)c^2}
+\end{equation}
+If $g_A=g_B$ (universal free-fall), then gravitational redshift is $gH/c^2$
+
+\subsection{Observation of GR in experiments}
+There are situtations where GR makes measurable difference \underline{today}
+
+\begin{itemize}
+\item Pound-Rebka experiment (gravitational redshift, also seen on white dwarf spectral lines)
+\item GPS
+\item 2015 discovery of gravitational waves from binary BH merger
+\item cosmological measurements (CMB, redshifts, $H_0$, \ldots)
+\item gravitational lensing (light bent by a mass) (see: Einstein cross, Abell clusters, stars behind Sun)
+\item precession of perihelion of Mercury
+\item orbital decay of Hulse-Taylor binary pulsar (can calculate to mm precision the decay of the orbit every 8 hours due to gravitational wave emission)
+\item Nordtredt/lunar ranging experiments
+\item Gravity Probe B - lense-thinning precession
+\item Shapiro time delay
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/einstein-cross.jpg}
+\caption{Einstein cross}
+\end{figure}
+
+
+\subsubsection{Pound-Rebka experiment}
+Looks at gravitational redshift of $\SI{14.4}{keV}$ gamma rays from $^{57}$Fe decay
+
+$^{57}$Fe decays and emits photons directly down from a $\SI{23}{m}$ tall tower, to another box of $^{57}$Fe below. Gravitational redshift occurs; time moves slower closer to the Earth, so gamma ray emitted will have a different energy than that required to be absorbed by the $^{57}$Fe at the bottom.
+
+Receiver box moves up/down at speed $v$. We adjust $v$ at bottom so that kinematic Doppler shift $\propto \left(\frac{1-v/c}{1+v/c}\right)^{1/2}$ exactly cancels the gravitational redshift $\propto gH/c^2$
+
+N.B.: recoil (in a random direction) when photon emitted/absorbed; energy $E_R=\frac{E_\gamma}{2M_{Fe}c^2}$
+
+\begin{equation}
+E_R\sim\frac{\SI{14.4}{keV}}{\SI{100}{GeV}}\sim 10^{-7}
+\end{equation}
+
+We solve this problem through the Mossbauer effect: use whole crystal; whole crystal ($\sim10^{23}$ Fe atoms) recoils
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/pound-rebka.png}
+\caption{Pound-Rebka experiment}
+\end{figure}
+
+
+\subsubsection{Lunar ranging}
+Williams + Dickey (2002)\footnote{See also ``Living Reviews'' Relativity}
+
+Moon not completely dormant
+\begin{itemize}
+\item fluid core (?)
+\item tidal dissipation internally
+\item etc \ldots
+\end{itemize}
+
+Multiple radar reflectors to improve accuracy. We search for an accurate Earth-Moon orbit versus time; we find
+\begin{equation}
+\frac{1}{G}\frac{dG}{dt}=(0.0\pm 1.1)\times \SI{d-12}{yr^{-1}}
+\end{equation}
+
+Uncertainty $\approx 0.02 H_0$ - we don't see increasing separation between Earth and Moon due to expansion of universe. This is expected, however: gravitational bound objects do not separate with time, although the energy they require to stay bound will increase
+
+\subsubsection{Deflection of light (gravitational lensing)}
+In a three-body system with the Earth, the Sun and another star, the light from the star will bend due to the Sun before it reaches Earth (not taking a straight path). This causes the apparent position of the star to be different than the actual position.
+
+Deflection angle $\delta\theta \propto \frac{GM}{c^2d}$
+
+GR deflection = $2\times$ Newtonian deflection (Einstein 1911). 
+
+This effect is achromatic!
+
+\subsubsection{Shapiro delay}
+Roundtrip time from Earth to a distant mirror (in a three-body system including the Sun) is longer than if the Sun was not there.
+\begin{equation}
+\delta t\propto \frac{GM}{c^3}\ln(\text{geometric factors})
+\end{equation}
+
+Best measurements with Cassinin spacecraft (accuracy 1 in $10^5$)
 
 \pagebreak
 
