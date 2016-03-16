@@ -65,6 +65,14 @@ A short review:
 \end{figure}
 }
 
+\newcommand{\picturesize}[2]
+{
+\begin{figure}[h]
+\centering
+\includegraphics[width=#2\textwidth]{#1}
+\end{figure}
+}
+
 \newcommand{\bmx}[1]{
 \begin{bmatrix}
 #1
@@ -77,6 +85,7 @@ A short review:
 \end{pmatrix}
 }
 
+\renewcommand{\tilde}{\widetilde}
 
  \geometry{
  a4paper,
@@ -649,6 +658,177 @@ Roundtrip time from Earth to a distant mirror (in a three-body system including 
 \end{equation}
 
 Best measurements with Cassinin spacecraft (accuracy 1 in $10^5$)
+
+\section{Geometric Objects}
+
+\subsection{Vectors}
+Invariants are measurable. Therefore, each coordinate represenation is as valid as the other!
+
+\subsubsection{Definitions of a vector}
+Vector $\vec{A}$
+\begin{itemize}
+\item four numbers that are projections onto spacetime (can be dependent or indepedent of a metric)
+\begin{itemize}
+\item Note: vectors can have meaning without a metric
+\end{itemize}
+\item a geometric object with ``length'' (requires a metric) and a ``direction'', i.e. an arrow
+\item a geometric object which transforms from one coordinate system to another
+\item a linear function which trakes a 1-form as an argument and returns a real numver
+\end{itemize}
+
+$\underbrace{\text{Vector spaces}}_{\text{vectors}}\supseteq \underbrace{\text{normed vector spaces}}_{\text{length}} \supseteq \underbrace{\text{inner product spaces}}_{\text{angle}}$
+
+$\Rightarrow$ you can have vector spaces wirthout a norm or angle concept.
+
+\exercise{$\vec{\Delta}x=$ displacement (in spacetime), is a vector}{}
+
+Vector components, $A^0,A^1,A^2,A^3$; in another frame we have $A^{0'},A^{1'},A^{2'},A^{3'}$.
+
+\subsubsection{What is a basis vector?}
+Projection requires a metric (for a dot product)!
+$\Rightarrow$ we have 4, special, linearly independent vectors which ``point along'' (no concept of length/angle) axes of coordinate system, $\left\{\vec{e}_{\alpha}\right\}$
+
+\begin{equation}
+\vec{A}=A^0 \vec{e}_{0} +A^{1}\vec{e}_{1}+A^{2}\vec{e}_{2}+A^{3}\vec{e}_{3} \label{vector projection}
+\end{equation}
+
+As $\vec{e}_{0}$ is itself a vector, using \ref{vector projection}
+\begin{equation}
+\vec{e}_{0}=(\vec{e}_{0})^{0}\vec{e}_{0}+(\vec{e}_{0})^{1}\vec{e}_{1}+(\vec{e}_{0})^{2}\vec{e}_{2}
++\underbrace{(\vec{e}_{0})^{3}}_{\text{3rd component of }\vec{e}_{0}}\vec{e}_{3}
+\end{equation}
+
+By linear independence, as $\vec{e}_0$ is linearly independent to $\vec{e}_{1},\vec{e}_{2},\vec{e}_{3}$
+\begin{equation}
+\Rightarrow (\vec{e}_{0})^{1}=(\vec{e}_{0})^{2}=(\vec{e}_{0})^{3}=0
+\end{equation}
+\begin{equation}
+\Rightarrow (\vec{e}_{\alpha})^{\beta}=\delta_{\alpha}^{\beta}
+\end{equation}
+which is \emph{true in all coordinate systems}. Therefore in a primed frame,
+\begin{equation}
+\Rightarrow (\vec{e}_{\alpha'})^{\beta'}=\delta_{\alpha'}^{\beta'}
+\end{equation}
+
+\underline{But} $(\vec{e}_{\alpha'})^{\beta}\neq \delta^{\beta}_{\alpha'}$
+\begin{itemize}
+\item $\vec{e}_{\alpha'}$ is tied to the prime frame
+\item the geometric object is only defined with respect to the frame (where $\vec{A}$ could exist in all frames)
+\item you cannot measure a basis vector in another coordinate frame. You have to be in the coordinate frame to measure it.
+\end{itemize}
+
+\subsubsection{Transformations}
+In general,
+\begin{align*}
+\left\{x^{\beta'}\right\}&\mapsto \left\{x^{\alpha}\right\}\\
+from \sigma' &\to \sigma\quad\text{primed to unprimed}
+\end{align*}
+
+\begin{equation}
+\Lambda^{\alpha}_{\beta'}=\frac{\partial (x^{0},x^{1},x^{2},x^{3})}{\partial (x^{0'},x^{1'},x^{2'},x^{3'})}
+=\frac{\partial x^{\alpha}}{x^{\beta'}}\quad \text{16 elements!}
+\end{equation}
+
+If the transform is linear (e.g. Lorentz transform), we can consider
+\begin{equation}
+x^{\alpha}=\Lambda^{\alpha}_{\beta'}x^{\beta'}
+\end{equation}
+where $\Lambda^{\alpha}$ is not necessarily a constant. But if the transform is non-linear, the left side is wrong. We instead have
+\begin{equation}
+dx^{\alpha}=\Lambda^{\alpha}_{\beta'}~dx^{\beta'}
+\end{equation}
+
+Why? If we define $\vec{x}$ as a displacement from origin to the point in a curved space, there are mutliple different path. We would need more than 4 numvers to define this, therefor we no longer have a meaningful vector. 
+
+Vectors are defined localling an tangent space, \textbf{and} transformations of vectors are also restricted locally to trangent space. If $\vec{A}$ is a vector,
+\begin{equation}
+A^{\alpha}=\Lambda^{\alpha}_{\beta'}A^{\beta'}
+\end{equation}
+
+\review{\textbf{Vectors}
+
+$\vec{A}$: defined in tangent space
+
+Components $A^\alpha$: $\vec{A}=A^\alpha \vec{e}_{\alpha}$ where $\vec{e}_{\alpha}$ are basis vectors. These (unprimed) basis vectors only have meaning in unprimed coordinates
+
+Transform like infinitesimal displacements:
+\begin{equation}
+\underbrace{A^{\alpha'}}_{\text{primed}}=\overbrace{\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}}^{\text{transform matrix}}\underbrace{A^{\alpha}}_{\text{unprimed}}\label{vector transform}
+\end{equation}
+
+How do basis vectors transform?
+\begin{align*}
+A^{\alpha}\vec{e}_\alpha=\vec{A}&=A^{\alpha'}\vec{e}_{\alpha'}\\
+&=\frac{\partial x^{\alpha'}}{\partial x^{\beta}}A^{\beta}\vec{e}_{\alpha'}	\\
+&=\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}A^{\alpha}\vec{e}_{\alpha'}
+\end{align*}
+
+This has to be true for all $\vec{A}$, i.e.
+\begin{equation}
+\vec{e}_{\alpha}=\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}\vec{e}_{\alpha'}
+\end{equation}
+Or equivalently,
+\begin{equation}
+\vec{e}_{\alpha'}=\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}\vec{e}_{\alpha}
+\end{equation}
+Note this is the opposite of transformation law for vector components \ref{vector transform}
+
+\exercise{Try for Lorentz transformations.}{}
+\exercise{(later) Try for 2 types of Schwarz black hole coordinates.}{}
+
+}
+
+\subsection{1-forms}
+$\widetilde{p}$
+\begin{itemize}
+\item four numbers assocation to four dimensions and associated to vectors in a specific way (see below)
+\item geomtric objecs that transforms like a \underline{gradient}
+\item tensor of type $\pmx{0\\1}$, i.e. linear function which accepts vector as an argument and reutrns a real number
+\end{itemize}
+If we have a metric, a neat way to visualise a 1-form is as a contour.
+
+e.g. vector is an arrow (length, direction)
+
+cf. 1-form is contours
+
+\picturesize{images/contour.png}{0.3}
+Value of $\widetilde{p}(\vec{A})=4$; number of times $\vec{A}$ pierces surfaces of $\widetilde{p}$
+
+Components defined to be
+\begin{align*}
+p_\alpha&=\widetilde{p}(\vec{e}_{\alpha})\\
+&=\langle{\tilde{p},\vec{e}_{\alpha}}\rangle
+\end{align*}
+From lines 1 to 2, we have equivalent notation. We are using an inner product. By convention we use a lowered index.
+
+We cannot have curved contours, as they are only defined in tangent space.
+
+We have a neat way to calculate the coordinate-independent quantity $\tilde{p}(\vec{A})$
+\begin{align*}
+\tilde{p}(\vec{A})&=\tilde{p}(A^{\alpha}\vec{e}_{\alpha})\\
+&=A^{\alpha}\tilde{p}(\vec{e}_{\alpha})\quad\text{linear}\\
+&=A^{\alpha}p_{\alpha}
+\end{align*}
+
+This is a contraction. It is an inner product but \underline{not} dot product (we require a metric, and for it to be between two vectors, for a dot product).
+
+Vectors and 1-forms are ``apples and oranges'' - completely different geometric objects which cannot be compared even at the same point, e.g. $\tilde{p}=\vec{A}$ is meaningless.
+
+This is comparable to bras and kets in quantum mechanics; they form a dual space, but we cannot directly compare the objects of a pair
+
+\subsubsection{How do 1-forms transform?}
+We start with basis vectors
+\begin{equation}
+\vec{e}_{\alpha}=\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}\vec{e}_{\alpha'}
+\end{equation}
+In component form:
+\begin{align*}
+p_{\alpha'}&=\tilde{p}(\vec{e}_{\alpha'})\\
+&=\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}\tilde{p}(\vec{e}_{\alpha})\quad\text{linear}\\
+&=\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}p_{\alpha}
+\end{align*}
+i.e. components of $\tilde{p}$ transform like basis vectors (\underline{not} components of basis vectors)
+
 
 \pagebreak
 
