@@ -158,7 +158,8 @@ A short review:
 \item Order of magnitude estimates
 \item Small amount of quantum gravity
 \end{itemize}
-\item Equivalence principle + experimental foundations
+\item Equivalence principle
+\item Experimental foundations
 \item Geometric objects
 \begin{itemize}
 \item Need to understand geomtric components of GR
@@ -783,7 +784,7 @@ $\widetilde{p}$
 \begin{itemize}
 \item four numbers assocation to four dimensions and associated to vectors in a specific way (see below)
 \item geomtric objecs that transforms like a \underline{gradient}
-\item tensor of type $\pmx{0\\1}$, i.e. linear function which accepts vector as an argument and reutrns a real number
+\item tensor of type $\pmx{0\\1}$, i.e. linear function which accepts vector as an argument and returns a real number
 \end{itemize}
 If we have a metric, a neat way to visualise a 1-form is as a contour.
 
@@ -829,8 +830,94 @@ p_{\alpha'}&=\tilde{p}(\vec{e}_{\alpha'})\\
 \end{align*}
 i.e. components of $\tilde{p}$ transform like basis vectors (\underline{not} components of basis vectors)
 
+\review{Last lecture missing
+
+1-forms and their relation to gradients defined
+}
+
+\review{Given a scalar field $\phi(\vec{x})$ we define a 1-form $\tilde{d\phi}$, with components $(\tilde{d\phi})_{\alpha}=\frac{\partial\phi}{\partial x^{\alpha}}$
+
+\textbf{Notes:}
+\begin{enumerate}
+\item If we take $\phi$ = one of the coordinates, e.g. $\phi=x^{\alpha}$ for a specific $\alpha$, then $\tilde{d\phi}=\delta^{\alpha}_{\beta}$ for $\phi=x^{\alpha}$
+\begin{itemize}
+\item i.e. $\tilde{d \phi}$, for $\phi=x^{\alpha}$ is just $\tilde{\omega}^{\alpha}$, the basis 1-form
+\end{itemize}
+\item $\tilde{d\phi}$ is the most natural definition of a normal in GR. We also has $\tilde{d\phi}(\vec{t})=0$ if $\vec{t}$ is a tangent vector to the level surfaces of $\phi$; don't need a metric
+\item How do we construct components of vectors?
+\begin{itemize}
+\item Components of 1-forms: $p_{\alpha}=\tilde{p}(\vec{e}_{\alpha})$
+\item Dual: components of vectors: $A^{\alpha}=\vec{A}(\tilde{\omega}^{\alpha})$
+\item Note that we do not need 1-forms to define vectors (and vice versa), but once we start discussing components, we do need them
+\end{itemize}
+\end{enumerate}
+}
+
+\subsubsection{Tensor}
+$\pmx{M\\N}$ tensor is a linear function operating on M 1-forms and N vectors to return a real number. 
+
+For example if $R$ is a $\pmx{1\\1}$ tensor then its components are $R^{\alpha}_{\beta}=R(\tilde{\omega}^{\alpha},\vec{e}_{\beta})$.
+
+You can build big tensors out of little ones in several ways (and vice versa, e.g. via contraction). One important way is the outer product; 
+
+e.g. outer product of vectors $\vec{A}$ and $\vec{B}=\pmx{2\\0}$ tensor; $T=\vec{A}\otimes \vec{B}$
+
+Takes two 1-forms as arguments: $T(\tilde{p},\tilde{q}) \equiv^{\text{def}}\vec{A}(\tilde{p})\vec{B}(\tilde{q})$ (this is multiplying two scalar numbers)
+
+\begin{itemize}
+\item Note: outer product not commutative.
+\begin{equation}
+\text{If } S=\vec{B}\otimes \vec{A} \text{ then } S(\tilde{p},\tilde{q})=\vec{B}(\tilde{p})\vec{A}(\tilde{q})\neq T(\tilde{p},\tilde{q})
+\end{equation}
+\item Can't write a general $\pmx{M\\N}$ tensor as an outer product necessarily, but can write as a linear combination of outer products
+\begin{equation}
+\underbrace{T}_{\text{geometric object}}=T^{\alpha_{1},\ldots,\alpha_{M}}_{\beta_{1},\ldots,\beta_{N}}\vec{e}_{\alpha_{1}}\otimes\ldots\otimes \vec{e}_{\alpha_{M}}\otimes \tilde{\omega}^{\beta_{1}}\otimes\ldots\otimes\tilde{\omega}^{\beta_{N}}
+\end{equation}
+\item even though we use M 1-forms and N vectors, we take the outer product over N 1-forms and M vectors
+\end{itemize}
+
+\exercise{Show that you get the compoents of $T$ when you evaluate $T$ for $M$ basis 1-forms and $N$ basis vectors.}{}
+
+Another way to generate new tensors:
+\begin{align*}
+\text{Symmetric part of T ($T^{(\alpha\beta)}$): }& T_{\text{(sym)}}^{(\tilde{p},\tilde{q})}=\frac{1}{2}T(\tilde{p},\tilde{q})+\frac{1}{2}T(\tilde{q},\tilde{p})\\
+\text{Antisymmetric part of T ($T^{[\alpha\beta]}$): }& T_{\text{(sym)}}^{(\tilde{p},\tilde{q})}=\frac{1}{2}T(\tilde{p},\tilde{q})-\frac{1}{2}T(\tilde{q},\tilde{p})\\
+\end{align*}
+
+This example is for $\pmx{2\\0}$ but can generealise to $\pmx{M\\N}$
+
+\subsubsection{Metric tensor}
+$\pmx{0\\2}$ tensor which accepts two vectors and returns a number which we call scalar or dot product.
+
+\begin{equation}
+g(\vec{A},\vec{B})\equiv^{def}\vec{A}\cdot \vec{B}\qquad\text{this is \underline{not} contraction}
+\end{equation}
+
+Clearly bilinear
+
+What is g? Anything we like! It depends on the coordinates we choose to use! (And it tells us how lengths, angles, $\ldots$ are measured in our favourite coordinates)
+
+Components: 
+\begin{equation}
+g_{\alpha\beta}=g(\vec{e}_{\alpha},\vec{e}_{\beta})=\vec{e}_{\alpha}\cdot \vec{e}_{\beta}
+\end{equation}
+i.e. 16 numbers saying how the basis vectors relate to each other in any given coordinate system
+
+What is $g(\Delta\vec{x},\Delta\vec{x})$ ($\Delta\vec{x}$ is a displacement vector)?
+\begin{align*}
+g(\Delta\vec{x},\Delta\vec{x})&=g(\Delta x^{\alpha}\vec{e}_{\alpha},\Delta x^{\beta}\vec{e}_{\beta})\\
+&=g_{\alpha\beta}\Delta x^{\alpha}\Delta x^{\beta} \qquad\text{linear}
+\end{align*}
+
+This quantity is the spacetime interval in curved space. Invariant!s
+
+
 
 \pagebreak
+
+Indices up = vector-like
+
+Indices down = 1-form-like
 
 %-----------------------------------------
 \end{document}
