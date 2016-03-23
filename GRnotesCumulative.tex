@@ -31,6 +31,8 @@
 %\usepackage{utilde}
 \newcommand{\utilde}[1]{\tilde{#1}}
 
+\newcommand{\vect}[1]{\mathbf{#1}} %3D vector
+
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 \newcommand{\goth}[1]{{\Huge\textfrak{#1}}}
@@ -1015,6 +1017,109 @@ i.e.
 \frac{p^r}{p^0}=\left(1-\frac{2M}{r}\right)^{-1}&\neq 1\\
 (\text{phase speed of light})^{-1}&\neq 1
 \end{align*}
+
+
+\section{Kinematics}
+In general, for kinematics we do not care about the origin of the force, and only analyse the motion of the object. This is in contrast to dynamics, where we investigate where a force originates. In a GR context, for kinematics this means that we will look into the motion of an object while considering the spacetime, while for dynamics we also investigate what causes the curvature of spacetime.
+
+Event: $\vec{x}=(t,x,y,z)$
+
+Spacetime interval between 2 events: $ds^s=g(d\vec{x},d\vec{x})$
+
+e.g. Minkowski
+
+\picture{images/lightcone.png}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l}
+$ds^2=0$ & \\
+$ds^2>0$ & \\
+$ds^2<0$ & 
+\end{tabular}
+\end{table}
+
+\begin{align*}
+ds^2=0\qquad &\text{null ray; defines light cone which joins events A and B}\\
+ds^2>0\qquad &\text{events A and B and mutually spacelike; can't event get from A to B;}\\
+\qquad&\text{there always exists an intertial frame such that evenents occur at}\\
+\qquad&\text{different spacial locations at the same time}\\
+ds^2<0 \qquad& \text{events are timelike; can get from A to B;}\\
+\qquad &\text{frame exists where evenetys occur at same spatial location at different times}
+\end{align*}
+
+For $ds^2>0$, we will always be able to Lorentz transform into a frame where two events occur at the same time, but spatially separated. For $ds^2<0$, there will always be a Lorentz transform such that the two events occur at the same spatial location, but temporally separated.
+
+Proper time: two events A and B separated infinintesimally along some 4D trajectory.
+\begin{equation}
+d\tau \equiv^{def}(-ds^2)^{1/2}
+\end{equation}
+
+\picture{images/propertime_path}
+
+
+$\tau$ is an affine parameter (= label of path) with a particular normalisation, namely that $\tau$ tracks passage of time for an observer at rest with respect to the sequence of events defined by $\vec{x}(\tau)$.
+
+\subsection{4-velocity}
+
+From above:
+\begin{align*}
+-d\tau^2=ds^2&=d\vec{x}\cdot d\vec{x}\\
+\Rightarrow -1&=\frac{d\vec{x}}{d\tau}\frac{d\vec{x}}{d\tau}
+\end{align*}
+where the dot product is with respect to the metric. 
+
+Call $\vec{u}=\dfrac{d\vec{x}}{d\tau}$ the 4-velocity. It is timelike, and $\vec{x}\propto d\vec{x}$. It relies on a geometric object (the sequence of events $\vec{x}(\tau)$) for its meaning. And if $\tau$ is the label, we have $\vec{u}\cdot \vec{u}=-1$ as normalisation.
+
+\subsubsection{Example 1: Momentarily co-moving reference frame}
+For example, consider the momentarily comoving reference frame.
+
+\begin{equation}
+\frac{d\mathbf{x}}{dt}=0 \qquad \therefore \vec{u}=(u^t,0,0,0)
+\end{equation}
+
+By definition $u^t=\frac{dt}{d\tau}$. But what is it? Normalisation gives
+\begin{align*}
+-1&=g_{tt}(u^t)^2+0\\
+u^t&=\left(-\frac{1}{g_{tt}}\right)^{1/2}
+\end{align*}
+
+In flat space, $g_{tt}=-1$ and $u^t=1$.
+
+In Schwarzschild space, $g_{tt}=-\left(1-\frac{2M}{r}\right)$ and $u^t=\left(1-\frac{2M}{r}\right)^{-1/2}$. Recall that $u^t \equiv \frac{dt}{d\tau}$. So as $r\to 2M, \frac{dt}{d\tau}\to \infty$. Physically, this says that time slows down as we approach a black hole. $d\tau$ would be the clock nearby the black hole, while $dt$ would be the clock on a faraway observer. They see an infinte amount of ticks on their clock, before the black hole clock ticks even once.
+
+\subsubsection{Example 2}
+Consider coordinates in which our body moves with speed $\vect{V}=\frac{d\vect{x}}{dt}$ (in, for example, the x-direction).
+
+\begin{align*}
+\vec{u}&=\left(\frac{dt}{d\tau},\frac{dx}{d\tau},0,0 \right)\\
+&=\left(\frac{dt}{d\tau}, V\frac{dt}{d\tau},0,0\right) \quad \text{chain rule}
+\end{align*}
+By normalisation,
+\begin{equation}
+-1=\vec{u}\cdot\vec{u}=g_{tt}\left(\frac{dt}{d\tau}\right)^2+g_{tx}\left(\frac{dt}{d\tau}\right)^2 V+g_{xx}V^2\left(\frac{dt}{d\tau}\right)^2
+\end{equation}
+
+Special cases (note $c=1$):
+\begin{align*}
+\text{(a) Minkowski:}\quad& g_{tt}=-1\quad g_{tx}=0\quad g_{xx}=1\\
+&\therefore -1=-\left(\frac{dt}{d\tau}\right)^2+V^2\left(\frac{dt}{d\tau}\right)^2\\
+&\therefore \frac{dt}{d\tau}=\frac{1}{\sqrt{1-V^2}}\\
+&\text{and }\vec{u}=\left(\frac{1}{\sqrt{1-V^2}},\frac{V}{\sqrt{1-V^2}},0,0\right)
+\end{align*}
+
+\begin{align*}
+\text{(b) Schwarz BH:}\quad &g_{tt}=-\left(1-\frac{2M}{r}\right)\quad g_{tr}=0\quad g_{rr}=\frac{1}{1-\frac{2M}{r}}\\
+&\therefore -1= -\left(1-\frac{2M}{r}\right)\left(\frac{dt}{d\tau}\right)^2+\frac{1}{1-\frac{2M}{r}}V^2 \cdot\left(\frac{dt}{d\tau}\right)^2
+\end{align*}
+
+Solve for $\frac{dt}{d\tau}$ again.
+
+N.B. Self-consistently combines time dilation due to gravity (e.g. Pound-Rebka experiment) and motion (e.g. special relativity). It is \underline{not} a simple addition!
+
+
+
+
 
 
 \pagebreak
