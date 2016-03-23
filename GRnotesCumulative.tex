@@ -28,6 +28,9 @@
 \usepackage{cite}
 \usepackage{siunitx}
 
+%\usepackage{utilde}
+\newcommand{\utilde}[1]{\tilde{#1}}
+
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 \newcommand{\goth}[1]{{\Huge\textfrak{#1}}}
@@ -835,6 +838,24 @@ i.e. components of $\tilde{p}$ transform like basis vectors (\underline{not} com
 1-forms and their relation to gradients defined
 }
 
+\subsection{1-forms, basis 1-forms and gradients}
+
+\begin{table}
+\centering
+\begin{tabular}{l  | c | c}
+\renewcommand\arraystretch{1}
+& \textbf{Vectors} & \textbf{1-forms}\\
+\renewcommand\arraystretch{2}
+& $\vec{A}=A^{\alpha}\vec{e}_{\alpha}$&$p_{\alpha}=\tilde{p}(\vec{e}_{\alpha})$\\
+\hline Transformation for coordinates & 
+$A^{\alpha'}=\dfrac{\partial x^{\alpha'}}{\partial x^{\alpha}}A^{\alpha}$ &
+$p_{\alpha'}=\dfrac{\partial x_{\alpha'}}{\partial x_{\alpha}}p_{\alpha}$ \\
+\hline Transformation for basis vectors &
+$\vec{e}_{\alpha'}=\dfrac{\partial x_{\alpha'}}{\partial x_{\alpha}}\vec{e}_{\alpha}$ &
+$\tilde{\omega}^{\alpha'}=\dfrac{\partial x^{\alpha'}}{\partial x^{\alpha}}\tilde{\omega}^{\alpha}$
+\end{tabular}
+\end{table}
+
 \review{Given a scalar field $\phi(\vec{x})$ we define a 1-form $\tilde{d\phi}$, with components $(\tilde{d\phi})_{\alpha}=\frac{\partial\phi}{\partial x^{\alpha}}$
 
 \textbf{Notes:}
@@ -853,7 +874,7 @@ i.e. components of $\tilde{p}$ transform like basis vectors (\underline{not} com
 \end{enumerate}
 }
 
-\subsubsection{Tensor}
+\subsection{Tensors}
 $\pmx{M\\N}$ tensor is a linear function operating on M 1-forms and N vectors to return a real number. 
 
 For example if $R$ is a $\pmx{1\\1}$ tensor then its components are $R^{\alpha}_{\beta}=R(\tilde{\omega}^{\alpha},\vec{e}_{\beta})$.
@@ -909,8 +930,91 @@ g(\Delta\vec{x},\Delta\vec{x})&=g(\Delta x^{\alpha}\vec{e}_{\alpha},\Delta x^{\b
 &=g_{\alpha\beta}\Delta x^{\alpha}\Delta x^{\beta} \qquad\text{linear}
 \end{align*}
 
-This quantity is the spacetime interval in curved space. Invariant!s
+This quantity is the spacetime interval in curved space. Invariant!
 
+\review{Metric: $\pmx{0\\2}$ tensor $g(\vec{A},\vec{B}\equiv \vec{A}\cdot\vec{B}$
+
+Components: 
+\begin{equation}
+g_{\alpha\beta}=g(\vec{e}_{\alpha},\vec{e}_{\beta})=\vec{e}_{\alpha}\cdot \vec{e}_{\beta}
+\end{equation}
+}
+
+e.g. Minkowski metric
+\begin{equation}
+\{g_{\alpha\beta}\}=\text{diag}(-1,1,1,1)
+\end{equation}
+e.g. Schwarzschild black hole of mass $M$ (we will prove this later)
+\thinmuskip=5mu
+\begin{equation}
+\{g_{\alpha\beta}\}=\left[-\left(1-\frac{2M}{r}\right),\left(1-\frac{2M}{r}\right)^{-1},~r^2,~r^2\sin^2\theta\right]
+\end{equation}
+where $r$ is the radial coordinate.
+
+Vectors $\vec{A}$ and $\vec{B}$ are orthogonal vectors if $g(\vec{A},\vec{B})=0$. But orthogonal doesn't necessarily mean perpendicular.
+
+These include 4D vectors of ``zero length'':
+\begin{itemize}
+\item in Mikowski, momentum of photon $\vec{p}=\left(\frac{E}{c},\utilde{p}\right)$ in flat space,
+and we know $E=|\underbar{p}|c$ so $g(\vec{p},\vec{p})=-\frac{E^2}{c^2}+|\underbar{p}|^2=0$.
+\begin{itemize}
+\item i.e. $\vec{p}$ is orthogonal with itself; has zero ``length'' but obviously \underline{not} a zero vector, nor is it perpendicular to itself
+\end{itemize}
+\item in Minkowski: boost between frames
+\picturesize{images/minkowski_boost.png}{0.4}
+\begin{itemize}
+\item the boost vectors are not perpendciular, but we still have $\vec{e}_{0'}\cdot\vec{e}_{1'}=0$
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Correspondence between vectors and 1-forms}
+
+Let $g$ be a metric, and let $\vec{V}$ be an arbitrary vector. Then $g(\vec{V},...)$ has one argument free, and that argument is a vector, so $g(\vec{V},...)$ must be a 1-form. We call it $\tilde{V}$ because it's the 1-form associated with $\vec{V}$. What are its components?
+
+\begin{align*}
+V_{\alpha}\equiv^{def}\tilde{V}(\vec{e}_{\alpha})&=g(\vec{V},\vec{e}_{\alpha})\\
+&=g(V^{\beta}\vec{e}_{\beta},\vec{e}_{\alpha})\\
+&=V^{\beta}g(\vec{e}_{\beta},\vec{e}_{\alpha})\quad\text{by linearity}\\
+&=V^{\beta}g_{\beta\alpha}\quad\text{by defintion}
+\end{align*}
+This is the ``lowering the index'' operation of yesteryear! The old language for this is: lower a contravariant index, get a covariant index.
+
+This can go the other way as long as $g$ is invertible. \underline{Define} $g^{\alpha\beta}$ as 16 numbers you get if you treat $g_{\alpha\beta}$ as a matrix and invert it.
+\begin{equation}
+\text{i.e.,}\quad g^{\alpha\beta}g_{\beta\gamma}=\delta^{\alpha}_{\gamma}
+\end{equation}
+
+\exercise{What is the geometric object whose components are $g^{\alpha\beta}$? Hint: $\pmx{2\\0}$ tensor which takes two 1-forms as arguments.}{}
+
+We check that ``raising the index'' on $V_{\alpha}$ gets us back to $\vec{V}$.
+\begin{equation}
+V_{\alpha}\underbrace{g^{\alpha\gamma}}_{\text{inverse metric}}=
+V^{\beta}g_{\beta\alpha}g^{\alpha\beta}=V^{\beta}\delta_{\beta}^{\gamma}
+=V^{\gamma}
+\end{equation}
+
+More generally:
+\begin{align*}
+g&\text{ maps } \pmx{M\\N}\text{ tensor to }\pmx{M-1\\N+1}\text{ tensor}\\
+g^{-1}&\text{ maps } \pmx{M\\N}\text{ tensor to }\pmx{M+1\\N-1}\text{ tensor}
+\end{align*}
+
+Physics example: consider a photon in curved (Schwarzschild) spacetime. 
+
+We know $\vec{p}\cdot\vec{p}=0$ in the local freely falling frame(from weeks 1,2: Michelson-Morley experiment), and $\vec{p}\cdot\vec{p}$ is invariant $\Rightarrow \vec{p}\cdot\vec{p}=0$ in all coordinate systems. 
+
+In Schwarzschild spacetime: radially in-falling photon $\vec{p}=\left(p^0,p^r,0,0\right)$
+
+\begin{align*}
+0&=g_{00}(p^0)^2+g_{11}(p^1)^2\\
+&=-\left(1-\frac{2M}{r}\right)(p^0)^2+\left(1-\frac{2M}{r}\right)^{-1}(p^r)^2
+\end{align*}
+i.e.
+\begin{align*}
+\frac{p^r}{p^0}=\left(1-\frac{2M}{r}\right)^{-1}&\neq 1\\
+(\text{phase speed of light})^{-1}&\neq 1
+\end{align*}
 
 
 \pagebreak
