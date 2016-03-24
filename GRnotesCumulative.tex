@@ -1109,17 +1109,108 @@ Special cases (note $c=1$):
 \end{align*}
 
 \begin{align*}
-\text{(b) Schwarz BH:}\quad &g_{tt}=-\left(1-\frac{2M}{r}\right)\quad g_{tr}=0\quad g_{rr}=\frac{1}{1-\frac{2M}{r}}\\
+\text{(b) Schwarz BH:}\quad &g_{tt}=-\left(1-\frac{2M}{r}\right)\qquad g_{tr}=0\qquad g_{rr}=\frac{1}{1-\frac{2M}{r}}\\
 &\therefore -1= -\left(1-\frac{2M}{r}\right)\left(\frac{dt}{d\tau}\right)^2+\frac{1}{1-\frac{2M}{r}}V^2 \cdot\left(\frac{dt}{d\tau}\right)^2
 \end{align*}
 
-Solve for $\frac{dt}{d\tau}$ again.
+Solve for $\dfrac{dt}{d\tau}$ again.
 
 N.B. Self-consistently combines time dilation due to gravity (e.g. Pound-Rebka experiment) and motion (e.g. special relativity). It is \underline{not} a simple addition!
 
 
+\review{Last lecture: kinematics; $\vec{u}$ and time dilation}
 
 
+\subsection{Energy measurements}
+
+Suppose an observer with 4-velocity $\vec{u}$ enocunters a particle with 4-momentum $\vec{p}$. What is the energy $E$ of the particle measured by the observer? (Note: $\vec{u}$ and $\vec{p}$ are geometric objects - they can be considered without reference to a frame (frame-independent). However, the energy measured by the observer is a frame-dependent quantity)
+
+\textbf{Equivalence principle}: we can always ``jump'' into a \emph{freely falling} frame at the location of the particle. In that frame, spacetime is flat $\Rightarrow$ we can describe the frame in Minkowski coordinates. 
+
+\textbf{Local Lorentz invariance}: we can boost ourselves so that we are instantaneously at rest with respect to the particle.
+
+We now know:
+\begin{align*}
+g&=(-1,1,1,1)\\
+\vec{v}&=(1,0,0,0)\\
+\vec{p}&=(E,p^x,p^y,p^z)\quad \text{from special relativity}
+\end{align*}
+
+Can we express $E$ as an invariant? Yes!
+\begin{equation}
+E=-\vec{u}\cdot\vec{p},
+\end{equation}
+recalling the dot product
+\begin{equation}
+\vec{u}\cdot\vec{p}=g_{\alpha\beta}u^{\alpha}p^{\beta}.
+\end{equation}
+
+
+This is invariant, meaning it is independent of coordinates. We can always use this result even when we're given $\vec{u}$ and $\vec{p}$ in some other coordinates (from the principle of equivalence).
+
+\example{?}{Consider a Schwarz. BH with coordinates $(t,r,\theta,\phi)$. Consider a radially infalling observer at some speed $V$, at some radius $r$. Then $\vec{u}=(u^t,Vu^t,0,0)$ and normalisation $\vec{u}\cdot\vec{u}=-1$ tells us $u^t$ given the metric $g_{tt}=-(\left(1-\frac{2M}{r}\right)$, $g_{rr}=\left(1-\frac{2M}{r}\right)^{-1}$. We dot product with $\vec{p}$ to get $E$.}
+
+\exercise{Measure velocity $V$ as well as energy $E$, and package into a 4-vector with the form\footnote{See Misner, Thorne and Wheeler, exercise 2.5}
+\begin{equation}
+\vec{V}=\frac{\vec{p}+(\vec{p}\cdot\vec{u})\vec{u}}{-\vec{p}\cdot\vec{u}}
+\end{equation}
+}{}
+
+\exercise{What is the Doppler sihft measured by a stationary observer who shines a laser at a moving mirro at speed $V$ and masures reflected light?
+}{}
+\picture{images/mirror.png}
+
+
+\subsection{4-acceleration}
+The definition $\vec{u}=\frac{d\vec{x}}{d\tau}$ is completely general in curved space. But acceleration is \underline{not} $\vec{a}=\frac{d\vec{u}}{d\tau}$ in general. This is because the 2nd derivative $\frac{d^2\vec{x}}{d\tau^2}$ cares about curvature (while the 1st derivative does not).
+
+Actually: $\vec{a}=\nabla_{\vec{u}}\vec{u}$ in general.
+
+In flat space: $\vec{a}=\frac{d\vec{u}}{d\tau}$, which is a special case.
+
+\begin{equation}
+\underbrace{\vec{u}\cdot\vec{u}=-1}_{\text{normalisation}}\Rightarrow \underbrace{\vec{u}\cdot\vec{a}=0}_{\text{differentiate both sides w.r.t $\tau$}}\label{4-accel diff}
+\end{equation}
+Equation (\ref{4-accel diff}) is true in curved space.
+
+\hrule
+
+Let's consider a case of \textbf{Uniform acceleration}. Consider a rocket ship with constant \emph{proper} acceleration $g$ in the ``1'' direction (achieved by, for example, throwing bricks out the back of the rocket at a constant rate), in flat spacetime.
+
+In momentarily co-moving reference frame:
+\begin{align*}
+g&=(-1,1,1,1)\\
+\vec{u}&=(1,0,0,0)\\
+\vec{a}&=(0,\frac{d^2\vec{x}}{d\tau^2},0,0)
+\end{align*}
+Above, $a^0$ is zero because
+\begin{equation}
+-a^t=\vec{u}\cdot\vec{a}=0
+\end{equation}
+and $a^1$ is equal to $g$ by definition. Hence $\vec{a}\cdot\vec{a}=g^2$. This invariant $\Rightarrow$ true in all coordinates, but ONLY true in \emph{flat spacetime}.
+
+Now consider motion in global Minkowski coordinates not tied to the rocket (which exists because spacetime is flat).
+
+We want to solve for $u^0(\tau),u^1(\tau),a^0(\tau),a^1(\tau)$ in general.
+\begin{align*}
+\vec{u}\cdot\vec{u}&=-1&-(u^0)^2+(u^1)^2&=-1\\
+\vec{a}\cdot\vec{u}&=0& -a^0 u^0+u^1 a^1&=0 \\
+\vec{a}\cdot\vec{a}&=g^2& -(a^0)^2+(a^1)^2&=g^2
+\end{align*}
+Eliminating variables and solving (using straightforward algebra), we obtain 
+\begin{align*}
+\frac{du^0}{d\tau}&=a^0=gu^1\\
+\frac{du^1}{d\tau}&=a^1=gu^0
+\end{align*}
+Integrating these gives
+\begin{align*}
+t&=\frac{1}{g}\sinh g\tau\\
+x&=\frac{1}{g}\cosh g\tau
+\end{align*}
+
+\picture{images/rocket_hyperbola.png}
+
+Remember this is in \emph{flat spacetime} The interesting thing about this diagram is that is shows that ANY photon more than $1/g$ distance away from the rocket ship at $t=0$ will never reach the rocket ship, even though the rocket ship is travelling less than $c$.
 
 
 \pagebreak

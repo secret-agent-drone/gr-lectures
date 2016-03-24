@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.10)  23 MAR 2016 11:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.10)  24 MAR 2016 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2756,7 +2756,7 @@ as been already used, duplicate ignored
                    \relax 
 l.262 \end{itemize}
                     [2]
-<images/cavendish-torsion-balance.png, id=236, 2007.5pt x 2196.205pt>
+<images/cavendish-torsion-balance.png, id=246, 2007.5pt x 2196.205pt>
 File: images/cavendish-torsion-balance.png Graphic file (type png)
 
 <use images/cavendish-torsion-balance.png>
@@ -2803,7 +2803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 446--446
 
  []
 
-[8] [9] <images/eotvos.png, id=304, 231.86626pt x 197.98969pt>
+[8] [9] <images/eotvos.png, id=315, 231.86626pt x 197.98969pt>
 File: images/eotvos.png Graphic file (type png)
 
 <use images/eotvos.png>
@@ -2814,14 +2814,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 574--574
 
  []
 
-[11] <images/einstein-cross.jpg, id=324, 158.09062pt x 139.57144pt>
+[11] <images/einstein-cross.jpg, id=334, 158.09062pt x 139.57144pt>
 File: images/einstein-cross.jpg Graphic file (type jpg)
 
 <use images/einstein-cross.jpg>
 Package pdftex.def Info: images/einstein-cross.jpg used on input line 607.
 (pdftex.def)             Requested size: 219.08623pt x 193.43507pt.
  [12 <./images/einstein-cross.jpg>]
-<images/pound-rebka.png, id=330, 572.1375pt x 357.335pt>
+<images/pound-rebka.png, id=340, 572.1375pt x 357.335pt>
 File: images/pound-rebka.png Graphic file (type png)
 
 <use images/pound-rebka.png>
@@ -2842,7 +2842,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 785--785
 
  []
 
-<images/contour.png, id=370, 159.59625pt x 122.4575pt>
+<images/contour.png, id=380, 159.59625pt x 122.4575pt>
 File: images/contour.png Graphic file (type png)
 
 <use images/contour.png>
@@ -2853,7 +2853,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 902--902
 
  []
 
-[19] [20] <images/minkowski_boost.png, id=402, 370.38374pt x 160.6pt>
+[19] [20] <images/minkowski_boost.png, id=413, 370.38374pt x 160.6pt>
 File: images/minkowski_boost.png Graphic file (type png)
 
 <use images/minkowski_boost.png>
@@ -2865,73 +2865,99 @@ Underfull \hbox (badness 10000) in paragraph at lines 990--990
  []
 
 [21 <./images/minkowski_boost.png>]
-<images/lightcone.png, id=411, 401.5pt x 401.5pt>
+<images/lightcone.png, id=421, 339.2675pt x 289.08pt>
 File: images/lightcone.png Graphic file (type png)
- <use images/lightcone.png>
+
+<use images/lightcone.png>
 Package pdftex.def Info: images/lightcone.png used on input line 1031.
-(pdftex.def)             Requested size: 219.08623pt x 219.0919pt.
+(pdftex.def)             Requested size: 219.08623pt x 186.67351pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] <images/propertime_path.png, id=419, 401.5pt x 401.5pt>
+[22] <images/propertime_path.png, id=429, 325.215pt x 235.88126pt>
 File: images/propertime_path.png Graphic file (type png)
 
 <use images/propertime_path.png>
 Package pdftex.def Info: images/propertime_path.png used on input line 1058.
-(pdftex.def)             Requested size: 219.08623pt x 219.0919pt.
+(pdftex.def)             Requested size: 219.08623pt x 158.90703pt.
+ [23 <./images/lightcone.png> <./images/propertime_path.png>] [24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1160
+
+ []
+
+<images/mirror.png, id=453, 344.28625pt x 234.8775pt>
+File: images/mirror.png Graphic file (type png)
+ <use images/mirror.png>
+Package pdftex.def Info: images/mirror.png used on input line 1161.
+(pdftex.def)             Requested size: 219.08623pt x 149.46452pt.
+
+[26 <./images/mirror.png>]
+<images/rocket_hyperbola.png, id=464, 295.1025pt x 259.97125pt>
+File: images/rocket_hyperbola.png Graphic file (type png)
+
+<use images/rocket_hyperbola.png>
+Package pdftex.def Info: images/rocket_hyperbola.png used on input line 1211.
+(pdftex.def)             Requested size: 219.08623pt x 193.00644pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./images/lightcone.png>] [24 <./images/propertime_path.png>] [25] [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1132.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1132.
-
-(./GRnotesCumulative.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1132.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1132.
+[27] [28 <./images/rocket_hyperbola.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1223.
+ (./GRnotesCumulative.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1223.
 
 Package rerunfilecheck Info: File `GRnotesCumulative.out' has not changed.
-(rerunfilecheck)             Checksum: B0B980C7EAE70E7C4C6BEF1F8B478227;2663.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1132.
+(rerunfilecheck)             Checksum: 3FC2AC83309C48AE29200046AB3527B4;2796.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1223.
  ) 
 Here is how much of TeX's memory you used:
- 36014 strings out of 493117
- 837403 string characters out of 6135433
- 1016355 words of memory out of 5000000
- 38776 multiletter control sequences out of 15000+600000
+ 36039 strings out of 493117
+ 837845 string characters out of 6135433
+ 1016398 words of memory out of 5000000
+ 38787 multiletter control sequences out of 15000+600000
  26420 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,21n,76p,10405b,999s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on GRnotesCumulative.pdf (29 pages, 591196 bytes).
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on GRnotesCumulative.pdf (31 pages, 606324 bytes).
 PDF statistics:
- 553 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 148 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 589 PDF objects out of 1000 (max. 8388607)
+ 508 compressed objects within 6 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 375 words of extra memory for PDF output out of 10000 (max. 10000000)
 
