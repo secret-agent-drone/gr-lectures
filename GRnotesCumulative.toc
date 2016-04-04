@@ -37,3 +37,5 @@
 \contentsline {subsubsection}{\numberline {5.1.2}Example 2}{24}{subsubsection.5.1.2}
 \contentsline {subsection}{\numberline {5.2}Energy measurements}{25}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}4-acceleration}{26}{subsection.5.3}
+\contentsline {section}{\numberline {6}Calculus in curved space}{28}{section.6}
+\contentsline {subsection}{\numberline {6.1}Differentiation in curved space}{28}{subsection.6.1}

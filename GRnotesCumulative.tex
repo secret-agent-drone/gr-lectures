@@ -1158,8 +1158,11 @@ This is invariant, meaning it is independent of coordinates. We can always use t
 
 \exercise{What is the Doppler sihft measured by a stationary observer who shines a laser at a moving mirro at speed $V$ and masures reflected light?
 }{}
-\picture{images/mirror.png}
-
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.35\textwidth]{images/mirror.png}
+\caption{Mirror}
+\end{figure}
 
 \subsection{4-acceleration}
 The definition $\vec{u}=\frac{d\vec{x}}{d\tau}$ is completely general in curved space. But acceleration is \underline{not} $\vec{a}=\frac{d\vec{u}}{d\tau}$ in general. This is because the 2nd derivative $\frac{d^2\vec{x}}{d\tau^2}$ cares about curvature (while the 1st derivative does not).
@@ -1208,12 +1211,110 @@ t&=\frac{1}{g}\sinh g\tau\\
 x&=\frac{1}{g}\cosh g\tau
 \end{align*}
 
-\picture{images/rocket_hyperbola.png}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{images/rocket_hyperbola.png}
+\caption{Rocket hyperbola}
+\end{figure}
 
 Remember this is in \emph{flat spacetime} The interesting thing about this diagram is that is shows that ANY photon more than $1/g$ distance away from the rocket ship at $t=0$ will never reach the rocket ship, even though the rocket ship is travelling less than $c$.
 
 
+\section{Calculus in curved space}
+
+\subsection{Differentiation in curved space}
+Covariant derivatives $\to$ curvature $\to$ Einstein's field equations. Curvature is the second order change in space.
+
+How does a tensor $T$ of type $\pmx{M\\N}$ change from spacetime point $P_A$ to $P_B$? (we conisder these points to be infinitesimally separated).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/tangent-spaces.png}
+\caption{Tangent spaces}
+\end{figure}
+
+In general, we annot compare geometric objects at $P_A$ and $P_B$ (they live in different tangent spaces) unless we have a recipe for ``moving'' geometric objects from $P_A$ to $P_B$, e.g. parallel transport (which we will consider later).
+
+For now we just consider \underline{flat} space, where all points share a common tangent space.
+
+
+Look for $\pmx{M\\N+1}$ tensor $\nabla T$ which contracts with a vector $\vec{A}$ to give inifinitesimal rate of change of $T$ along $\vec{A}$. We call the rate of change $\nabla_{\vec{A}}T$ (type $\pmx{M\\N}$) the \emph{covariant derivative}
+\begin{equation}
+\nabla_{\vec{A}} T=\langle \nabla T,\vec{A}\rangle
+\end{equation}
+
+e.g. if $T$ is a scalar $\underbrace{\phi}_{\pmx{0\\0}\text{ type}}$, then $\nabla T=\underbrace{\tilde{d\phi}}_{\text{gradient }\pmx{0\\1}}$
+
+e.g. if T is a vector, say $\vec{V}$: in general consider two points $P_A$, $P_B$ joined by a world line $\vec{x}(t)$
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/world-line.png}
+\caption{World line connecting points $P_A$ and $P_B$}
+\end{figure}
+
+\begin{align*}
+\frac{d\vec{V}}{d\tau}(\vec{x}(\tau))&=\frac{d}{d\tau}\left[V^{\alpha}(\vec{x}(\tau))\vec{e}_{\alpha}
+(\vec{x}(\tau))\right]\\
+&=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\frac{dx^{\beta}}{d\tau}\vec{e}_{\alpha}(\vec{x}(\tau))
++V^{\alpha}\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}\frac{dx^{\beta}}{d\tau}\qquad\text{product rule}\\
+&=\left(\frac{\partial V^{\alpha}}{dx^{\beta}}\vec{e}_{\alpha}+V^{\alpha}\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}\right)u^{\beta}\qquad\text{4-velocity}\label{diff eqn1}
+\end{align*}
+
+The parts inside the brackets of (\ref{diff eqn1}), denoted as $(\ldots)$, are contracted with $\vec{u}$ to give the LHS, which is a vector. So $(\ldots)$ is type $\pmx{1\\1}$.
+
+$\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}$ are vectors, so can be written as a linear combination of basis vectors. 
+
+\begin{equation}
+\text{Define: } \frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}=\Gamma^{\mu}_{\alpha\beta} \vec{e}_{\mu}\label{de dx with chris}
+\end{equation}
+
+Then,
+
+\begin{align*}
+(\ldots)&=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\vec{e}_{\alpha} + V^{\alpha}\Gamma^{\mu}_{\alpha\beta}\vec{e}_{\mu}\\
+&=\left(\frac{\partial V^{\alpha}}{\partial x^{\beta}}+\Gamma^{\alpha}_{\mu\beta}V^{\mu}\right)
+\vec{e}_{\alpha}
+\end{align*}
+
+The bracketed part above is, in index notation, $V^{\alpha}_{; \beta}$; the componts of covariant derivation $\nabla \vec{V}$ of type $\pmx{1\\1}$.
+
+Notation: switch $\mu \leftrightarrow \alpha$ in \underline{dummy} index (repeated).
+
+Christoffel symbols $\Gamma$:
+\begin{itemize}
+\item $4\times 4\times 4=64$ numbers
+\item solve 64 equations given by (\ref{de dx with chris}) - linear equations (easy to solve!)
+\begin{itemize}
+\item an alternative trick is to use the metric, which we will see later
+\end{itemize}
+\item are Christoffel symbols components of a $\pmx{1\\2}$ tensor?
+\begin{itemize}
+\item No!
+\item $\{\Gamma^{\mu}_{\alpha\beta}\vec{e}_{\mu}\}$ are components of a tensor, but the $\Gamma$'s themselves are not
+\item e.g. is $\Gamma$'s are tensor, then
+\begin{equation}
+\Gamma^{\mu'}_{\alpha' \beta'}=\frac{\partial x^{\mu'}}{\partial x^{\mu}}\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}\frac{\partial x^{\beta}}{\partial x^{\beta'}}\Gamma^{\mu}_{\alpha\beta}\label{tensor Chris}
+\end{equation}
+\item but from the definition of $\Gamma$'s we have $\Gamma^{\mu}_{\alpha\beta}=0$ for (say) Cartesian coordinates, which would then wrongly imply $\Gamma^{\mu'}_{\alpha'\beta'}$ from (\ref{tensor Chris}) too!
+\end{itemize}
+\end{itemize}
+
+Physically: suppose you have a vector $\vec{V}$ which does \underline{not} change from point to point. We want $\nabla \vec{V}=0$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/vectors-V.png}
+\caption{Vectors V}
+\end{figure}
+
+If the coordinates are curvilinear, then components ``artificially'' change. The $\Gamma$'s ``undo'' the artificial change!
+
+
+
+
 \pagebreak
+
 
 Indices up = vector-like
 
