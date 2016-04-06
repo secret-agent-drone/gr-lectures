@@ -1306,9 +1306,105 @@ Physically: suppose you have a vector $\vec{V}$ which does \underline{not} chang
 \centering
 \includegraphics[width=0.5\textwidth]{images/vectors-V.png}
 \caption{Vectors V}
+\label{Christoffel image}
 \end{figure}
 
 If the coordinates are curvilinear, then components ``artificially'' change. The $\Gamma$'s ``undo'' the artificial change!
+
+
+\review{
+\begin{align*}
+T&=\pmx{M\\N}\text{ tensor}\\
+\nabla T&=\pmx{M\\N+1}\text{ tensor}\\
+\nabla_{\vec{A}}T&=\text{covariant derivative of T along }\vec{A}=\langle\nabla T,\vec{A}\rangle=\text{type }\pmx{M\\N}
+\end{align*}
+
+e.g. if $T$ os a scalar $\phi$ then $\nabla T=\tilde{d\phi}$
+
+e.g. if $T$ is a vector $\vec{V}$ then $\nabla \vec{V}$ is a $\pmx{1\\1}$ object
+\begin{equation}
+\underbrace{(\nabla \vec{V})^{\alpha}_{\beta}}_{\text{notation: }V^{\alpha}_{;\beta}}=
+\underbrace{\frac{\partial V^{\alpha}}{\partial x^{\beta}}}_{\text{notation: }V^{\alpha}_{,\beta}}
++\underbrace{\Gamma^{\alpha}_{\lambda\beta}}_{\text{Christoffel}}V^{\lambda}
+\end{equation}
+
+Christoffel symbol corrects for artificial change in components of $\vec{V}$ due to curvilinear coordinates (see Figure \ref{Christoffel image}). Derived for curvilinear coordinates in flat space but remains true for curved spaces also!
+
+\underline{Note:} neither $V^{\alpha}_{,\beta}$ nor $\Gamma^{\mu}_{\alpha\beta}$ are tensors ($\Gamma$'s are components of set of tensors $\{\nabla \vec{e}_{\alpha}\}$). But $V^{\alpha}_{;\beta}$
+}
+
+\subsection{Covariant derivative of 1-form}
+What about 1-forms? Can we just say
+
+\begin{equation*}
+p_{\alpha;\beta}=\frac{\partial p_{\alpha}}{\partial x^{\beta}}
++\Gamma^{\alpha}_{\lambda\beta}p_{\lambda}\quad \text{??}
+\end{equation*}
+
+No, we cannot - note the double lowered $\lambda$ in the RHS.
+
+$\nabla\tilde{p}$ is $\pmx{0\\2}$ type/
+
+We redo rate-of-change calculation along world line $\vec{x}$
+\begin{align}
+\frac{d\tilde{p}}{d\tau}&=\frac{d}{d\tau}\left[p_{\alpha}(\vec{x}(\tau))\tilde{\omega}^{\alpha}(\vec{x}(\tau))\right]\\
+&=\frac{\partial p_{\alpha}}{dx^{\beta}}\frac{dx^{\beta}}{d\tau}\tilde{\omega}^{\alpha}+p_{\alpha}\underbrace{\frac{\partial \tilde{\omega}^{\alpha}}{\partial x^{\beta}}}_{\text{1-form}}
+\frac{dx^{\beta}}{d\tau}
+\end{align}
+
+We can write the 1-form as linear combination $x_{\mu\beta}^{\alpha}\tilde{\omega}^{\mu}$
+
+Are $x$'s related to $\Gamma$;s? Yes - duality.
+\begin{equation}
+\delta ^{\alpha}_{\beta}=\langle \tilde{\omega}^{\alpha},\vec{e}_{\beta}\rangle\qquad \text{from previous lectures}
+\end{equation}
+
+Differentiate by $x^{\gamma}$
+\begin{align}
+0&=\langle\frac{\partial\tilde{\omega}^{\alpha}}{\partial x^{\gamma}},\vec{e}_{\beta}\rangle 
+\langle \tilde{\omega}^{\alpha},\frac{\partial \vec{e}_{\beta}}{\partial x^{\gamma}}\\
+&=\langle x_{\mu\gamma}^{\alpha}\tilde{\omega}^{\mu},\vec{e}_{\beta}\rangle +\langle\tilde{\omega}^{\alpha},\Gamma^{\lambda}_{\beta\gamma}\vec{e}_{\lambda}\rangle\\
+&=x^{\alpha}_{\mu\gamma}\delta^{\mu}_{\beta}
++\Gamma^{\lambda}_{\beta\gamma}\delta^{\alpha}_{\lambda}\\
+&=x^{\alpha}_{\beta\gamma}+\Gamma^{\alpha}_{\beta\gamma}
+\end{align}
+i.e. opposites!
+
+Components of $\nabla\tilde{p}$, i.e. $(\nabla\tilde{p})_{\alpha\beta}$ is notationally $p_{\alpha;\beta}$
+
+\begin{equation}
+p_{\alpha;\beta}=\frac{\partial_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
+\end{equation}
+
+For general tensor: add correction term $\pm \Gamma$ tensor for each tensor index; $+$ is index is up; $-$ if index is down.
+
+\begin{equation}
+\text{e.g. } T^{\alpha}_{\beta;\gamma}=\frac{\partial T^{\alpha}_{\beta}}{\partial^{\gamma}}
++\underbrace{\Gamma^{\alpha}_{\lambda\gamma} T^{\lambda}_{\beta}}_{\text{by analogy with vector}}
+-\underbrace{\Gamma^{\lambda}_{\beta \gamma}T^{\alpha}_{\lambda}}_{\text{by analogy with 1-form}}
+\end{equation}
+
+\subsection{Covariant derivative of metric}
+
+Recall
+\begin{align}
+\nabla \vec{V}&=\pmx{1\\1}\text{ type}\\
+\nabla \tilde{V}&=\pmx{0\\2}\text{ type}
+\end{align}
+where $\tilde{V}$ is the specific 1-formn induced by the metric with $\vec{V}$ in the one slot ($\tilde{V}=g(\vec{V},\ldots)$).
+
+We can go from $\pmx{0\\2}$ to $\pmx{1\\1}$ by contraction! 
+
+Consider $\nabla_{\vec{a}}\vec{V}=\pmx{1\\0}$ object. 
+
+Then $g(\nabla_{\vec{A}}\vec{V},\ldots)$ is a 1-form induced by $g$. 
+
+By definition this is $\nabla_{\vec{A}}\tilde{V}$ which is a 1-form, i.e. $\nabla\tilde{V}\pmx{0\\2}$ contracted with $\vec{A}$. 
+
+In index notation:
+\begin{equation}
+V_{\alpha;\beta}=g_{\alpha\gamma}V^{\gamma}_{;\beta}\qquad\text{as in previous lectures}
+\end{equation}
 
 
 
