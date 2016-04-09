@@ -1304,7 +1304,7 @@ Physically: suppose you have a vector $\vec{V}$ which does \underline{not} chang
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\textwidth]{images/vectors-V.png}
+\includegraphics[width=0.5\textwidth]{images/vectors-v.png}
 \caption{Vectors V}
 \label{Christoffel image}
 \end{figure}
@@ -1407,9 +1407,187 @@ V_{\alpha;\beta}=g_{\alpha\gamma}V^{\gamma}_{;\beta}\qquad\text{as in previous l
 \end{equation}
 
 
+\subsection{Christoffel Symbols and Metric and Acceleration}
+\subsubsection{Covariant derivative}
+$\nabla g$ is a $\pmx{0\\3}$ tensor (with components $g_{\alpha\beta ; \gamma}$).
+
+From last time, given $\vec{V}$ there is a $\tilde{V}$.
+
+By definition,
+\begin{equation}
+V_{\alpha;\beta}=g_{\alpha\gamma} V^{\gamma}_{;\beta}\quad\text{(or $\nabla_{\vec{A}}\vec{V}$)}\label{product rule}
+\end{equation}
+
+Separately,
+\begin{equation}
+V_{\alpha}=g_{\alpha\beta}V^{\gamma}\label{Valph}
+\end{equation}
+
+Taking the covariant derivative of both sides of (\ref{Valph}) with respect to $x^{\beta}$
+\begin{align}
+\Rightarrow V_{\alpha;\beta}&=g_{\alpha\gamma;\beta}V^{\gamma}+g_{\alpha\gamma}V^{\gamma}_{;\beta}\\
+&\Rightarrow g_{\alpha\gamma;\beta=0}\\
+&\Rightarrow \nabla g=0
+\end{align}
+
+We can use this to get a formula for $\Gamma$'s ($\Gamma$'s are coefficients in linear combination of basis vectors which give $\frac{\partial \vec{e}_{\alpha}}{\partial x_{\beta}}$)
+
+An alterative derivation of $\nabla g=0$:
+
+In flat space, $g_{\alpha\beta , \gamma}=0$ \underline{and} $\Gamma$'s are zero because $\frac{\partial\vec{e}_{\alpha}}{\partial x^{\beta}}=0$
+\begin{align}
+\Rightarrow g_{\alpha\beta;\gamma}&=g_{\alpha\beta,\gamma}-(\text{two terms involving Christoffel symbols})\\
+&=0 \quad\text{in flat space}
+\end{align}
+
+But $g_{\alpha\beta;\gamma}=0$ involves only decent tensors, so it's free in ????
+
+\begin{equation}
+-=g_{\alpha\beta;\gamma}=g_{\alpha\beta,\gamma}-\Gamma^{\lambda}_{\alpha\gamma}g_{\lambda\beta}
+\end{equation}
+
+??? gives us 64 equations for 64 unknowns ($\Gamma$ components) provided $g_{\alpha\beta}$ and $g_{\alpha\beta,\gamma}$ are given.
+
+Simplification: symmetric in $\alpha,\beta$; symmetric in lower indices of the $\Gamma$'s
+
+Using this and write three cyclic permutations of (*) and sum them (see Schutz p. 142):
+
+\begin{equation}
+\Gamma^{\lambda}_{\alpha\beta}=\frac{1}{2}g^{\lambda\mu}(g_{\mu\alpha,\beta}+g_{\mu\beta,\alpha}-g_{\alpha\beta,\mu})\label{chris to mem}
+\end{equation}
+You should memorise equation (\ref{chris to mem})!
+
+\begin{itemize}
+\item If Minkowski:
+\begin{itemize}
+\item $\Gamma$'s are 0
+\end{itemize}
+\item If not:
+\begin{itemize}
+\item $\Gamma\text{'s}\neq 0$, coordinates are curved, but space may not be curved
+\end{itemize}
+\end{itemize}
+
+Curvatures of manifold depend on 2nd derivatives of g.
+
+\subsection{The 4-acceleration}
+$\vec{u}=\frac{d\vec{x}}{d\tau}$ is a first derivative (i.e. this is calculated without reference to curvature of coordinates and/or manifold).
+
+$\vec{a}$ is a second derivative. We need to refer to curvature of coordinates/manifold.
+
+In general, $\vec{a}=\nabla_{\vec{u}}\vec{u}$, i.e. rate of change of $\vec{i}$ along itself.
+
+In free fall: $\nabla_{\vec{u}}\vec{u}=0$ (but with rocket engines $\nabla_{\vec{u}}\vec{u}\neq 0$)
+
+Christoffel sybmols contain curvature!
+
+\review{Last lecture: \begin{itemize}
+\item $\Gamma^{\lambda}_{\alpha\beta}=\frac{1}{2}g^{\lambda\mu}(g_{\mu\alpha,\beta}+g_{\mu\beta,\alpha}-g_{\alpha\beta,\mu})$
+\item $g_{\alpha\beta;\gamma}=0$
+\end{itemize}
+}
+
+Remember, for curved space, 4-accelation $\vec{a}\neq\frac{d^2\vec{x}}{d\tau^2}$. This is the derivative of $x^{\alpha}(\vec{e}_{\alpha})$ not just coordinates. $\tau$ involves curvature.
+
+For free fall, $\vec{a}=0$ (compare with Newtonian $\SI{9.8}{ms^{-2}}$
+
+\example{?}{Astronaut above Schwarz. black hole, at distance $r$ (radial coordinate appearing in metric), with $\theta$ and $\phi$ also fixed. The Schwarzchild metric is:
+\begin{align}
+g_{tt}&=-\left(1-\frac{2M}{r}\right)\\
+g_{rr}&=\left(1-\frac{2M}{r}\right)^{-1}\\
+g_{\theta\theta}&=...\\
+g_{\phi\phi}&=...
+\end{align}
+
+Note: rotating blackhole is not diagonal! (but it will be symmetric because $A^{\alpha}\vec{e}_{\alpha}=A^{\beta}\vec{e}_{\beta}$; non-diagonal $\Leftarrow$ diagonal (one way!))
+
+Question: qhat is the acceleration of this astronaut (globally not flat) at a fixed radius?
+
+We need $\vec{u}=\left(\frac{dt}{d\tau},0,0,0\right)$
+
+\begin{align}
+\vec{x}&=(t,r,\theta,\phi)\\
+\vec{u}&=\frac{d\vec{x}}{d\tau}
+\end{align}
+
+What is $u_t$? We need to normalise.
+
+\begin{align}
+\vec{u}\cdot\vec{u}&=-1\\
+u^\beta g^{\alpha\beta}u_{\alpha}&=-\left(1-\frac{2M}{r}\right)=u_t^2=-1\\
+&\Rightarrow u_t=\left(1-\frac{2M}{r}\right)^{-1/2}
+\end{align}
+
+\begin{align}
+a^{\alpha}&=u^{\beta}u^{\alpha}_{;\beta}\quad\text{covariant derivative}\\
+&=u^{\beta}\left(\frac{\partial u^{\alpha}}{\partial x^{\beta}}+\Gamma^{\alpha}_{\lambda\beta}u^{\lambda}\right)\\
+&=\underbrace{\frac{\partial u^{\alpha}}{\partial\tau}}_{\text{zero}}+\Gamma^{\alpha}_{\lambda\beta}u^{\lambda}u^{\beta}
+\end{align}
+
+Now,
+\begin{align}
+a^t=a^{\theta}=a^{\phi}&=0\\
+\Rightarrow a^{r}&=\Gamma^{r}_{tt}(u^t)^2\\
+&=\frac{M}{r^2}\left(1-\frac{2M}{r}\right)\cdot\left[\left(1-\frac{2M}{r}\right)^{-1/2}\right]^2=\frac{M}{r^2}
+\end{align}
+
+\begin{equation}
+\vec{a}=\nabla_{\vec{u}}\vec{u}=(0,\frac{M}{r^2},0,0)=\frac{M}{r^2}\hat{r}\quad\text{(accelerating outwards!)}
+\end{equation}
+
+We will prove that acceleration is always orthogonal to the 4-velocity.
+
+\begin{align}
+\vec{u}\cdot\vec{u}&=-1=u^{\alpha}u_{\alpha}
+\intertext{Take the covariant derviative}
+\Rightarrow 0&=(u^{\alpha}_{;\beta}u_{\alpha}+u^{\alpha}u_{\alpha;\beta})u^{\beta}\\
+&=(u^{\alpha}_{;\beta}u_{\alpha}+u_{\gamma}g^{\gamma\alpha}u_{\alpha;\beta})u^{\beta}\quad\text{(note $g^{\gamma\alpha}_{;\beta}=0$)}\\
+0&=(u^{\alpha}_{;\beta}u_{\alpha}+u_{\gamma}u^{\gamma}_{;\beta})u^{\beta}
+\end{align}
+where we have switched co- and contra-variant indices using the metric!
+
+So $(u_\alpha u^{\alpha}_{;\beta})u^{\beta}=0$ (both terms are equal).
+\begin{equation}
+\Rightarrow \vec{u}\cdot\vec{a}=0
+\end{equation}
+}
+
+
+\subsection{Fermi-Walker Transport}
+
+What does the ``natural basis'' of an observer in a rocket ship $(\vec{a},\vec{v})$ in curved space look like, compared to some external basis? (global coordinate system)
+
+We let $\vec{v}$ be an arbitrary vector. We then solve
+\begin{equation}
+\nabla_{\vec{u}}\vec{v}=(\vec{a}\cdot\vec{v})\vec{u}-\vec{a}(\vec{u}\cdot\vec{v})
+\end{equation}
+to see what $\vec{v}$ and $\vec{u}$ look like in a global coordinate system.
+
+Not unique apparently. However,
+\begin{enumerate}
+\item 
+\begin{equation}
+\nabla_{\vec{u}}(\vec{v}\cdot\vec{v})=2\vec{v}\cdot\nabla_{\vec{u}}\vec{v}=0\quad\text{lengths preserved}
+\end{equation}
+\item 
+\begin{equation}
+\nabla_{\vec{u}}(\vec{v}\cdot\vec{w})=\vec{v}\cdot\nabla_{\vec{u}}\vec{w}+\vec{w}\cdot\nabla_{\vec{u}}\vec{v}=0
+\quad\text{angles preserved (orthogonality)}
+\end{equation}
+\item
+4-velocity is Fermi-Walker transported automatically. (if $\vec{v}=\vec{u}$ then
+\begin{align}
+\nabla_{\vec{u}}\vec{v}&=(\vec{a}\cdot\vec{u})\vec{u}-\vec{a}(\vec{u}\cdot\vec{u})\\
+&=\vec{a}\quad\text{identically satisfied}
+\end{align}
+You can treat your time axis to be $\vec{u}$ (along the path).
+\item
+If $\vec{w}$ is spacelike (orthogonal to $\vec{a}$ and $\vec{u}$), then $\nabla_{\vec{u}}\vec{w}=0$ ($\vec{w}$ does not rotate spatially relative to $\vec{u}$) (it's temporal (?))
+\end{enumerate}
 
 
 \pagebreak
+
 
 
 Indices up = vector-like
