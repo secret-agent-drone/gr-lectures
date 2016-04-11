@@ -1585,6 +1585,132 @@ You can treat your time axis to be $\vec{u}$ (along the path).
 If $\vec{w}$ is spacelike (orthogonal to $\vec{a}$ and $\vec{u}$), then $\nabla_{\vec{u}}\vec{w}=0$ ($\vec{w}$ does not rotate spatially relative to $\vec{u}$) (it's temporal (?))
 \end{enumerate}
 
+\subsection{Constants of motion}
+
+Approach \#1: use Lagrangian methods
+
+Approach \#2: for free fall
+\begin{equation}
+\nabla_{\vec{u}}\vec{u}=0 \label{freefall crit}
+\end{equation}
+(for a photon $\nabla_{\vec{p}}\vec{p}=0$)
+We can also look at the 1-form version of equation (\ref{freefall crit})
+\begin{equation}
+\nabla_{\vec{u}}\tilde{u}=0
+\end{equation}
+\begin{align}
+\text{Components: }\quad&u^{\beta}_{\alpha;\beta}=0\\
+&\underbrace{u^{\beta}}_{=\frac{\partial x^{\beta}}{d\tau}}
+\left(\frac{\partial u_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta}u^{\lambda}\right)=0
+\end{align}
+
+\begin{equation}
+\text{i.e., } \underbrace{\frac{\partial u_{\alpha}}{d\tau}}_{\text{chain rule}}
+=\Gamma^{\lambda}_{\alpha\beta}u_{\lambda}u^{\beta}
+\end{equation}
+
+\begin{align}
+\text{Recall: }\quad&&\Gamma^{\lambda}_{\alpha\beta}&=\frac{1}{2}g^{\lambda\mu}
+(g_{\mu\alpha,\beta}+g_{\mu\beta,\alpha}-g_{\alpha\beta,\mu})\\
+&&\Gamma^{\lambda}_{\alpha\beta}u_{\lambda}u^{\beta}
+&=\frac{1}{2}\underbrace{u^{\mu}u^{\beta}}_{\text{symm. }\mu\leftrightarrow \beta}
+(g_{\mu\alpha,\beta}+g_{\mu\beta,\alpha}-g_{\alpha\beta,\mu})
+\intertext{Now, $g_{\mu\alpha,\beta}$ and $g_{\alpha\beta,\mu}$ are antisymmetric under exchange of $\mu\leftrightarrow\beta$}
+&&&=\frac{1}{2}u^{\mu}u^{\beta}g_{\mu\beta,\alpha}
+\end{align}
+since contraction of symmetric and antisymmetric components vanishes.
+
+i.e., if the metric is independent of coordinate $x^{\alpha}$ then $u_{\alpha}$ is constant along world line.
+
+e.g., in Schwarz spacetime, a freely falling body has $u_{\phi}=\text{constant}$ and $u_t=\text{constant}$.
+
+
+\example{?}
+{
+
+Polar coordinates (primed): $(r,\theta)$
+
+Cartesian (unprimed): $(x,y)$
+\begin{align}
+x&=r\cos\theta\\
+y&=r\sin\theta
+\end{align}
+
+Our plan is:
+\begin{itemize}
+\item get polar basis
+\item get polar metric
+\item get polar Christoffel symbol
+\end{itemize}
+
+To get \textbf{polar basis}:
+
+Transformation matrix:
+\begin{align}
+\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}&=\pmx{\frac{\partial x}{\partial r}&\frac{\partial x}{\partial \theta}\\
+\frac{\partial y}{\partial r}&\frac{\partial y}{\partial \theta}}=\pmx{\cos\theta&-r\sin\theta\\\sin\theta&r\cos\theta}\\
+\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}&=\pmx{\frac{\partial r}{\partial x}&\frac{\partial r}{\partial y}\\
+\frac{\partial \theta}{\partial x}&\frac{\partial \theta}{\partial y}}=\ldots \quad\text{exercise}
+\end{align}
+
+
+Basis vectors:
+\begin{align}
+\vec{e}_{\alpha}&=\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}\vec{e}_{\alpha'}\\
+\vec{e}_r&=\frac{\partial x}{\partial r}\vec{e}_x+\frac{\partial y}{\partial r}\vec{e}_y\\
+&=\cos\theta\vec{e}_x+\sin\theta\vec{e}_y\\
+\vec{e}_{\theta}&=\frac{\partial x}{\partial \theta}\vec{e}_x+\frac{\partial y}{\partial \theta}\vec{e}_y\\
+&=-r\sin\theta\vec{e}_x+r\cos\theta \vec{e}_y
+\end{align}
+
+\begin{center}[h]
+
+\includegraphics[width=0.5\textwidth]{images/polar.png}
+\captionof{figure}{Polar coordinates?}
+\label{polar coords fig}
+\end{center}
+ 
+In Figure \ref{polar coords fig} above we see the vector length at $B$ is greater than at $A$; the length of $\vec{e}_\theta$ is proportional to $r$ because we need to subtend a greater arc further out so as to produce unit change in $\theta$.
+
+
+\textbf{Polar metric}:
+\begin{align}
+g_{\alpha'\beta'}&=\vec{e}_{\alpha'}\vec{\beta'}\\
+g_{rr}&=\vec{e}_r\cdot\vec{e}_r=1\\
+g_{r\theta}&=\vec{e}_r\cdot \vec{e}_{\theta}=0\\
+g_{\theta\theta}&=\vec{e}_{\theta}\cdot\vec{e}_{\theta}=r^2
+\end{align}
+
+\exercise{
+Check this this also follows from the transformation law
+\begin{equation}
+g_{\alpha'\beta'}=\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}\frac{\partial x^{\beta}}{\partial x^{\beta'}}
+\underbrace{g_{\alpha\beta}}_{\pmx{1&0\\0&1}\text{ Cartesian}}
+\end{equation}
+}
+{}
+
+Christoffel symbols describe derivatives of basis vectors in that basis itself
+
+\begin{align}
+\frac{\partial \vec{e}_r}{\partial r}&=0\\
+\frac{\partial \vec{e}_r}{\partial \theta}&=-\sin\theta\vec{e}_x+\cos\theta \vec{e}_y\\
+\frac{\partial \vec{e}_{\theta}}{\partial r}&=-\sin\theta\vec{e}_x+\cos\theta\vec{e}_y\\
+\frac{\partial \vec{e}_{\theta}}{\partial \theta}&=-r\cos\theta \vec{e}_x-r\sin\theta\vec{e}_y
+\end{align}
+
+Expressing these in the basis we get
+\begin{center}
+\begin{tabular}{l|l|l}
+$=0$ & $\Gamma^{r}_{rr}=0$&$\Gamma^{\theta}_{rr}=0$\\
+$=\frac{1}{r}\vec{e}_\theta$ & $\Gamma^{r}_{r\theta}=0$&$\Gamma^{\theta}_{r\theta}=\frac{1}{r}$\\
+$=\frac{1}{r}\vec{e}_{\theta}$ & $\Gamma^{r}_{\theta r}=0$&$\Gamma^{\theta}_{\theta r}=\frac{1}{r}$\\
+$=-r\vec{e}_r$ & $\Gamma^{r}_{\theta\theta}=0$&$\Gamma^{\theta}_{\theta \theta}=0$\\
+\end{tabular}
+\end{center}
+\textbf{Note: these values need to be checked (I don't think I copied them down properly)}
+}
+
 
 \pagebreak
 
