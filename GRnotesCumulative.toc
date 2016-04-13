@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {4.5}Correspondence between vectors and 1-forms}{21}{subsection.4.5}
 \contentsline {section}{\numberline {5}Kinematics}{22}{section.5}
 \contentsline {subsection}{\numberline {5.1}4-velocity}{24}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Example 1: Momentarily co-moving reference frame}{24}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Example 1: Momentarily comoving reference frame}{24}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}Example 2}{24}{subsubsection.5.1.2}
 \contentsline {subsection}{\numberline {5.2}Energy measurements}{25}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}4-acceleration}{26}{subsection.5.3}
