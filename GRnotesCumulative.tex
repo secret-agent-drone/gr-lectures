@@ -28,7 +28,6 @@
 \usepackage{cite}
 \usepackage{siunitx}
 
-%\usepackage{utilde}
 \newcommand{\utilde}[1]{\tilde{#1}}
 
 \newcommand{\vect}[1]{\mathbf{#1}} %3D vector
@@ -1625,8 +1624,9 @@ i.e., if the metric is independent of coordinate $x^{\alpha}$ then $u_{\alpha}$ 
 e.g., in Schwarz spacetime, a freely falling body has $u_{\phi}=\text{constant}$ and $u_t=\text{constant}$.
 
 
-\example{?}
-{
+\subsection{Polar coordinates}
+
+We shall explore polar coordinates through use of an example.
 
 Polar coordinates (primed): $(r,\theta)$
 
@@ -1702,14 +1702,89 @@ Christoffel symbols describe derivatives of basis vectors in that basis itself
 Expressing these in the basis we get
 \begin{center}
 \begin{tabular}{l|l|l}
-$=0$ & $\Gamma^{r}_{rr}=0$&$\Gamma^{\theta}_{rr}=0$\\
-$=\frac{1}{r}\vec{e}_\theta$ & $\Gamma^{r}_{r\theta}=0$&$\Gamma^{\theta}_{r\theta}=\frac{1}{r}$\\
-$=\frac{1}{r}\vec{e}_{\theta}$ & $\Gamma^{r}_{\theta r}=0$&$\Gamma^{\theta}_{\theta r}=\frac{1}{r}$\\
-$=-r\vec{e}_r$ & $\Gamma^{r}_{\theta\theta}=0$&$\Gamma^{\theta}_{\theta \theta}=0$\\
+$\frac{\partial \vec{e}_r}{\partial r}=0$ & $\Gamma^{r}_{rr}=0$&$\Gamma^{\theta}_{rr}=0$\\
+$\frac{\partial \vec{e}_r}{\partial \theta}=\frac{1}{r}\vec{e}_\theta$ & $\Gamma^{r}_{r\theta}=0$&$\Gamma^{\theta}_{r\theta}=\frac{1}{r}$\\
+$\frac{\partial \vec{e}_{\theta}}{\partial r}=\frac{1}{r}\vec{e}_{\theta}$ & $\Gamma^{r}_{\theta r}=0$&$\Gamma^{\theta}_{\theta r}=\frac{1}{r}$\\
+$\frac{\partial \vec{e}_{\theta}}{\partial \theta}=-r\vec{e}_r$ & $\Gamma^{r}_{\theta\theta}=-r$&$\Gamma^{\theta}_{\theta \theta}=0$\\
 \end{tabular}
 \end{center}
-\textbf{Note: these values need to be checked (I don't think I copied them down properly)}
-}
+
+Important to recall:
+\begin{equation}
+\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}=\vec{e}_{\mu}\Gamma^{\mu}_{\alpha\beta}
+\end{equation}
+
+We should check this works when taking covariant derivative of $\vec{V}$.
+
+Special case: $\vec{V}=\vec{e}_{x}=\text{constant}$. We should find $\nabla_{\vec{A}}\vec{V}=0$ for all $\vec{A}$.
+
+To check: we write $\vec{V}$ in polar coordinates:
+\begin{equation}
+\vec{V}=\cos\theta\vec{e}_{r}-\frac{1}{r}\sin\theta\vec{e}_{\theta}
+\end{equation}
+from transformation laws for basis vectors.
+
+\begin{align*}
+\left(\nabla_{\vec{A}}\vec{V}\right)^{\alpha}&=A^{\beta}\left(\frac{\partial V^{\alpha}}{\partial x^{\beta}}+\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}\right)\\
+\therefore \left(\nabla_{\vec{A}}\vec{V}\right)^{r}&=A^{\beta}\frac{\partial V^{r}}{\partial x^{\beta}}+\Gamma^r_{\lambda\beta}V^{\lambda}A^{\beta}\\
+&=A^{\theta}\frac{\partial V^r}{\partial \theta}+\Gamma^{r}_{\theta\theta}V^{\theta}A^{\theta}\quad\text{other terms zero}\\
+&=A^{\theta}(-\sin\theta)-r\cdot\left(-\frac{1}{r}\sin\theta\right)A^{\theta}\\
+&=0\\
+\left(\nabla_{\vec{A}}\vec{V}\right)^{\theta}&=A^{\beta}\frac{\partial V^{\theta}}{\partial x^{\beta}}+\Gamma^{\theta}_{\lambda\beta}V^{\lambda}A^{\beta}\\
+&=A^r\frac{\partial V^{\theta}}{\partial r}+A^{\theta}\frac{\partial V^{\theta}}{\partial \theta}+\Gamma^{\theta}_{r\theta}V^{r}A^{\theta}+\Gamma^{\theta}_{\theta r}V^{\theta}A^{r}\\
+&=A^{r}\cdot\frac{1}{r^2}\sin\theta+A{\theta}\cdot\left(-\frac{\cos\theta}{r}\right)+\frac{1}{r}\cdot\cos\theta\cdot A^{\theta}+\frac{1}{r}\left(-\frac{1}{r}\sin\theta\right)A^r\\
+&=0
+\end{align*}
+
+\exercise{Metric $g=\text{diag}(1,r^2)$ from previous lecture; check that $\nabla g=0$ explicitly.}{}
+
+\exercise{Confirm that $\Gamma$'s can also be derived from
+\begin{equation}
+\Gamma^{\mu}_{\alpha\beta}=\frac{1}{2}g^{\mu\lambda}(g_{\lambda\alpha,\beta}+g_{\lambda\beta,\alpha}
+-g_{\alpha\beta,\lambda})
+\end{equation}}{}
+
+\exercise{Prove divergence
+\begin{equation}
+V^{\alpha}_{;\alpha}=\frac{1}{r}\frac{\partial}{\partial r}(rV_r)+\frac{\partial V_{\theta}}{\partial \theta}
+\end{equation}
+as you would expect from undergrad.}{}
+
+\exercise{Derive $\chi^{\mu}_{\alpha\beta}$'s for basis one-forms
+\begin{align}
+\tilde{\omega}^r&=\cos\theta\cdot\tilde{\omega}^x+\sin\theta\cdot\tilde{\omega}^y\\
+\tilde{\omega}^{\theta}&=-\frac{\sin\theta}{r}\cdot\tilde{\omega}^x+\frac{\cos\theta}{r}\cdot\tilde{\omega}^y
+\end{align}}{}
+
+
+\section{Curved space}
+
+In the presence of gravity, we cannot have a global inertial (Minkowski) frame.
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=0.2\textheight]{images/freely-falling-observers.png}
+\caption{Freely falling observers}
+\end{figure}
+We see that the distance between the observers decreases! i.e. curved geodesics $\Rightarrow$ curved space!
+
+\subsection{Curved manifold}
+\begin{itemize}
+\item Extrinsic curvature: is space curved with respect to the space in which it's embedded?
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/extrinsic-curvature.png}
+\caption{Extrinsic curvature}
+\end{figure}\\
+Yes!
+\item Intrinsic curvature: without refernce to an emedding. Do neighbouring geodesics (``free fall'') diverge/converge? Note we need the idea of parallel transport to discuss geodesics.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/intrinsic-curvature.png}
+\caption{Intrinsic curvature}
+\end{figure}\\
+We see that a 2D cylinder does \underline{not} have intrinsic curvature!
+\end{itemize}
 
 
 \pagebreak
