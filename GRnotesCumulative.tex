@@ -1023,29 +1023,20 @@ In general, for kinematics we do not care about the origin of the force, and onl
 
 Event: $\vec{x}=(t,x,y,z)$
 
-Spacetime interval between 2 events: $ds^s=g(d\vec{x},d\vec{x})$
+Spacetime interval between 2 events: $ds^2=g(d\vec{x},d\vec{x})$
 
 e.g. Minkowski
 
 \picture{images/lightcone.png}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l l}
-$ds^2=0$ & \\
-$ds^2>0$ & \\
-$ds^2<0$ & 
-\end{tabular}
-\end{table}
-
-\begin{align*}
+\begin{align}
 ds^2=0\qquad &\text{null ray; defines light cone which joins events A and B}\\
 ds^2>0\qquad &\text{events A and B and mutually spacelike; can't event get from A to B;}\\
-\qquad&\text{there always exists an inertial frame such that events occur at}\\
-\qquad&\text{different spacial locations at the same time}\\
+\qquad&\text{there always exists an inertial frame such that events occur at}\nonumber\\
+\qquad&\text{different spacial locations at the same time}\nonumber\\
 ds^2<0 \qquad& \text{events are timelike; can get from A to B;}\\
-\qquad &\text{frame exists where events occur at same spatial location at different times}
-\end{align*}
+\qquad &\text{frame exists where events occur at same spatial location at different times}\nonumber
+\end{align}
 
 For $ds^2>0$, we will always be able to Lorentz transform into a frame where two events occur at the same time, but spatially separated. For $ds^2<0$, there will always be a Lorentz transform such that the two events occur at the same spatial location, but temporally separated.
 
@@ -1200,15 +1191,15 @@ We want to solve for $u^0(\tau),u^1(\tau),a^0(\tau),a^1(\tau)$ in general.
 \vec{a}\cdot\vec{a}&=g^2& -(a^0)^2+(a^1)^2&=g^2
 \end{align*}
 Eliminating variables and solving (using straightforward algebra), we obtain 
-\begin{align*}
+\begin{align}
 \frac{du^0}{d\tau}&=a^0=gu^1\\
 \frac{du^1}{d\tau}&=a^1=gu^0
-\end{align*}
+\end{align}
 Integrating these gives
-\begin{align*}
+\begin{align}
 t&=\frac{1}{g}\sinh g\tau\\
 x&=\frac{1}{g}\cosh g\tau
-\end{align*}
+\end{align}
 
 \begin{figure}[h]
 \centering
@@ -1372,7 +1363,7 @@ i.e. opposites!
 Components of $\nabla\tilde{p}$, i.e. $(\nabla\tilde{p})_{\alpha\beta}$ is notationally $p_{\alpha;\beta}$
 
 \begin{equation}
-p_{\alpha;\beta}=\frac{\partial_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
+p_{\alpha;\beta}=\frac{\partial p_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
 \end{equation}
 
 For general tensor: add correction term $\pm \Gamma$ tensor for each tensor index; $+$ is index is up; $-$ if index is down.
@@ -1789,11 +1780,58 @@ We see that a 2D cylinder does \underline{not} have intrinsic curvature!
 
 \pagebreak
 
+\section{Appendix}
 
 
 Indices up = vector-like
 
 Indices down = 1-form-like
+
+\subsection{Covariant derviative notation}
+\subsubsection{Vectors}
+We realise that the component form of $\nabla \vec{V}$ can be written as $(\nabla \vec{V})^{\alpha}_{\beta}$.
+
+\begin{equation}
+\underbrace{(\nabla \vec{V})^{\alpha}_{\beta}}_{\text{notation: }V^{\alpha}_{;\beta}}=
+\underbrace{\frac{\partial V^{\alpha}}{\partial x^{\beta}}}_{\text{notation: }V^{\alpha}_{,\beta}}
++\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
+\end{equation}
+
+That is:
+\begin{align}
+V^{\alpha}_{,\beta}&:=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\\
+(\nabla \vec{V})^{\alpha}_{\beta}\equiv V^{\alpha}_{;\beta}&:=V^{\alpha}_{,\beta}+\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
+\end{align}
+
+\subsubsection{One-forms}
+Components of $\nabla\tilde{p}$, i.e. $(\nabla\tilde{p})_{\alpha\beta}$ is notationally $p_{\alpha;\beta}$
+
+\begin{equation}
+p_{\alpha;\beta}=\frac{\partial p_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
+\end{equation}
+
+\subsubsection{General tensors}
+For general tensor: add correction term $\pm \Gamma$ tensor for each tensor index; $+$ is index is up; $-$ if index is down.
+
+\begin{equation}
+\text{e.g. }\quad T^{\alpha}_{\beta;\gamma}=\frac{\partial T^{\alpha}_{\beta}}{\partial x^{\gamma}}
++\underbrace{\Gamma^{\alpha}_{\lambda\gamma} T^{\lambda}_{\beta}}_{\text{by analogy with vector}}
+-\underbrace{\Gamma^{\lambda}_{\beta \gamma}T^{\alpha}_{\lambda}}_{\text{by analogy with 1-form}}
+\end{equation}
+
+\begin{equation}
+\nabla_{\vec{u}}\vec{v}=(\nabla\vec{v})\cdot \vec{u}
+\end{equation}
+...probably?
+
+
+\subsubsection{Metric}
+In flat space, $g_{\alpha\beta , \gamma}=0$ \underline{and} $\Gamma$'s are zero because $\frac{\partial\vec{e}_{\alpha}}{\partial x^{\beta}}=0$
+\begin{align}
+\Rightarrow g_{\alpha\beta;\gamma}&=g_{\alpha\beta,\gamma}-(\text{two terms involving Christoffel symbols})\\
+&=0 \quad\text{in flat space}
+\end{align}
+
 
 %-----------------------------------------
 \end{document}
