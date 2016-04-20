@@ -1833,18 +1833,100 @@ In flat space, $g_{\alpha\beta , \gamma}=0$ \underline{and} $\Gamma$'s are zero 
 \end{align}
 
 
+\subsection{Curvature and Einstein's Field Equations}
+Parallel transport!
+
+Generally, geometric objects like vectors as different points live in different tangent spaces, hence cannot be compared. We will investigate the looks for omving them.
+
+\subsubsection{Rules}
+If $T$ is a geometric object, then we can parallel transport along $\vec{x}(\lambda)$ by requiring that
+\begin{equation}
+\nabla\frac{d\vec{x}}{d\lambda}T=0
+\end{equation}
+$\Rightarrow T$ remains constant along tangent vector (is zero ???)
+
+An example $A \to B \to C \to A$.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/parallel_transport_example.png}
+\end{figure}
+
+Theorem: if we parallel transport $T$ around a \underline{closed} curve, then the change in $T$ is proportional to the intrinsic curvature of the manifold (proportional to the Riemann tensor). No curvature = flat $\Rightarrow$ no change.
+
+What is $\Delta T = T_{\text{final}} - T_{\text{initial}}$ around a closed loop? (specialise to vector $\vec{V}$)
+
+Consider a small patch (not flat)
+An example $A \to B \to C \to A$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/small_patch.png}
+\end{figure}
+
+To parallel transport $\vec{V}$ around the loop $A \to B \to C \to D \to A$:
+
+Consider AB:
+\begin{align}
+\nabla_{\vec{e}_1}\vec{V}&=0\quad\text{(the tangent to AB is $\vec{e}_1$)}\\
+\Rightarrow V^{\alpha}_{;\beta}&=0\quad(\beta=1)\\
+\Rightarrow 0 &=\frac{\partial V^{\alpha}}{\partial x^{1}}+\Gamma^{\alpha}_{\lambda 1}V^{\lambda}
+\intertext{We integrate}
+V^{\alpha}(B)-V^{\alpha}(D)&=\int^B_A \frac{\partial V^{\alpha}}{\partial x^{1}}dx^{1}\\
+&=-\int^D_A dx^{1}~\Gamma^{\alpha}_{\lambda 1} V^{\lambda}
+\end{align}
+
+Along BC:
+\begin{align}
+\nabla_{\vec{e}_2} \vec{V}&=0 \quad\text{(parallel transport!)}\\
+\Rightarrow V^{\alpha}(C)-V^{\alpha}(B)&=\int^C_B \frac{\partial V^{\alpha}}{\partial x^2} dx^{2}\\
+&=-\int^C_B dx^{2}~\Gamma^{\alpha}_{\lambda 2} V^{\lambda}
+\end{align}
+
+Along CD:
+\begin{align}
+\nabla_{-\vec{e}_2} \vec{V}&=0 \quad\text{(parallel transport!)}\\
+\Rightarrow V^{\alpha}(D)-V^{\alpha}(C)&=\int^D_C dx^{1}~\Gamma^{\alpha}_{\lambda 1} V^{\lambda}
+\end{align}
+
+Along DA:
+\begin{align}
+\nabla _{-\vec{e}_2} \vec{V}&=0\\
+\Rightarrow V^{\alpha}(A)-V^{\alpha}(D)&=\int^A_D dx^{2}~\Gamma^{\alpha}_{\lambda 2}V^{\lambda}
+\end{align}
+
+Note that $\Gamma^{\alpha}_{\lambda 1}$'s are not the smae at different positions! There is no zero.
+
+The sum of the $A \to B \to C \to D \to A$ path is
+\begin{equation}
+-\int^B_A dx^{1}~\Gamma^{\alpha}_{\lambda 1}V^{\lambda}-\int^C_B~dx^{2}\Gamma^{\alpha}_{\lambda 2} V^{\lambda}
++\int^D_C dx^{1}~\Gamma^{\alpha}_{\lambda 1} V^{\lambda} + \int^{A}_{D}dx^{2}~\Gamma^{\alpha}_{\lambda 2} V^{\lambda}
+\end{equation}
+
+For small patches,
+\begin{align}
+\left(\Gamma^{\alpha}_{\lambda 2}\right)_{BC}&=\left(\Gamma^{\alpha}_{\lambda 2}V^{\lambda}\right){AB}
++\delta_{a' ???}\left(\Gamma^{\alpha}_{\lambda 2} V^{\lambda}\right)\\
+\Rightarrow \left(\Gamma^{\alpha}_{\lambda 1} V^{\lambda}\right)_{CD}&=
+\left(\Gamma^{\alpha}_{\lambda 1} V^{\lambda}\right)_{AB}
++\delta b \frac{\partial}{\partial x^2}\left(\Gamma^{\alpha}_{\lambda 1} V^{\lambda}\right)
+\intertext{This is a Taylor expansion in $x^2$.}
+\Delta V^{\alpha}&= -\delta a \frac{\partial}{\partial x^{1}}\left(\Gamma^{\alpha}_{\lambda 2} V^{\lambda}\right) \delta b
+\quad\text{(integral along BC)}\\
+&~~+ \delta b \frac{\partial}{\partial x^{2}}\left(\Gamma^{\alpha}_{\lambda 1} V^{\lambda}\right)\delta a \quad\text{(integral along CD)}\\
+\Rightarrow \frac{\Delta V^{\alpha}}{\delta a~\delta b}&=- \frac{\partial \Gamma^{\alpha}_{\lambda 2}}{\partial x^{1}}
+V^{\lambda} - \Gamma^{\alpha}_{\lambda 2} \underbrace{\frac{\partial V^{\lambda}}{\partial x^1}}_{*}\\
+&~~+ \frac{\partial \Gamma^{\alpha}_{\lambda 1}}{\partial x^{2}} V^{\lambda} 
+- \Gamma^{\alpha}_{\lambda 1}\underbrace{\frac{\partial V^{\lambda}}{\partial x^{2}}}_{**}
+\intertext{where the derivative * is the parallel transport condition $-\Gamma^{\lambda}_{\mu 1}V^{\mu}$, and the derivative ** is $-\Gamma^{\lambda}_{\mu 2} V^{\mu}$.}
+\Rightarrow \Delta V^{\alpha} & \propto \delta a~ \delta b~ V^{\alpha}
+\end{align}
+where is proportional to constant; ???? and first derivaitives, \underline{Riemann tensor}!! (????)
+
+
+
+
 %-----------------------------------------
 \end{document}
-
-
-
-
-%\begin{tikzpicture}[line width=0.7 pt, xscale = 3, yscale = 3]
-
-%\draw [fermion] (0,0)--(1.5,0);
-%	\node at (0.75,0.3) {$\tau$};
-
-%\end{tikzpicture}
 
 
 

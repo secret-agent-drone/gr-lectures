@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.8.15)  14 APR 2016 16:49
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.8.15)  19 APR 2016 11:39
  restricted \write18 enabled.
 **GRnotesCumulative.tex
 (./GRnotesCumulative.tex
@@ -2553,7 +2553,7 @@ s been already used, duplicate ignored
 \relax 
 l.261 \end{itemize}
                   [2]
-<images/cavendish-torsion-balance.png, id=344, 2007.5pt x 2196.205pt>
+<images/cavendish-torsion-balance.png, id=354, 2007.5pt x 2196.205pt>
 File: images/cavendish-torsion-balance.png Graphic file (type png)
 
 <use images/cavendish-torsion-balance.png>
@@ -2605,7 +2605,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 445--445
 
  []
 
-[8] [9] <images/eotvos.png, id=412, 231.86626pt x 197.98969pt>
+[8] [9] <images/eotvos.png, id=422, 231.86626pt x 197.98969pt>
 File: images/eotvos.png Graphic file (type png)
 
 <use images/eotvos.png>
@@ -2616,14 +2616,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 573--573
 
  []
 
-[11] <images/einstein-cross.jpg, id=430, 158.09062pt x 139.57144pt>
+[11] <images/einstein-cross.jpg, id=440, 158.09062pt x 139.57144pt>
 File: images/einstein-cross.jpg Graphic file (type jpg)
 
 <use images/einstein-cross.jpg>
 Package pdftex.def Info: images/einstein-cross.jpg used on input line 606.
 (pdftex.def)             Requested size: 219.08623pt x 193.43507pt.
  [12<./images/einstein-cross.jpg>]
-<images/pound-rebka.png, id=436, 572.1375pt x 357.335pt>
+<images/pound-rebka.png, id=446, 572.1375pt x 357.335pt>
 File: images/pound-rebka.png Graphic file (type png)
 
 <use images/pound-rebka.png>
@@ -2644,7 +2644,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 784--784
 
  []
 
-<images/contour.png, id=479, 159.59625pt x 122.4575pt>
+<images/contour.png, id=489, 159.59625pt x 122.4575pt>
 File: images/contour.png Graphic file (type png)
 
 <use images/contour.png>
@@ -2655,7 +2655,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 901--901
 
  []
 
-[19] [20] <images/minkowski_boost.png, id=511, 370.38374pt x 160.6pt>
+[19] [20] <images/minkowski_boost.png, id=521, 370.38374pt x 160.6pt>
 File: images/minkowski_boost.png Graphic file (type png)
 
 <use images/minkowski_boost.png>
@@ -2667,7 +2667,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 989--989
  []
 
 [21<./images/minkowski_boost.png>]
-<images/lightcone.png, id=519, 339.2675pt x 289.08pt>
+<images/lightcone.png, id=529, 339.2675pt x 289.08pt>
 File: images/lightcone.png Graphic file (type png)
 
 <use images/lightcone.png>
@@ -2677,7 +2677,7 @@ Package pdftex.def Info: images/lightcone.png used on input line 1030.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] <images/propertime_path.png, id=525, 325.215pt x 235.88126pt>
+[22] <images/propertime_path.png, id=535, 325.215pt x 235.88126pt>
 File: images/propertime_path.png Graphic file (type png)
 
 <use images/propertime_path.png>
@@ -2693,28 +2693,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 1150--1150
 
  []
 
-<images/mirror.png, id=552, 344.28625pt x 234.8775pt>
+<images/mirror.png, id=563, 344.28625pt x 234.8775pt>
 File: images/mirror.png Graphic file (type png)
  <use images/mirror.png>
 Package pdftex.def Info: images/mirror.png used on input line 1153.
 (pdftex.def)             Requested size: 153.36302pt x 104.62589pt.
 
 [26<./images/mirror.png>]
-<images/rocket_hyperbola.png, id=565, 295.1025pt x 259.97125pt>
+<images/rocket_hyperbola.png, id=575, 295.1025pt x 259.97125pt>
 File: images/rocket_hyperbola.png Graphic file (type png)
 
 <use images/rocket_hyperbola.png>
 Package pdftex.def Info: images/rocket_hyperbola.png used on input line 1206.
 (pdftex.def)             Requested size: 131.45306pt x 115.80386pt.
  [27<./images/rocket_hyperbola.png>]
-<images/tangent-spaces.png, id=578, 313.17pt x 123.46124pt>
+<images/tangent-spaces.png, id=588, 313.17pt x 123.46124pt>
 File: images/tangent-spaces.png Graphic file (type png)
 
 <use images/tangent-spaces.png>
 Package pdftex.def Info: images/tangent-spaces.png used on input line 1222.
 (pdftex.def)             Requested size: 219.08623pt x 86.37328pt.
 
-<images/world-line.png, id=579, 314.17375pt x 262.9825pt>
+<images/world-line.png, id=589, 314.17375pt x 262.9825pt>
 File: images/world-line.png Graphic file (type png)
 
 <use images/world-line.png>
@@ -2728,14 +2728,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: Reference `diff eqn1' on page 28 undefined on input line 1254.
 
 [28<./images/tangent-spaces.png>] [29<./images/world-line.png>]
-<images/vectors-v.png, id=597, 364.36125pt x 238.8925pt>
+<images/vectors-v.png, id=607, 364.36125pt x 238.8925pt>
 File: images/vectors-v.png Graphic file (type png)
 
 <use images/vectors-v.png>
 Package pdftex.def Info: images/vectors-v.png used on input line 1297.
 (pdftex.def)             Requested size: 219.08623pt x 143.64279pt.
  [30<./images/vectors-v.png>] [31] [32] [33] [34]
-[35] [36] <images/polar.png, id=698, 257.96375pt x 258.9675pt>
+[35] [36] <images/polar.png, id=708, 257.96375pt x 258.9675pt>
 File: images/polar.png Graphic file (type png)
 
 <use images/polar.png>
@@ -2772,7 +2772,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1748--1748
 
  []
 
-<images/freely-falling-observers.png, id=736, 178.6675pt x 329.23pt>
+<images/freely-falling-observers.png, id=746, 178.6675pt x 329.23pt>
 File: images/freely-falling-observers.png Graphic file (type png)
 
 <use images/freely-falling-observers.png>
@@ -2780,7 +2780,7 @@ Package pdftex.def Info: images/freely-falling-observers.png used on input line
 1757.
 (pdftex.def)             Requested size: 70.09987pt x 129.17354pt.
 
-<images/extrinsic-curvature.png, id=737, 356.33125pt x 148.555pt>
+<images/extrinsic-curvature.png, id=747, 356.33125pt x 148.555pt>
 File: images/extrinsic-curvature.png Graphic file (type png)
 
 <use images/extrinsic-curvature.png>
@@ -2788,37 +2788,56 @@ Package pdftex.def Info: images/extrinsic-curvature.png used on input line 1767.
 
 (pdftex.def)             Requested size: 219.08623pt x 91.33698pt.
  [40<./images/freely-falling-observers.png>]
-<images/intrinsic-curvature.png, id=748, 373.395pt x 192.72pt>
+<images/intrinsic-curvature.png, id=758, 373.395pt x 192.72pt>
 File: images/intrinsic-curvature.png Graphic file (type png)
 
 <use images/intrinsic-curvature.png>
 Package pdftex.def Info: images/intrinsic-curvature.png used on input line 1774.
 
 (pdftex.def)             Requested size: 219.08623pt x 113.07744pt.
- [41<./images/extrinsic-curvature.png><./images/intrinsic-curvature.png>] [42] 
-[43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1837.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1837.
+ [41<./images/extrinsic-curvature.png><./images/intrinsic-curvature.png>] [42]
+<images/parallel_transport_example.png, id=777, 545.03625pt x 389.455pt>
+File: images/parallel_transport_example.png Graphic file (type png)
+
+<use images/parallel_transport_example.png>
+Package pdftex.def Info: images/parallel_transport_example.png used on input lin
+e 1851.
+(pdftex.def)             Requested size: 219.08623pt x 156.54582pt.
+
+<images/small_patch.png, id=778, 369.38pt x 194.7275pt>
+File: images/small_patch.png Graphic file (type png)
+
+<use images/small_patch.png>
+Package pdftex.def Info: images/small_patch.png used on input line 1863.
+(pdftex.def)             Requested size: 219.08623pt x 115.49733pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43<./images/parallel_transport_example.png>] [44<./images/small_patch.png>]
+[45]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1929.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1929.
  (./GRnotesCumulative.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1837.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1837.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1929.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1929.
 Package rerunfilecheck Info: File `GRnotesCumulative.out' has not changed.
-(rerunfilecheck)             Checksum: E3CC01650169F82BD45C5DE61D896441;4062.
+(rerunfilecheck)             Checksum: E06EB1382D8E8D06B7909195C05D40E3;4217.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1837.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1929.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38686 strings out of 494956
+ 38735 strings out of 494956
  100000,1144653 words of node,token memory allocated
- 1436 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 76 kern, 25 sub_mlist, 52 glue_spec, 1 writ
+ 1497 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 78 kern, 25 sub_mlist, 52 glue_spec, 1 writ
 e nodes
-   avail lists: 2:61,3:731,4:915,5:300,6:2182,7:146,8:29,9:784,10:192
- 40574 multiletter control sequences out of 65536+600000
+   avail lists: 2:61,3:782,4:864,5:298,6:2182,7:146,8:29,9:806,10:192
+ 40584 multiletter control sequences out of 65536+600000
  111 fonts using 4369887 bytes
  55i,21n,77p,1195b,1030s stack positions out of 5000i,500n,10000p,200000b,100000s
 LuaTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist,
@@ -2850,10 +2869,10 @@ brmoore/.local/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ><</home/brmoore/.local/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb><</home/brmoore/.local/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm7.pfb>
-Output written on GRnotesCumulative.pdf (47 pages, 689933 bytes).
+Output written on GRnotesCumulative.pdf (49 pages, 746163 bytes).
 
-PDF statistics: 863 PDF objects out of 1000 (max. 8388607)
- 750 compressed objects within 8 object streams
- 301 named destinations out of 1000 (max. 131072)
- 472 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 907 PDF objects out of 1000 (max. 8388607)
+ 790 compressed objects within 8 object streams
+ 328 named destinations out of 1000 (max. 131072)
+ 488 words of extra memory for PDF output out of 10000 (max. 10000000)
 
