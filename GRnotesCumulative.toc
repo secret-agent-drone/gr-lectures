@@ -57,3 +57,4 @@
 \contentsline {subsubsection}{\numberline {8.1.4}Metric}{43}{subsubsection.8.1.4}
 \contentsline {subsection}{\numberline {8.2}Curvature and Einstein's Field Equations}{43}{subsection.8.2}
 \contentsline {subsubsection}{\numberline {8.2.1}Rules}{43}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Symmetrics of the Riemann tensor}{46}{subsubsection.8.2.2}

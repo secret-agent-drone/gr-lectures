@@ -1922,7 +1922,101 @@ V^{\lambda} - \Gamma^{\alpha}_{\lambda 2} \underbrace{\frac{\partial V^{\lambda}
 \end{align}
 where is proportional to constant; ???? and first derivaitives, \underline{Riemann tensor}!! (????)
 
+\review{Last lecture:
+\begin{itemize}
+\item parallel transport
+\item Riemann curvature tensor (20 independent numbers)
+\end{itemize}
+Today:
+\begin{itemize}
+\item symmetrics of Riemann
+\end{itemize}
+}
 
+Parallel transport along $\vec{x}(\lambda)$: $\nabla_{\frac{d\vec{x}}{d\lambda}}T=0$ where $T$ is any geometric object.
+
+If we parallel transport some object (say, vector $\vec{V}$) around a closed loop, then $\vec{V}$ does not return to its initial value if the spacetime is curved. We find $\Delta\vec{V}\propto \text{area of curve}\times\text{curvature}$.
+
+In component notation:
+\begin{equation}
+\Delta V^{\alpha}=R^{\alpha}_{\beta\mu\nu} V^{\beta} \delta a~\delta b
+\end{equation}
+where $\delta a ~ \delta b$ is thearea of quadrilaterial with sides $\delta a$ and $\delta b$, and $R$ is the Riemann tensor, contains 2nd derivatives of metric.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{images/quadrilateral.png}
+\caption{A quadrilateral in curved space}
+\end{figure}
+
+\begin{align}
+R^{\alpha}_{\beta\mu\nu}&=2\times\text{Christoffel 1st derivative}+ 2\times \text{products of Christoffel}\\
+&=\Gamma^{\alpha}_{\beta\mu,\nu}-\Gamma^{\alpha}_{\beta\nu,\mu}
+-\Gamma^{\alpha}_{\lambda\nu}\Gamma^{\lambda}_{\beta\nu}
++\Gamma^{\alpha}_{\lambda\nu}\Gamma^{\lambda}_{\beta\mu}
+\end{align}
+
+
+\subsubsection{Symmetrics of the Riemann tensor}
+\begin{equation}
+R_{\alpha\beta\mu\nu}=g_{\alpha\lambda} R^{\lambda}_{\beta\nu\mu}
+\end{equation}
+\begin{itemize}
+\item $R_{\alpha\beta\mu\nu}$ is antisymmetric in $\mu\leftrightarrow\nu$ (see picture; this is eqivalent to circumnavigating the loop in opposit direction)
+\item $R_{\alpha\beta\mu\nu}$ is antisymmetric in $\alpha\leftrightarrow \beta$
+\item $R_{\alpha\beta\mu\nu}$ is symmetric under exchange of pairs; i.e. $R_{\alpha\beta\mu\nu}=R_{\mu\nu\alpha\beta}$
+\item ``Symmetric'' under cyclic permutation of last three indices (Jordan symmetry)
+\begin{equation}
+0=R_{\alpha\beta\mu\nu}+R_{\alpha \mu \nu \beta} + R_{\alpha \nu \beta \mu}
+\end{equation}
+\end{itemize}
+
+After applying these symmetrics to the $4\times 4 \times 4 \times 4=256$ components of the Riemann tensor, we reduce them down to only 20.
+
+
+\underline{Proof}: go into local Minkowski coordinates (i.e. flat patch). Here $\Gamma$'s are zero, but their derivatives are not.
+
+\begin{equation}
+R_{\alpha\beta\mu \nu}=\Gamma^{\alpha}_{\beta \mu , \nu} - \Gamma^{\alpha}_{\beta \nu , \mu}
+\end{equation}
+Substitute
+\begin{equation}
+\Gamma^{\alpha}_{\beta \mu}=\frac{1}{2}g^{\alpha \lambda}\left(g_{\lambda \beta, \mu} + g_{\lambda \mu, \beta} 
+- g_{\beta\mu , \lambda}\right)
+\end{equation}
+We lower the indices by
+\begin{equation}
+R_{\alpha \beta \mu \nu} = g_{\alpha\sigma} R^{\sigma}_{\beta \mu \nu}
+\end{equation}
+We now derivates with respect to $\nu$ (as an exercise)
+
+\begin{equation}
+\Rightarrow R_{\alpha\beta\mu\nu}=\frac{1}{2}\left(g_{\alpha \nu, \beta \mu} + g_{\beta \mu,\alpha \nu}
+-g_{\alpha \mu, \beta \nu} - g_{\beta \nu, \alpha \mu}\right)
+\end{equation}
+
+Let's start with last symmetry (12 terms).
+
+\begin{equation}
+R_{\alpha \beta \mu \nu} + R_{\alpha \mu \nu \beta} + R_{\alpha \nu \beta \mu} = \text{12 terms}
+\end{equation}
+\exercise{Check that these terms cancel pairwise.}{}
+
+\begin{equation}
+R_{\alpha \beta \mu \nu} + R_{\alpha \mu \nu \beta} + R_{\alpha \nu \beta \mu} = 0.
+\end{equation}
+which is derived in local falt. But it's a perfectly good tensor equation $\Rightarrow$ it is coordinate independent $\Rightarrow$ true in curved space, also.
+
+A good tensor equation = something built out of tensors $\pmx{M\\N}$ (which transform like they should) using valid operations like outer product, symmetrisation etc.
+
+An example of a bad tensor equation:
+\begin{equation}
+R_{\alpha \beta \mu \nu , \lambda}=0
+\end{equation}
+because ordinary derivatives \textbf{,} are ``not good''; however
+\begin{equation}
+R_{\alpha \beta \mu \nu ; \lambda}=0
+\end{equation}
+is a good tensor equation, since covariant derivatives \textbf{;} are ``good''.
 
 
 %-----------------------------------------
