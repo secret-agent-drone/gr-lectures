@@ -27,10 +27,12 @@
 \usepackage{calc}
 \usepackage{cite}
 \usepackage{siunitx}
+\usepackage{mathtools} %for underbraces without whitespace
 
 \newcommand{\utilde}[1]{\tilde{#1}}
 
 \newcommand{\vect}[1]{\mathbf{#1}} %3D vector
+\renewcommand{\div}{\text{div}~}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
@@ -1777,66 +1779,192 @@ Yes!
 We see that a 2D cylinder does \underline{not} have intrinsic curvature!
 \end{itemize}
 
+\subsection{Local flatness}
+\begin{itemize}
+\item Let $\{x^{\alpha}\}$ be some generic coordinates
+\item Make a transformation to $\{x^{\alpha'}\}$ coordinates
+\item See how for we can get in flattening the space near a point $\hat{x}_0$
+\item Can we choose $x^{\alpha'}(\vec{x})$ in such a way that the primed metric is Minkowski near $\vec{x}_0$?
+\begin{itemize}
+\item exactly no, but approximately yes
+\end{itemize}
+\end{itemize}
 
-\pagebreak
+\underline{At $\vec{x}_0$}:
 
-\section{Appendix}
+We are in a tangent space; first derivatives of the metric at the second derivatives disappear.
 
+\underline{Away from $\vec{x}_0$}:
 
-Indices up = vector-like
+Curvature contributes to $\vec{a}$ (we can set first derivatives to metric to zero)
 
-Indices down = 1-form-like
-
-\subsection{Covariant derviative notation}
-\subsubsection{Vectors}
-We realise that the component form of $\nabla \vec{V}$ can be written as $(\nabla \vec{V})^{\alpha}_{\beta}$.
-
+To transform from primed to unprimed:
 \begin{equation}
-\underbrace{(\nabla \vec{V})^{\alpha}_{\beta}}_{\text{notation: }V^{\alpha}_{;\beta}}=
-\underbrace{\frac{\partial V^{\alpha}}{\partial x^{\beta}}}_{\text{notation: }V^{\alpha}_{,\beta}}
-+\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
+\Lambda^{\alpha}_{\mu'}=\frac{\partial x^{\alpha}}{\partial \mu'}
 \end{equation}
 
-That is:
+Aim: to compute transformed metric
+\begin{equation}
+g_{\mu'\nu'}=\Lambda^{\alpha}_{\mu'}\Lambda^{\beta}_{\nu'}g_{\alpha\beta}
+\end{equation}
+We seek to cheek $x^{\alpha'}$ (and hence $\Lambda^{\alpha}_{\mu'}$) in order to make $g_{\mu'\nu'}$ as flat as possible.
+
+Taylor expansion: small departures around $\vec{x}_0$; no cusps, space is differentiable, order of differentiation is unimportant.
 \begin{align}
-V^{\alpha}_{,\beta}&:=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\\
-(\nabla \vec{V})^{\alpha}_{\beta}\equiv V^{\alpha}_{;\beta}&:=V^{\alpha}_{,\beta}+\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
+\Lambda^{\alpha}_{\mu'}&=\Lambda^{\alpha}_{\mu'}\rvert_{\vec{x}_0}
++\frac{\partial \Lambda^{\alpha}_{\mu'}}{\partial x^{\gamma'}}\left(x^{\gamma'}-x^{\gamma'}_0
++\frac{1}{2}\frac{\partial^2 \Lambda^{\alpha}}{\partial x^{\gamma'}~\partial x^{\delta'}}
+\left(x^{\gamma'}-x_0^{\gamma'}\right)(x^{\delta'}-x_0^{\delta'}\right)+\ldots\\
+&=\Lambda^{\alpha}_{\mu'}\rvert_{\vec{x}_0}+\frac{\partial}{\partial x^{\gamma'}}
+\left(\frac{\partial x^{\alpha}}{\partial \mu'}\right)\rvert^{(x^{\gamma'}-x_0^{\gamma'}}_{\vec{x}_0}
++\frac{1}{2}\frac{\partial^3 x^{\alpha}}{\partial x^{\mu'}~\partial x^{\gamma'}~\partial x^{\delta'}}\rvert_{\vec{x}_0}
+\left(x^{\gamma'}-x_0^{\gamma'}\right)\left(x^{\delta'}-x_0^{\delta'}\right)+\ldots\\
+g_{\alpha\beta}&=g_{\alpha\beta}\rvert_{\vec{x}_0}+g_{\alpha\beta,\gamma'}\left(x^{\gamma'}-x_0^{\gamma'}\right)
++\frac{1}{2}g_{\alpha\beta,\gamma'\delta'}\left(x^{\gamma'}-x_0^{\gamma'}\right)
+\left(x^{\delta'}-x_0^{\delta'}\right)+\ldots
+\intertext{Therefore, at zeroth order}
+g_{\mu'\nu'}&=\Lambda^{\alpha}_{\mu'}\rvert_{\vec{x}_0}~\Lambda^{\beta}_{\nu'}\rvert_{\vec{x}_0}~
+g_{\alpha\beta}\rvert_{\vec{x}_0}
 \end{align}
 
-\subsubsection{One-forms}
-Components of $\nabla\tilde{p}$, i.e. $(\nabla\tilde{p})_{\alpha\beta}$ is notationally $p_{\alpha;\beta}$
+(Can we make this flat?)
+
+\subsection{Miscellaneous practical results}
+On curved space times.
+
+\subsubsection{Proper length}
+Also called the ``geodesic length''
 
 \begin{equation}
-p_{\alpha;\beta}=\frac{\partial p_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
+ds^2=g_{\alpha\beta}\frac{dx^{\alpha}(\lambda)}{d\lambda}\cdot \frac{dx^{\beta}(\lambda)}{d\lambda}
 \end{equation}
-
-\subsubsection{General tensors}
-For general tensor: add correction term $\pm \Gamma$ tensor for each tensor index; $+$ is index is up; $-$ if index is down.
-
 \begin{equation}
-\text{e.g. }\quad T^{\alpha}_{\beta;\gamma}=\frac{\partial T^{\alpha}_{\beta}}{\partial x^{\gamma}}
-+\underbrace{\Gamma^{\alpha}_{\lambda\gamma} T^{\lambda}_{\beta}}_{\text{by analogy with vector}}
--\underbrace{\Gamma^{\lambda}_{\beta \gamma}T^{\alpha}_{\lambda}}_{\text{by analogy with 1-form}}
+\text{proper length}=\int^{\lambda_1}_{\lambda_0}dx~\sqrt{\frac{d\vec{x}}{d\lambda}\cdot\frac{d\vec{x}}{d\lambda}}
 \end{equation}
+Proper length is coordinate independent.
 
-\begin{equation}
-\nabla_{\vec{u}}\vec{v}=(\nabla\vec{v})\cdot \vec{u}
-\end{equation}
-...probably?
+\subsubsection{Volume}
 
-
-\subsubsection{Metric}
-In flat space, $g_{\alpha\beta , \gamma}=0$ \underline{and} $\Gamma$'s are zero because $\frac{\partial\vec{e}_{\alpha}}{\partial x^{\beta}}=0$
 \begin{align}
-\Rightarrow g_{\alpha\beta;\gamma}&=g_{\alpha\beta,\gamma}-(\text{two terms involving Christoffel symbols})\\
-&=0 \quad\text{in flat space}
+\text{Inifinitesimal volume}&=dx^{0'}~dx^{1'}~dx^{2'}~dx^{3'}\\
+&=\text{Jacobian}\times dx^0~dx^1~dx^2~dx^3\\
+&=\det\underbrace{\left(\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}\right)}
+_{\Lambda^{\alpha'}_{\alpha}} dx^0~dx^1~dx^2~dx^3
 \end{align}
+
+For an infinitesimal volume: locally the manifold is flat. So there exists a transformation that maps $g$ into Minkowski $\eta$.
+
+In matrix notation:
+\begin{equation}
+g=\Lambda\eta\Lambda^{\top}
+\end{equation}
+
+In component notation:
+\begin{equation}
+g_{\alpha\beta}=\Lambda^{\alpha'}_{\alpha}\Lambda^{\beta'}_{\beta}\eta_{\alpha'\beta'}
+\end{equation}
+
+Determinant of both sides (in matrix notation)
+\begin{align}
+\det g&=\det\Lambda~\det \eta ~ \det(\Lambda^{\top})\\
+&=-(\det \Lambda)^2
+\end{align}
+
+Therefore $\det\Lambda=(-\det g)^{1/2}$.
+
+\subsubsection{Divergence of a vector}
+Used in conservation laws.
+
+\begin{align}
+V^{\alpha}_{;\beta}&=\frac{\partial V^{\alpha}}{\partial x^{\beta}}=\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}\\
+\div \vec{V}&=V^{\alpha}_{;\alpha}\\
+&=\frac{\partial V^{\alpha}}{\partial x^{\alpha}}+\Gamma^{\alpha}_{\lambda\alpha}V^{\lambda}
+\intertext{}
+\Gamma^{\alpha}_{\lambda\beta}&=\frac{1}{2}g^{\alpha\mu}
+\left(g_{\mu\lambda,\beta}+g_{\mu\beta,\lambda}-g_{\lambda\beta,mu}\right)\\
+\Rightarrow \Gamma^{\alpha}_{\lambda\alpha}&+\frac{1}{2}g^{\alpha\mu}
+\left(g_{\mu\lambda,\alpha}+g_{\mu\alpha,\lambda}-g_{\lambda\alpha,\mu}\right)\\
+&=\frac{1}{2}g^{\alpha\mu}g_{\mu\alpha,\lambda}
+\end{align}
+
+An example: $g^{-1}g=1$ and matrix algebra.
+
+\begin{align}
+\to (\det g)_{,\mu}&=\det g-g^{\alpha\beta} g_{\alpha\beta,\mu}
+\intertext{Hence}
+\Gamma^{\alpha}_{\lambda\alpha}&=\frac{(\sqrt{-g})_{,\lambda}}{\sqrt{-g}}
+\end{align} 
+where $g\equiv \det(g_{\alpha\beta})$.
+
+So,
+\begin{equation}
+\div \vec{V}=\frac{1}{\sqrt{-g}}\left(\sqrt{-g}V^{\alpha}\right)
+\end{equation}
+
+Exercise: 3D spherical polar, $g=\det(g_{\alpha\beta})=r^2\sin\theta$.
+
+\subsubsection{Gauss Law in integral form}
+
+\begin{equation}
+\int d^3\mathbf{x'}~\div'(\mathbf{V})=\int \underbrace{d^2 \mathbf{x'}}_{dA~\mathbf{\hat{n}}}\cdot \mathbf{V}
+\end{equation}
+
+This is 4D! let's measure conservation of the quantity $\vec{V}$ locally in flat space.
+\begin{equation}
+0=V^{\alpha}_{,\alpha}
+\end{equation}
+
+Locally flat $\Rightarrow$ Christoffel symbols for the unprimed flat coordinates are zero
+\begin{equation}
+V^{\alpha}_{,\alpha}=V^{\alpha}_{,\alpha}+\underbrace{\Gamma^{\alpha}_{\lambda\alpha}
+V^{\lambda}}_{\text{zero}}=V^{\alpha}_{;\alpha}
+\end{equation}
+
+Integrate over small volume in flat space
+\begin{align}
+\int d^4 x~ V^{\alpha}_{,\alpha}&=\int d^4 x~V^{\alpha}_{;\alpha},\quad\text{as above}
+\intertext{transform into primed (non-flat) coordinates)}
+&=\int d^4 x' \underbrace{\sqrt{-g}}_{\mathclap{\text{Jacobian of transform}}} \overbrace{V^{\alpha'}_{;\alpha'}}^
+{\mathclap{\text{unchanged; frame invariant}}}\\
+&-\int d^4 x'~\sqrt{-g}\cdot\frac{1}{\sqrt{-g}}\cdot\left(\sqrt{-g}V^{\alpha'}\right)_{,\alpha'}\\
+&=\int d^4 x'~\left(\sqrt{-g} V^{\alpha'}\right)_{,\alpha'}\\
+&=\int d^3 \mathbf{x'}~n_{\alpha'} V^{\alpha'}\sqrt{-g}
+\end{align}
+where $n_{\alpha'}$ is normal to the 3-surface enclosing the 4-volume.
+
+This is Gauss' law (also applies to the covariant derivative).
+
+\subsubsection{Angles}
+
+\begin{align}
+\frac{\vec{A}\cdot\vec{B}}{\lvert \vec{A}\rvert \lvert\vec{B}\rvert}&=\cos\theta
+\intertext{where $\vec{A}\cdot\vec{B}=g(\vec{A},\vec{B})$}
+\lvert\vec{A}\rvert&=\sqrt{g(\vec{A},\vec{A})}\\
+\lvert\vec{B}\rvert&=\sqrt{g(\vec{B},\vec{B})}
+\end{align}
+
+\subsubsection{Geodesics}
+Curves that continue to progress in the same direction they were progressing in; i.e. the tangent is parallel to the tangent at the previous point.
+\begin{equation}
+\nabla_{\frac{d\vec{x}}{d\lambda}}{d\vec{x}}{d\lambda}=0
+\end{equation}
+Covariant derivative of tangent along its own direction is zero.
+
+In component notation: $\pmx{1\\0}$
+\begin{align}
+\frac{dx^{\beta}}{d\lambda}\left(\frac{d\vec{x}}{d\lambda}\right)^{\alpha}_{;\beta}&=0\\
+\Rightarrow\frac{dx^{\beta}}{d\lambda}\left(\frac{d}{dx^{\beta}}\left(\frac{dx^{\alpha}}{d\lambda}\right)
++\Gamma^{\alpha}_{\mu\beta}\frac{dx^{\mu}}{d\lambda}\right)
+&=\frac{d^2 x^{\alpha}}{d\lambda^2}+\Gamma^{\alpha}_{\mu\beta}\frac{dx^{\mu}}{d\lambda}\cdot\frac{dx^{\beta}}{d\lambda}
+\end{align}
+
+Note $\vec{x}(\lambda=0)$ and $\frac{d\vec{x}}{d\lambda}(\lambda=0)$.
 
 
 \subsection{Curvature and Einstein's Field Equations}
 Parallel transport!
 
-Generally, geometric objects like vectors as different points live in different tangent spaces, hence cannot be compared. We will investigate the looks for omving them.
+Generally, geometric objects like vectors as different points live in different tangent spaces, hence cannot be compared. We will investigate the looks for moving them.
 
 \subsubsection{Rules}
 If $T$ is a geometric object, then we can parallel transport along $\vec{x}(\lambda)$ by requiring that
@@ -2074,18 +2202,44 @@ How does the field evolve due to a source? (; is coordinate independent)
 Note: need derivatives of curvature is we hope to describe how curvature evolves in response to source $T^{\mu\nu}$ (and how it evolves).
 
 \subsubsection{Contractions of Riemann}
-How many independent way s can we do this? $R^{\nu}_{\beta\mu\nu}$
+How many independent ways can we do this? $R^{\nu}_{\beta\mu\nu}$
 \begin{align}
-a%\Rightarrow R^{\alpha}_{\alpha\mu\nu}&= \underbrace{g^{\alpha\lambda}}_{\text{sym }$\alpha\leftrightarrow \lambda$} R_{\lambda\alpha,\mu\nu}
+\Rightarrow R^{\alpha}_{\alpha\mu\nu}&=\underbrace{g^{\alpha\lambda}}_{\text{sym }\alpha\leftrightarrow\lambda} \overbrace{R_{\lambda\alpha\mu\nu}}^{\text{anti-sym }\lambda\leftrightarrow\alpha}\\
+&=-g^{\lambda\alpha} R_{\alpha\lambda\mu\nu}\\
+&=-R^{\lambda}_{\lambda\mu\nu}\\
+&=0
+\intertext{}
+R^{\alpha}_{\beta\alpha\nu}&=?\\
+R^{\alpha}_{\beta\mu\alpha}&=g^{\alpha\lambda} R_{\lambda\beta\mu\alpha}\\
+&=-g^{\alpha\lambda} R_{\lambda\beta\alpha\mu}\\
+&=-R^{\alpha}_{\beta\alpha\mu}\\
+&=-R^{\alpha}_{\beta\alpha\nu}
+\end{align}
+(exercise: check the others)
+
+The only independent contraction:
+\begin{equation}
+R_{\beta\nu}=R^{\alpha}_{\beta\alpha\nu}
+\end{equation}
+
+Ricci tensor is symmetric!
+\begin{align}
+R_{\nu\beta}=R^{\alpha}_{\nu\alpha\beta}&=g^{\alpha\lambda} R_{\lambda\nu\alpha\beta}\\
+&=g^{\alpha\lambda} R_{\alpha\beta\lambda\nu}\\
+&=R^{\lambda}_{\beta\lambda\nu}\\
+&=R_{\beta\nu}
 \end{align}
 
-{\Large Missing lectures above}
 
-End of last lecture: Bianchi from contracted Riemann (Ricci)
+We can derive the Bianchi identities for the Ricci tensor from the Riemann tensor.
 
-\begin{equation}
-R_{\beta\nu;\lambda} + R^{\alpha}_{\beta\nu\lambda;\alpha} - R_{\beta \lambda ; \nu} = 0
-\end{equation}
+\begin{align}
+0&=R_{\alpha \beta\mu\nu;\lambda}+R_{\alpha\beta\nu\lambda;\mu}+R_{\alpha\beta\lambda\mu;\nu}
+\intertext{Raise 1st index by contracting with metric (also $\nabla g = 0$). Contract $\alpha$ with $\mu$}
+0&=\underbrace{R^{\alpha}_{\beta\alpha\nu;\lambda}}_{R_{\beta\nu;\lambda}}+R^{\alpha}_{\beta\nu\lambda;\alpha}+
+\underbrace{R^{\alpha}_{\beta\lambda\alpha;\nu}}_{-R^{\alpha}_{\beta\alpha\lambda;\nu}=-R_{\beta\lambda;\nu}}\\
+0&=R_{\beta\nu;\lambda} + R^{\alpha}_{\beta\nu\lambda;\alpha} - R_{\beta \lambda ; \nu}
+\end{align}
 
 We contract again (involves Ricci scalar)
 
@@ -2156,10 +2310,66 @@ Einstein's field equations:
 \begin{equation}
 \underbrace{R^{\alpha\beta}-\frac{1}{2} R g^{\alpha\beta}}_{G^{\alpha\beta}}+\Lambda g^{\alpha\beta} = 8\pi T^{\alpha\beta}
 \end{equation}
-where $\Lambda$ is the ``cosmological'' constant (air-quotes because we do not need to discuss it in a cosmological context). This term is sometimes missing.
+where $\Lambda$ is the ``cosmological'' constant (air-quotes because we do not need to discuss it in a cosmological context). This term is sometimes missing from t-shirts.
 
 
 %-----------------------------------------
+\pagebreak
+\section{Appendix}
+
+
+Indices up = vector-like
+
+Indices down = 1-form-like
+
+\subsection{Covariant derviative notation}
+\subsubsection{Vectors}
+We realise that the component form of $\nabla \vec{V}$ can be written as $(\nabla \vec{V})^{\alpha}_{\beta}$.
+
+\begin{equation}
+\underbrace{(\nabla \vec{V})^{\alpha}_{\beta}}_{\text{notation: }V^{\alpha}_{;\beta}}=
+\underbrace{\frac{\partial V^{\alpha}}{\partial x^{\beta}}}_{\text{notation: }V^{\alpha}_{,\beta}}
++\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
+\end{equation}
+
+That is:
+\begin{align}
+V^{\alpha}_{,\beta}&:=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\\
+(\nabla \vec{V})^{\alpha}_{\beta}\equiv V^{\alpha}_{;\beta}&:=V^{\alpha}_{,\beta}+\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
+\end{align}
+
+\subsubsection{One-forms}
+Components of $\nabla\tilde{p}$, i.e. $(\nabla\tilde{p})_{\alpha\beta}$ is notationally $p_{\alpha;\beta}$
+
+\begin{equation}
+p_{\alpha;\beta}=\frac{\partial p_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
+\end{equation}
+
+\subsubsection{General tensors}
+For general tensor: add correction term $\pm \Gamma$ tensor for each tensor index; $+$ is index is up; $-$ if index is down.
+
+\begin{equation}
+\text{e.g. }\quad T^{\alpha}_{\beta;\gamma}=\frac{\partial T^{\alpha}_{\beta}}{\partial x^{\gamma}}
++\underbrace{\Gamma^{\alpha}_{\lambda\gamma} T^{\lambda}_{\beta}}_{\text{by analogy with vector}}
+-\underbrace{\Gamma^{\lambda}_{\beta \gamma}T^{\alpha}_{\lambda}}_{\text{by analogy with 1-form}}
+\end{equation}
+
+\begin{equation}
+\nabla_{\vec{u}}\vec{v}=(\nabla\vec{v})\cdot \vec{u}
+\end{equation}
+...probably?
+
+
+\subsubsection{Metric}
+In flat space, $g_{\alpha\beta , \gamma}=0$ \underline{and} $\Gamma$'s are zero because $\frac{\partial\vec{e}_{\alpha}}{\partial x^{\beta}}=0$
+\begin{align}
+\Rightarrow g_{\alpha\beta;\gamma}&=g_{\alpha\beta,\gamma}-(\text{two terms involving Christoffel symbols})\\
+&=0 \quad\text{in flat space}
+\end{align}
+
+%-----------------------------------------
+
+
 \end{document}
 
 

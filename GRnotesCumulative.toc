@@ -46,18 +46,26 @@
 \contentsline {subsection}{\numberline {6.5}The 4-acceleration}{33}{subsection.6.5}
 \contentsline {subsection}{\numberline {6.6}Fermi-Walker Transport}{35}{subsection.6.6}
 \contentsline {subsection}{\numberline {6.7}Constants of motion}{36}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}Polar coordinates}{37}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.8}Polar coordinates}{36}{subsection.6.8}
 \contentsline {section}{\numberline {7}Curved space}{40}{section.7}
 \contentsline {subsection}{\numberline {7.1}Curved manifold}{41}{subsection.7.1}
-\contentsline {section}{\numberline {8}Appendix}{42}{section.8}
-\contentsline {subsection}{\numberline {8.1}Covariant derviative notation}{42}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Vectors}{42}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}One-forms}{42}{subsubsection.8.1.2}
-\contentsline {subsubsection}{\numberline {8.1.3}General tensors}{42}{subsubsection.8.1.3}
-\contentsline {subsubsection}{\numberline {8.1.4}Metric}{43}{subsubsection.8.1.4}
-\contentsline {subsection}{\numberline {8.2}Curvature and Einstein's Field Equations}{43}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Rules}{43}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Symmetrics of the Riemann tensor}{46}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Constructing new tensors from Riemann on the way to Einstein's field equations}{47}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Contractions of Riemann}{48}{subsubsection.8.3.1}
-\contentsline {subsection}{\numberline {8.4}Einstein's field equations}{49}{subsection.8.4}
+\contentsline {subsection}{\numberline {7.2}Local flatness}{41}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Miscellaneous practical results}{42}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Proper length}{42}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}Volume}{42}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3}Divergence of a vector}{43}{subsubsection.7.3.3}
+\contentsline {subsubsection}{\numberline {7.3.4}Gauss Law in integral form}{44}{subsubsection.7.3.4}
+\contentsline {subsubsection}{\numberline {7.3.5}Angles}{44}{subsubsection.7.3.5}
+\contentsline {subsubsection}{\numberline {7.3.6}Geodesics}{45}{subsubsection.7.3.6}
+\contentsline {subsection}{\numberline {7.4}Curvature and Einstein's Field Equations}{45}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.4.1}Rules}{45}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.2}Symmetrics of the Riemann tensor}{48}{subsubsection.7.4.2}
+\contentsline {subsection}{\numberline {7.5}Constructing new tensors from Riemann on the way to Einstein's field equations}{49}{subsection.7.5}
+\contentsline {subsubsection}{\numberline {7.5.1}Contractions of Riemann}{50}{subsubsection.7.5.1}
+\contentsline {subsection}{\numberline {7.6}Einstein's field equations}{52}{subsection.7.6}
+\contentsline {section}{\numberline {8}Appendix}{54}{section.8}
+\contentsline {subsection}{\numberline {8.1}Covariant derviative notation}{54}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Vectors}{54}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}One-forms}{54}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}General tensors}{54}{subsubsection.8.1.3}
+\contentsline {subsubsection}{\numberline {8.1.4}Metric}{55}{subsubsection.8.1.4}
