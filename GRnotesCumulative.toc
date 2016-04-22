@@ -60,3 +60,4 @@
 \contentsline {subsubsection}{\numberline {8.2.2}Symmetrics of the Riemann tensor}{46}{subsubsection.8.2.2}
 \contentsline {subsection}{\numberline {8.3}Constructing new tensors from Riemann on the way to Einstein's field equations}{47}{subsection.8.3}
 \contentsline {subsubsection}{\numberline {8.3.1}Contractions of Riemann}{48}{subsubsection.8.3.1}
+\contentsline {subsection}{\numberline {8.4}Einstein's field equations}{49}{subsection.8.4}

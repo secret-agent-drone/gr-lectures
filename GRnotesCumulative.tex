@@ -2079,7 +2079,84 @@ How many independent way s can we do this? $R^{\nu}_{\beta\mu\nu}$
 a%\Rightarrow R^{\alpha}_{\alpha\mu\nu}&= \underbrace{g^{\alpha\lambda}}_{\text{sym }$\alpha\leftrightarrow \lambda$} R_{\lambda\alpha,\mu\nu}
 \end{align}
 
+{\Large Missing lectures above}
 
+End of last lecture: Bianchi from contracted Riemann (Ricci)
+
+\begin{equation}
+R_{\beta\nu;\lambda} + R^{\alpha}_{\beta\nu\lambda;\alpha} - R_{\beta \lambda ; \nu} = 0
+\end{equation}
+
+We contract again (involves Ricci scalar)
+
+\begin{equation}
+R = R^{\beta}_{\beta}=g^{\beta\nu}R_{\beta\nu}
+\end{equation}
+
+Contract Bianchi: raise $\beta$ and contract with $\nu$ (use $\nabla g = 0$).
+\begin{equation}
+0=\underbrace{R^{\beta}_{\beta;\lambda}}_{R_{;\lambda}}
++\underbrace{R^{\alpha\beta}_{\beta\lambda;\alpha}}_{-R^{\beta\alpha}_{\beta\lambda;\alpha}=-R^{\alpha}_{\lambda;\alpha}}
+- R^{\beta}_{\lambda;\beta}
+\end{equation}
+(note we have skipped a few steps to get to this point, incl. raising $\beta$)
+where $R_{;\lambda}$ is the Ricci scalar. It is important to remember that the antisymmetry properties of Riemann are only immediately true in the case where all indices are down; we cannot immediately say the second term has the antisymmetry shown (though it can be shown that it indeed does).
+\begin{align}
+\text{i.e. } 0&=R_{;\lambda}-2R^{\beta}_{\lambda;\beta}
+\intertext{We play with this to get it into the form $(\ldots)_{;\beta}=0$}
+0&=\left(R \delta ^{\beta}_{\lambda} - 2R^{\beta}_{\lambda}\right)_{;\beta}
+\end{align}
+We define the Einstein curvature tensor
+\begin{align}
+G^{\beta\lambda}&\equiv R^{\beta\lambda}-\frac{1}{2}R g^{\beta\lambda}
+\intertext{Note this is just pretty notation, nothing exciting. Then,}
+G^{\beta}_{\lambda}&=R^{\beta}_{\lambda}-\frac{1}{2}R g^{\beta}_{\lambda}=\delta^{\beta}_{\lambda}
+\intertext{So we have that}
+G^{\beta}_{\lambda;\beta}&=0
+\end{align}
+The diveregence of the Einstein curvature tensor vanishes!
+
+\subsection{Einstein's field equations}
+These cannot be derived; they are experimental laws. We shall motivate them heuristically.
+
+\begin{enumerate}
+\item Equivalence principle $\Rightarrow$ make sure our field equations are good tensor equations
+\item In the weak field, we must recover Newtonian gravity
+\begin{equation}
+\nabla^2 \Phi = 4\pi G\rho
+\end{equation}
+\item Weak field suggests 2nd derivative of field (analogy: $g_{\mu\nu}$) proportional to energy density ($\rho c^2$)
+\begin{itemize}
+\item i.e., curvature (2nd derivatives of metric) $\propto T^{\mu\nu}$ (stress-energy tensor)
+\end{itemize}
+\item $T^{\mu\nu}$ has 10 independent components. \\What curvature quantity matches this? Ricci (for example)! So should we postulate $R^{\mu\nu}\propto T^{\mu\nu}$?
+\item No! It violates energy conservation. We must have $T^{\mu\nu}_{;\nu}=0$. But then 
+\begin{align}
+R^{\mu\nu}_{;\nu}&=-\text{Ricci scalar}\\
+&\neq 0 \text{ in general}
+\end{align}
+\item But we do have a nice curvature-related $\pmx{0\\2}$ tensor (or $\pmx{2\\0}$) whose divergence is zero, namely $G^{\beta\lambda}$. So we postulate
+\begin{equation}
+G^{\beta\lambda}\propto T^{\beta\lambda}
+\end{equation}
+\end{enumerate}
+In fact we can be a tiny bit more general and ask: what symmetric tensor can we construct from Ricci and the metric on LHS?
+\begin{equation}
+R^{\alpha\beta}+\mu R g^{\alpha\beta} + \Lambda g^{\alpha\beta}=kT^{\alpha\beta}
+\end{equation}
+\begin{enumerate}
+\item Insist on $T^{\alpha\beta}_{;\beta}=0$\\$\Rightarrow \mu = -\frac{1}{2}$ as calculated above
+\item Insist on $\nabla^2=4\pi G\rho$ in weak field (which we will prove later)
+\begin{equation}
+\Rightarrow k = 8\pi G = 8\pi\text{ in natural units}
+\end{equation}
+\end{enumerate}
+
+Einstein's field equations:
+\begin{equation}
+\underbrace{R^{\alpha\beta}-\frac{1}{2} R g^{\alpha\beta}}_{G^{\alpha\beta}}+\Lambda g^{\alpha\beta} = 8\pi T^{\alpha\beta}
+\end{equation}
+where $\Lambda$ is the ``cosmological'' constant (air-quotes because we do not need to discuss it in a cosmological context). This term is sometimes missing.
 
 
 %-----------------------------------------
