@@ -2019,6 +2019,69 @@ R_{\alpha \beta \mu \nu ; \lambda}=0
 is a good tensor equation, since covariant derivatives \textbf{;} are ``good''.
 
 
+\subsection{Constructing new tensors from Riemann on the way to Einstein's field equations}
+Aside: Riemann as a commutator
+\begin{equation}
+(V^{\mu}_{j\alpha})_{;\beta}-(V^{\mu}_{j\beta})_{;\alpha}=R^{\mu}_{\nu\alpha\beta}V^{\nu}
+\end{equation}
+This is a good tensor equation: it is true in all reference frames.
+
+Aim:
+\begin{itemize}
+\item Derive Bianchi identities, which contain infofrmation about symmetries of Riemann tensor's derivatives
+\item Contract Riemann in the hope of making a smaller tensor with 10 independent stress-energy tensor components, to match the 10 independent stress-energy components $T^{\mu\nu}$
+\item Combine the above 2 aims to ``derive'' Einstein's field equations in the form 
+\begin{equation}
+(\text{curvature})=(\text{stress energy})
+\end{equation} 
+\end{itemize}
+
+Bianchi identities
+\begin{equation}
+R_{\alpha\beta\mu\nu}=\frac{1}{2}\left(g_{\alpha\nu,\beta\mu}+g_{\beta\mu,\alpha\nu}-g_{\alpha\mu,\beta\nu}
+-g_{\beta\nu,\alpha\mu}\right)
+\end{equation}
+Note $R_{\alpha\beta\mu\nu}$ is antisymmetric under exchange $\alpha\leftrightarrow \beta$ and $\mu \leftrightarrow \nu$, and under $\alpha \beta \leftrightarrow \mu \nu$.
+
+We differentiate with respect to $x^{\lambda}$ and add
+\begin{equation}
+R_{\alpha\beta\mu\nu,\lambda}=\frac{1}{2}\left(g_{\alpha,\beta\mu\lambda}+g_{\beta\mu,\alpha\nu\lambda}
+-g_{\alpha\mu,\beta\nu\lambda}-g_{\beta\nu,\alpha\mu\lambda}\right)
+\end{equation}
+
+Add cyclic permutations
+\begin{equation}
+R_{\alpha\beta\mu\nu,\lambda}+R_{\alpha\beta\nu\lambda,\mu}+R_{\alpha\beta\lambda\mu,\nu}=0
+\end{equation}
+(show this as an exercise)
+
+Note that in flat space, $\Gamma$'s are zero. So,
+\begin{align}
+R_{\alpha\beta\mu\nu,\lambda}&=R_{\alpha\beta\mu\nu,\lambda}
++\overbrace{\Gamma\text{'s}\times R}_{\text{correct for each index}}\\
+&=R_{\alpha\beta\mu\nu;\lambda},\quad\text{since $\Gamma$'s are zero}
+\end{align}
+
+Now we have a new good tensor equation valid in all coordinate systems.
+
+\begin{equation}
+0=R_{\alpha\beta\mu\nu;\lambda}+R_{\alpha\beta\nu\lambda;\mu}+R_{\alpha\beta\lambda\mu;\nu}
+\end{equation}
+the Bianchi identity!
+
+How does the field evolve due to a source? (; is coordinate independent)
+
+Note: need derivatives of curvature is we hope to describe how curvature evolves in response to source $T^{\mu\nu}$ (and how it evolves).
+
+\subsubsection{Contractions of Riemann}
+How many independent way s can we do this? $R^{\nu}_{\beta\mu\nu}$
+\begin{align}
+a%\Rightarrow R^{\alpha}_{\alpha\mu\nu}&= \underbrace{g^{\alpha\lambda}}_{\text{sym }$\alpha\leftrightarrow \lambda$} R_{\lambda\alpha,\mu\nu}
+\end{align}
+
+
+
+
 %-----------------------------------------
 \end{document}
 
