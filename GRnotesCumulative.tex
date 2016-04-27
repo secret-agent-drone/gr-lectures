@@ -27,7 +27,7 @@
 \usepackage{calc}
 \usepackage{cite}
 \usepackage{siunitx}
-\usepackage{mathtools} %for underbraces without whitespace
+\usepackage{mathtools} %for underbraces without whitespace (\mathclap{})
 
 \newcommand{\utilde}[1]{\tilde{#1}}
 
@@ -235,6 +235,10 @@ A short review:
 \end{itemize}
 
 \end{enumerate}
+
+\pagebreak
+
+\part{Theoretical tools of the trade}
 
 
 \section{Introduction to gravity}
@@ -2312,10 +2316,104 @@ Einstein's field equations:
 \end{equation}
 where $\Lambda$ is the ``cosmological'' constant (air-quotes because we do not need to discuss it in a cosmological context). This term is sometimes missing from t-shirts.
 
+This can also be written with indices down, as
+\begin{equation}
+\underbrace{R_{\alpha\beta}}_{\mathclap{\text{Ricci tensor}}}
+-\frac{1}{2} \overbrace{R}^{\mathclap{\text{Ricci scalar}}} g_{\alpha\beta}
++\underbrace{\Lambda g_{\alpha\beta}}_{\mathclap{\text{cosmological constant}}} = 8\pi T_{\alpha\beta}
+\end{equation}
+
+
+\pagebreak
+
+\part{Terrestrial and astronomical applications}
+
+Today we will discuss:
+\begin{itemize}
+\item what is $T_{\mu\nu}$?
+\item where did the 10 ``missing'' curvature degrees of freedom go?
+\end{itemize}
+
+\section{Stress energy}
+The principle of equivalence says we work out $T$ as a tensor in Minkowski space $\Rightarrow$ same tensor form in curved space. This is true for all geometric objects (when a new piece of phyiscs is introduced, we refer back to local flat space, because this is all we can do).
+
+Components:
+\begin{align}
+&&&\text{e.g. EM}\nonumber \\
+T^{00}&=\text{energy density}\equiv\text{energy/volume}&&\frac{1}{2}\epsilon_0 E^2 + \frac{B^2}{2\mu_0}\\
+T^{0i}&=\text{energy flux}\equiv\text{energy/area/time}&&\frac{(\vect{E} \times \vect{B})_i}{\mu_0}\\
+T^{ij}&=\text{momentum flux}&&\epsilon_0 E_i E_j 
++ \frac{1}{\mu_0}-\left(\frac{1}{2}\epsilon_0 E^2+\frac{B^2}{2\mu_0}\right)\delta_{ij}
+\end{align}
+
+$T^{ij}$ is momentum/area/time in $i$th direction transported through area defined by normal along $j$ direction.
+
+It is easy (as an exercise; see textbooks) to write $T$ in Minkowski coordinates as a tensor equation involving the Faraday tensor 
+$F_{\mu\nu} = \partial_\mu A_{\nu}-\partial_{\nu}A_{\mu}$. Then this is true in curved space too.
+
+For particles:
+\begin{itemize}
+\item ``cold dust'': at temperature $=0$, all particles in local volume have a single bulk velocity
+\item perfect fluid/gas: particles have bulk motion plus random motions, i.e. pressure
+\end{itemize}
+
+\example{?}{
+Considering dust,
+\begin{equation}
+T^{00}\sim \rho c^2,\quad T^{0i}\sim \rho v^{i}, \quad T^{ij}\sim \rho v^{i} v^{j}\quad \text{(heuristically)}
+\end{equation}
+Formally, we can do this by letting $n_0=$ proper number density (in fluid bulk frame). 
+
+Then define a particle flux 4-vector $\vec{N}=n_0\vec{u}$. 
+
+Note that divergence of $\vec{N}$ vanishes by particle conservation.
+
+Then $T=\vec{p} \otimes \vec{N}$ where $\vec{p}$ is the bulk momentum.
+
+If we consider a single species of aprticle, with mass $m$ and proper density $n_0$,
+\begin{equation}
+T=m\vec{u}\otimes n_0\vec{u}
+\end{equation}
+with components
+\begin{equation}
+T^{\mu\nu}=m n_0 u^{\mu} u^{\nu}
+\end{equation}
+}
+
+\example{?}{
+We now consider a perfect fluid.
+
+Each particle (label it $A$) has 4-velocity
+\begin{equation}
+\vec{w}_A=\underbrace{\vec{u}_A}_{\mathclap{\text{organised bulk}}}
++\overbrace{\delta \vec{u}_A}^{\mathclap{\text{random}}}
+\end{equation}
+
+For the total fluid, we sum over the particle (i.e. take the average)
+\begin{align}
+T&=\sum_A m n_0 \left(\vec{u}_A \otimes \vec{u}_A 
++ \underbrace{2\vec{u}_a \times \delta \vec{u}_A}_{\mathclap{\approx0~\text{(random vector $\delta\vec{u}_A$)}}}
++ \overbrace{\delta \vec{u}_A \times \delta \vec{u}_A}^{\text{pressure}}\right) \label{random motion} \\
+&= p g + (\rho + p)~\vec{u} \otimes \underbrace{\vec{u}}_{\mathclap{\text{bulk 4-velocity}}}
+\end{align}
+
+
+where $\rho$ is the mass density. Note that in~(\ref{random motion}) the sum over the random vector will go to zero, as it averages to zero.
+
+If there is no bulk motion then (Minkowski) $\vec{u}=(1,0,0,0)$
+\begin{align}
+T^{00}&=p g^{00}+(\rho+p)\cdot 1 &&= \rho,\quad\text{rest energy density}\\
+T^{11}&=pg^{11}+(\rho+p)\cdot \underbrace{u^{1} u^{1}}_{0} &&=p,
+\quad\underbrace{\text{isotropic pressure}}_{T^{11}=T^{22}=T^{33}}
+\end{align}
+
+Note that this section relates to Schutz Chapter 4; we should read it carefully and do some of the problems (also relating to assignment 3).
+}
+
 
 %-----------------------------------------
 \pagebreak
-\section{Appendix}
+\part{Appendix}
 
 
 Indices up = vector-like

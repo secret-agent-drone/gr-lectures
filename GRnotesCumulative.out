@@ -1,71 +1,74 @@
 \BOOKMARK [1][-]{section.0}{Syllabus}{}% 1
 \BOOKMARK [2][-]{subsection.0.1}{Part I}{section.0}% 2
 \BOOKMARK [2][-]{subsection.0.2}{Part II - Applications}{section.0}% 3
-\BOOKMARK [1][-]{section.1}{Introduction to gravity}{}% 4
-\BOOKMARK [2][-]{subsection.1.1}{Strength of gravity}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.2}{Strong vs. weak gravity}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.3}{Black hole oscillations}{section.1}% 7
-\BOOKMARK [2][-]{subsection.1.4}{Quantum Gravity}{section.1}% 8
-\BOOKMARK [3][-]{subsubsection.1.4.1}{Hawking Radiation}{subsection.1.4}% 9
-\BOOKMARK [2][-]{subsection.1.5}{Black hole thermodynamics}{section.1}% 10
-\BOOKMARK [1][-]{section.2}{Einstein equivalence principle}{}% 11
-\BOOKMARK [2][-]{subsection.2.1}{Weak equivalence principle}{section.2}% 12
-\BOOKMARK [2][-]{subsection.2.2}{Strong equivalence principle}{section.2}% 13
-\BOOKMARK [1][-]{section.3}{Experimental tests}{}% 14
-\BOOKMARK [2][-]{subsection.3.1}{Experimental tests of free fall}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.2}{Tests of local Lorentz invariance}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.3}{Gravitational redshift}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.4}{Observation of GR in experiments}{section.3}% 18
-\BOOKMARK [3][-]{subsubsection.3.4.1}{Pound-Rebka experiment}{subsection.3.4}% 19
-\BOOKMARK [3][-]{subsubsection.3.4.2}{Lunar ranging}{subsection.3.4}% 20
-\BOOKMARK [3][-]{subsubsection.3.4.3}{Deflection of light \(gravitational lensing\)}{subsection.3.4}% 21
-\BOOKMARK [3][-]{subsubsection.3.4.4}{Shapiro delay}{subsection.3.4}% 22
-\BOOKMARK [1][-]{section.4}{Geometric Objects}{}% 23
-\BOOKMARK [2][-]{subsection.4.1}{Vectors}{section.4}% 24
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Definitions of a vector}{subsection.4.1}% 25
-\BOOKMARK [3][-]{subsubsection.4.1.2}{What is a basis vector?}{subsection.4.1}% 26
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Transformations}{subsection.4.1}% 27
-\BOOKMARK [2][-]{subsection.4.2}{1-forms}{section.4}% 28
-\BOOKMARK [3][-]{subsubsection.4.2.1}{How do 1-forms transform?}{subsection.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.3}{1-forms, basis 1-forms and gradients}{section.4}% 30
-\BOOKMARK [2][-]{subsection.4.4}{Tensors}{section.4}% 31
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Metric tensor}{subsection.4.4}% 32
-\BOOKMARK [2][-]{subsection.4.5}{Correspondence between vectors and 1-forms}{section.4}% 33
-\BOOKMARK [1][-]{section.5}{Kinematics}{}% 34
-\BOOKMARK [2][-]{subsection.5.1}{4-velocity}{section.5}% 35
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Example 1: Momentarily comoving reference frame}{subsection.5.1}% 36
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Example 2}{subsection.5.1}% 37
-\BOOKMARK [2][-]{subsection.5.2}{Energy measurements}{section.5}% 38
-\BOOKMARK [2][-]{subsection.5.3}{4-acceleration}{section.5}% 39
-\BOOKMARK [1][-]{section.6}{Calculus in curved space}{}% 40
-\BOOKMARK [2][-]{subsection.6.1}{Differentiation in curved space}{section.6}% 41
-\BOOKMARK [2][-]{subsection.6.2}{Covariant derivative of 1-form}{section.6}% 42
-\BOOKMARK [2][-]{subsection.6.3}{Covariant derivative of metric}{section.6}% 43
-\BOOKMARK [2][-]{subsection.6.4}{Christoffel Symbols and Metric and Acceleration}{section.6}% 44
-\BOOKMARK [3][-]{subsubsection.6.4.1}{Covariant derivative}{subsection.6.4}% 45
-\BOOKMARK [2][-]{subsection.6.5}{The 4-acceleration}{section.6}% 46
-\BOOKMARK [2][-]{subsection.6.6}{Fermi-Walker Transport}{section.6}% 47
-\BOOKMARK [2][-]{subsection.6.7}{Constants of motion}{section.6}% 48
-\BOOKMARK [2][-]{subsection.6.8}{Polar coordinates}{section.6}% 49
-\BOOKMARK [1][-]{section.7}{Curved space}{}% 50
-\BOOKMARK [2][-]{subsection.7.1}{Curved manifold}{section.7}% 51
-\BOOKMARK [2][-]{subsection.7.2}{Local flatness}{section.7}% 52
-\BOOKMARK [2][-]{subsection.7.3}{Miscellaneous practical results}{section.7}% 53
-\BOOKMARK [3][-]{subsubsection.7.3.1}{Proper length}{subsection.7.3}% 54
-\BOOKMARK [3][-]{subsubsection.7.3.2}{Volume}{subsection.7.3}% 55
-\BOOKMARK [3][-]{subsubsection.7.3.3}{Divergence of a vector}{subsection.7.3}% 56
-\BOOKMARK [3][-]{subsubsection.7.3.4}{Gauss Law in integral form}{subsection.7.3}% 57
-\BOOKMARK [3][-]{subsubsection.7.3.5}{Angles}{subsection.7.3}% 58
-\BOOKMARK [3][-]{subsubsection.7.3.6}{Geodesics}{subsection.7.3}% 59
-\BOOKMARK [2][-]{subsection.7.4}{Curvature and Einstein's Field Equations}{section.7}% 60
-\BOOKMARK [3][-]{subsubsection.7.4.1}{Rules}{subsection.7.4}% 61
-\BOOKMARK [3][-]{subsubsection.7.4.2}{Symmetrics of the Riemann tensor}{subsection.7.4}% 62
-\BOOKMARK [2][-]{subsection.7.5}{Constructing new tensors from Riemann on the way to Einstein's field equations}{section.7}% 63
-\BOOKMARK [3][-]{subsubsection.7.5.1}{Contractions of Riemann}{subsection.7.5}% 64
-\BOOKMARK [2][-]{subsection.7.6}{Einstein's field equations}{section.7}% 65
-\BOOKMARK [1][-]{section.8}{Appendix}{}% 66
-\BOOKMARK [2][-]{subsection.8.1}{Covariant derviative notation}{section.8}% 67
-\BOOKMARK [3][-]{subsubsection.8.1.1}{Vectors}{subsection.8.1}% 68
-\BOOKMARK [3][-]{subsubsection.8.1.2}{One-forms}{subsection.8.1}% 69
-\BOOKMARK [3][-]{subsubsection.8.1.3}{General tensors}{subsection.8.1}% 70
-\BOOKMARK [3][-]{subsubsection.8.1.4}{Metric}{subsection.8.1}% 71
+\BOOKMARK [0][-]{part.1}{I Theoretical tools of the trade}{}% 4
+\BOOKMARK [1][-]{section.1}{Introduction to gravity}{part.1}% 5
+\BOOKMARK [2][-]{subsection.1.1}{Strength of gravity}{section.1}% 6
+\BOOKMARK [2][-]{subsection.1.2}{Strong vs. weak gravity}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.3}{Black hole oscillations}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.4}{Quantum Gravity}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Hawking Radiation}{subsection.1.4}% 10
+\BOOKMARK [2][-]{subsection.1.5}{Black hole thermodynamics}{section.1}% 11
+\BOOKMARK [1][-]{section.2}{Einstein equivalence principle}{part.1}% 12
+\BOOKMARK [2][-]{subsection.2.1}{Weak equivalence principle}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.2}{Strong equivalence principle}{section.2}% 14
+\BOOKMARK [1][-]{section.3}{Experimental tests}{part.1}% 15
+\BOOKMARK [2][-]{subsection.3.1}{Experimental tests of free fall}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.2}{Tests of local Lorentz invariance}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Gravitational redshift}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.4}{Observation of GR in experiments}{section.3}% 19
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Pound-Rebka experiment}{subsection.3.4}% 20
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Lunar ranging}{subsection.3.4}% 21
+\BOOKMARK [3][-]{subsubsection.3.4.3}{Deflection of light \(gravitational lensing\)}{subsection.3.4}% 22
+\BOOKMARK [3][-]{subsubsection.3.4.4}{Shapiro delay}{subsection.3.4}% 23
+\BOOKMARK [1][-]{section.4}{Geometric Objects}{part.1}% 24
+\BOOKMARK [2][-]{subsection.4.1}{Vectors}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Definitions of a vector}{subsection.4.1}% 26
+\BOOKMARK [3][-]{subsubsection.4.1.2}{What is a basis vector?}{subsection.4.1}% 27
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Transformations}{subsection.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.2}{1-forms}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.2.1}{How do 1-forms transform?}{subsection.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.3}{1-forms, basis 1-forms and gradients}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.4}{Tensors}{section.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Metric tensor}{subsection.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.5}{Correspondence between vectors and 1-forms}{section.4}% 34
+\BOOKMARK [1][-]{section.5}{Kinematics}{part.1}% 35
+\BOOKMARK [2][-]{subsection.5.1}{4-velocity}{section.5}% 36
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Example 1: Momentarily comoving reference frame}{subsection.5.1}% 37
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Example 2}{subsection.5.1}% 38
+\BOOKMARK [2][-]{subsection.5.2}{Energy measurements}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.3}{4-acceleration}{section.5}% 40
+\BOOKMARK [1][-]{section.6}{Calculus in curved space}{part.1}% 41
+\BOOKMARK [2][-]{subsection.6.1}{Differentiation in curved space}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.2}{Covariant derivative of 1-form}{section.6}% 43
+\BOOKMARK [2][-]{subsection.6.3}{Covariant derivative of metric}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.4}{Christoffel Symbols and Metric and Acceleration}{section.6}% 45
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Covariant derivative}{subsection.6.4}% 46
+\BOOKMARK [2][-]{subsection.6.5}{The 4-acceleration}{section.6}% 47
+\BOOKMARK [2][-]{subsection.6.6}{Fermi-Walker Transport}{section.6}% 48
+\BOOKMARK [2][-]{subsection.6.7}{Constants of motion}{section.6}% 49
+\BOOKMARK [2][-]{subsection.6.8}{Polar coordinates}{section.6}% 50
+\BOOKMARK [1][-]{section.7}{Curved space}{part.1}% 51
+\BOOKMARK [2][-]{subsection.7.1}{Curved manifold}{section.7}% 52
+\BOOKMARK [2][-]{subsection.7.2}{Local flatness}{section.7}% 53
+\BOOKMARK [2][-]{subsection.7.3}{Miscellaneous practical results}{section.7}% 54
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Proper length}{subsection.7.3}% 55
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Volume}{subsection.7.3}% 56
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Divergence of a vector}{subsection.7.3}% 57
+\BOOKMARK [3][-]{subsubsection.7.3.4}{Gauss Law in integral form}{subsection.7.3}% 58
+\BOOKMARK [3][-]{subsubsection.7.3.5}{Angles}{subsection.7.3}% 59
+\BOOKMARK [3][-]{subsubsection.7.3.6}{Geodesics}{subsection.7.3}% 60
+\BOOKMARK [2][-]{subsection.7.4}{Curvature and Einstein's Field Equations}{section.7}% 61
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Rules}{subsection.7.4}% 62
+\BOOKMARK [3][-]{subsubsection.7.4.2}{Symmetrics of the Riemann tensor}{subsection.7.4}% 63
+\BOOKMARK [2][-]{subsection.7.5}{Constructing new tensors from Riemann on the way to Einstein's field equations}{section.7}% 64
+\BOOKMARK [3][-]{subsubsection.7.5.1}{Contractions of Riemann}{subsection.7.5}% 65
+\BOOKMARK [2][-]{subsection.7.6}{Einstein's field equations}{section.7}% 66
+\BOOKMARK [0][-]{part.2}{II Terrestrial and astronomical applications}{}% 67
+\BOOKMARK [1][-]{section.8}{Stress energy}{part.2}% 68
+\BOOKMARK [0][-]{part.3}{III Appendix}{}% 69
+\BOOKMARK [1][-]{subsection.8.1}{Covariant derviative notation}{part.3}% 70
+\BOOKMARK [2][-]{subsubsection.8.1.1}{Vectors}{subsection.8.1}% 71
+\BOOKMARK [3][-]{subsubsection.8.1.2}{One-forms}{subsubsection.8.1.1}% 72
+\BOOKMARK [3][-]{subsubsection.8.1.3}{General tensors}{subsubsection.8.1.1}% 73
+\BOOKMARK [3][-]{subsubsection.8.1.4}{Metric}{subsubsection.8.1.1}% 74
