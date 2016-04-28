@@ -2410,6 +2410,133 @@ T^{11}&=pg^{11}+(\rho+p)\cdot \underbrace{u^{1} u^{1}}_{0} &&=p,
 Note that this section relates to Schutz Chapter 4; we should read it carefully and do some of the problems (also relating to assignment 3).
 }
 
+\section{Gauges}
+
+
+We work towards a weak-field theory, which we need to treat solar system/terrestrial experiments (see earlier sections).
+
+The Einstein field equations are 10 indepedent equations when viewed in isolation. But we know there are \underline{4} degrees of freedom which we know \underline{physically} to be dependent, because we can always choose 4 coordinates, i.e. 4 gauge choices, as we please (no matter how complicated $T$ is).
+
+$\therefore$ 6 truly independent field equations. We can compare this to electromagnetism (EM):
+\begin{itemize}
+\item 6 field variables $\vect{E}$, $\vect{B}$
+\item these reduce to 4 potentials $\Phi$, $\vect{A}$
+\item these reduce further to 3 equations via gauge choices
+\end{itemize}
+
+Recall in EM:
+Faraday field tensor (we will work in flat space)
+\begin{align}
+F_{\mu\nu}&=\partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu}\\
+\text{Let } \bar{A}_{\nu}&=A_{\nu}+\partial_{\nu} \chi,\quad\text{where $\chi$ is an arbitrary scalar function}\\
+\bar{F}_{\mu\nu}&=\partial_\mu \bar{A}_\nu - \partial_\nu \bar{A}_\mu\\
+&= F_{\mu\nu}+\partial_\mu \partial_\nu \chi - \partial_\nu \partial_\mu \chi\\
+&=F_{\mu\nu}
+\end{align}
+i.e. Faraday tensor is unchanged under gauge transformation (as an exercise, show that this is also true in curved space).
+
+Furthermore in flat space, the homogeneous Maxwell equations read
+\begin{equation}
+0=F_{\mu\nu,\alpha}+F_{\nu\alpha,\mu} + F_{\alpha\mu,\nu}
+\end{equation}
+and all the Christoffels are zero, so we can add zeroes to the RHS of the above equation to get in curved space
+\begin{equation}
+ 0=F_{\mu\nu;\alpha}+F_{\nu\alpha;\mu} + F_{\alpha\mu;\nu}
+\end{equation}
+
+This is of an identical form to the Bianchi identities (satisfied by the Riemann tensor in GR which is slightly larger; here it is satisfied by the Faraday tensor).
+
+\begin{enumerate}
+\item In EM, Biachi tells us we can write $\vect{E}$ and $\vect{B}$ in terms of $\vect{A}$ and $\Phi$ (via $\div \vect{B}=0$ + Faraday's law). Likewise, in GR Bianchi tells us $R_{\alpha\beta\gamma\delta}$ can be written in terms of ``potentials'' (see below).
+
+\item By analogy with EM Bianchi, it is clear that GR also has an ``electric'' and ``magnetic'' subdivision of the metric satisfying the generalised Faraday's law. We often see talk of gravitoelectric and gravitomagnetic effects (even when $F^{\mu\nu}=0$; i.e. when there are no electric and magnetic fields - these are not actually caused by EM, but rather appear analogously)
+\end{enumerate}
+
+An example of a gravitomagnetic effect is Lense-Thirring precession.
+
+What are the ``potentials'' in GR? Unfortunately it is not as simple as saying
+\begin{equation}
+R_{\alpha \beta \gamma \delta}= A_{\beta \gamma\delta;\alpha} - A_{\alpha \beta \gamma ; \delta},\quad\text{for some
+$A_{\alpha\beta\gamma}$}\nonumber
+\end{equation}
+
+This is clearly not true - the symmetry and anti-symmetry of the indices leads either to trivialities or contradictions
+
+Luckily our maths \cancel{friends} frenemies :) have shown that there exists Ricci decomposition for Riemann
+\begin{align}
+R_{\alpha\beta\gamma\delta}&=\frac{R}{6}\underbrace{g_{\alpha[\gamma}g_{\delta]\beta}}_{\text{scalar}}
++\underbrace{•g_{\alpha[\gamma} S_{\delta]\beta}- g_{\beta[\gamma} S_{\delta]\alpha}}_{\text{semi-traceless}}
+ + \underbrace{C_{\alpha\beta\gamma\delta}}_{\text{traceless}}
+\intertext{}
+\text{where }[\ldots]&=\text{antisymmetrisation}\\
+S_{\alpha\beta}&=R_{\alpha\beta}-\frac{1}{4}R g_{\alpha\beta}\\
+C_{\alpha\beta\gamma\delta}&=\text{Weyl tensor}
+\end{align} 
+
+See footnote for antisymmetrisation\footnote{
+$g_{\alpha[\gamma}g_{\delta]\beta} = g_{\alpha\gamma}g_{\delta\beta} - g_{\alpha\delta}g_{\gamma \beta}$}
+
+The Weyl tensor is a complicated thing involving derivatives of Lanczos tensor $H_{\alpha\beta\gamma}$; it is where the 10 ``missing'' degrees of freedom in Riemann went, i.e. the ones \underline{not} in Eintein's field equation.
+
+The Einstein field equations involve the trace of Riemann (to get the Ricci tensor), and since $C_{\alpha\beta\gamma\delta}$ is traceless and hence disappears (does not appear in the field equations.
+
+Equation of motion for Weyl:
+\begin{equation}
+C_{\alpha\beta\gamma\phantom{\delta};\delta}^{\phantom{\alpha\beta\gamma}\delta}=\text{stuff involving $R_{\beta\nu}$ and its covariant}
+\end{equation}
+By analogy, the EM inhomogeneous Maxwell:
+\begin{equation}
+F^{\mu\nu}_{\phantom{\mu\nu};\nu}=\mu_0 J^{\mu}
+\end{equation}
+
+GR case: invariant under gauge transform
+\begin{equation}
+\bar{H}_{\alpha\beta\gamma}=H_{\alpha\beta\gamma}+\chi_{[\alpha}g_{\beta]\gamma}
+\end{equation}
+where $\chi_{\alpha}$ is an arbitrary 1-form (4 functions because we are free to make 4 coordinate choices)
+
+Nice gauge choices:
+\begin{itemize}
+\item algebraic
+\begin{equation}
+3\chi_{\alpha}=H_{\alpha\phantom{\beta}\beta}^{\phantom{\alpha}\beta}
+\end{equation}
+\item differential (like Lorenz in EM, $A^{\mu}_{\phantom{\mu};\mu}=0$)
+\begin{equation}
+H_{\alpha\beta\phantom{\gamma};\gamma}^{\phantom{\alpha\beta}\gamma}=0
+\end{equation}
+\end{itemize}
+
+\subsection{Weak fields}
+Spacetime is nearly flat
+\begin{align}
+g_{\mu\nu}&=\underbrace{\eta_{\mu\nu}}_{\mathclap{\text{Minkowski}}} + h_{\mu\nu}
+\intertext{with}
+\lvert h_{\mu\nu} \rvert &\ll 1\quad\text{(this is element-wise comparison)}
+\end{align}
+
+This implies a restricted choice of coordinates, e.g. spherical polars are \underline{not} appropriate ($r,\theta$, etc.)
+
+We define and use two kinds of transformations
+\subsubsection{Background Lorentz transformations}
+\begin{equation}
+dx^{\bar{\alpha}}=\Lambda^{\bar{\alpha}}_{\phantom{\alpha}\beta}dx^{\beta}
+\end{equation}
+from special relativity with reference to a flat background. Applying this to the metric:
+\begin{align}
+g_{\bar{\alpha}\bar{\beta}}&=\Lambda^{\alpha}_{\phantom{\alpha}\bar{\alpha}} 
+\Lambda^{\beta}_{\phantom{\beta}\bar{\beta}} \left(\eta_{\alpha\beta}+h_{\alpha\beta}\right)\\
+&=\eta_{\bar{\alpha}\bar{\beta}}+h_{\bar{\alpha}\bar{\beta}},\quad\text{by definition}
+\end{align}
+where $h_{\bar{\alpha}\bar{\beta}}$ means ``via background Lorentz''.
+
+\subsubsection{Gauge transformation: small coordinate change}
+
+\begin{equation}
+x^{\alpha} \mapsto x^{\alpha'} = x^{\alpha} + \underbrace{\zeta^{\alpha}(\vec{x})}_{\text{small}}
+\end{equation}
+By small we mean $\lvert \zeta^{\alpha} \rvert \ll \lvert x^{\alpha} \rvert$ element-wise.
+
 
 %-----------------------------------------
 \pagebreak

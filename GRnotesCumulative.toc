@@ -66,9 +66,13 @@
 \contentsline {subsection}{\numberline {7.6}Einstein's field equations}{52}{subsection.7.6}
 \contentsline {part}{II\hspace {1em}Terrestrial and astronomical applications}{54}{part.2}
 \contentsline {section}{\numberline {8}Stress energy}{54}{section.8}
-\contentsline {part}{III\hspace {1em}Appendix}{56}{part.3}
-\contentsline {subsection}{\numberline {8.1}Covariant derviative notation}{56}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Vectors}{56}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}One-forms}{56}{subsubsection.8.1.2}
-\contentsline {subsubsection}{\numberline {8.1.3}General tensors}{56}{subsubsection.8.1.3}
-\contentsline {subsubsection}{\numberline {8.1.4}Metric}{57}{subsubsection.8.1.4}
+\contentsline {section}{\numberline {9}Gauges}{55}{section.9}
+\contentsline {subsection}{\numberline {9.1}Weak fields}{57}{subsection.9.1}
+\contentsline {subsubsection}{\numberline {9.1.1}Background Lorentz transformations}{58}{subsubsection.9.1.1}
+\contentsline {subsubsection}{\numberline {9.1.2}Gauge transformation: small coordinate change}{58}{subsubsection.9.1.2}
+\contentsline {part}{III\hspace {1em}Appendix}{59}{part.3}
+\contentsline {subsection}{\numberline {9.2}Covariant derviative notation}{59}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Vectors}{59}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}One-forms}{59}{subsubsection.9.2.2}
+\contentsline {subsubsection}{\numberline {9.2.3}General tensors}{59}{subsubsection.9.2.3}
+\contentsline {subsubsection}{\numberline {9.2.4}Metric}{60}{subsubsection.9.2.4}
