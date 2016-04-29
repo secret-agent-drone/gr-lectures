@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.10)  28 APR 2016 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.10)  29 APR 2016 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3083,22 +3083,27 @@ ion.9.267}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.2521 \subsubsection
-                     {Background Lorentz transformations}] [58]
+l.2521 
+       ] [58]
+Underfull \hbox (badness 10000) in paragraph at lines 2581--2581
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2550.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2551.
+ []
 
 [59] [60]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2598.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2598.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 2661.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 2662.
+
+[61] [62]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2709.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2709.
  (./GRnotesCumulative.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2598.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2598.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2709.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2709.
 
 Package rerunfilecheck Info: File `GRnotesCumulative.out' has not changed.
 (rerunfilecheck)             Checksum: 63DF6D5EE6C40C982F45331C1AB47B2F;5743.
@@ -3106,11 +3111,11 @@ Package rerunfilecheck Info: File `GRnotesCumulative.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2598.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2709.
  ) 
 Here is how much of TeX's memory you used:
- 36936 strings out of 493117
- 852801 string characters out of 6135433
+ 36958 strings out of 493117
+ 853095 string characters out of 6135433
  1033760 words of memory out of 5000000
  39329 multiletter control sequences out of 15000+600000
  26420 words of font info for 99 fonts, out of 8000000 for 9000
@@ -3147,10 +3152,10 @@ ts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2014/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on GRnotesCumulative.pdf (65 pages, 823538 bytes).
+Output written on GRnotesCumulative.pdf (67 pages, 824324 bytes).
 PDF statistics:
- 1309 PDF objects out of 1440 (max. 8388607)
- 1166 compressed objects within 12 object streams
- 498 named destinations out of 1000 (max. 500000)
+ 1343 PDF objects out of 1440 (max. 8388607)
+ 1198 compressed objects within 12 object streams
+ 520 named destinations out of 1000 (max. 500000)
  737 words of extra memory for PDF output out of 10000 (max. 10000000)
 

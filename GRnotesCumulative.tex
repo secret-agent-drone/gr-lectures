@@ -2517,7 +2517,8 @@ g_{\mu\nu}&=\underbrace{\eta_{\mu\nu}}_{\mathclap{\text{Minkowski}}} + h_{\mu\nu
 
 This implies a restricted choice of coordinates, e.g. spherical polars are \underline{not} appropriate ($r,\theta$, etc.)
 
-We define and use two kinds of transformations
+We define and use two kinds of transformations. Our aim is to find a metric suitable for terrestrial and solar system applcations, e.g. Pound-Rekba experiment.
+
 \subsubsection{Background Lorentz transformations}
 \begin{equation}
 dx^{\bar{\alpha}}=\Lambda^{\bar{\alpha}}_{\phantom{\alpha}\beta}dx^{\beta}
@@ -2532,15 +2533,125 @@ where $h_{\bar{\alpha}\bar{\beta}}$ means ``via background Lorentz''.
 
 \subsubsection{Gauge transformation: small coordinate change}
 
+The gauge transformation we use is:
+
+\begin{equation}
+\vec{x} \mapsto \vec{x} + \underbrace{\vec{\zeta}(\vec{x})}_{\text{small}}
+\end{equation}
+By small we mean $\lvert \zeta \rvert \ll \lvert \vec{x} \rvert$.
+
+The transform matrix is then
 \begin{equation}
 x^{\alpha} \mapsto x^{\alpha'} = x^{\alpha} + \underbrace{\zeta^{\alpha}(\vec{x})}_{\text{small}}
 \end{equation}
-By small we mean $\lvert \zeta^{\alpha} \rvert \ll \lvert x^{\alpha} \rvert$ element-wise.
+where ``small'' is as previous, though evaluated element-wise.
+
+So now, our metric in primed coordinates is:
+
+\begin{align}
+g_{\alpha'\beta'}&=\Lambda^{\alpha}_{\phantom{\alpha}\alpha'} \Lambda^{\beta}_{\phantom{\beta}\beta'}
+(\eta_{\alpha\beta}+h_{\alpha\beta})\\
+&=\delta^{\alpha}_{\phantom{\alpha}\alpha'}\delta^{\beta}_{\phantom{\beta}\beta'}\eta_{\alpha\beta}
+-\frac{\partial \zeta^{\alpha}}{\partial x^{\alpha'}} \delta^{\beta}_{\phantom{\beta}\beta'}\eta_{\alpha \beta}
+-\delta^{\alpha}_{\phantom{\alpha}\alpha'}\frac{\partial \zeta^{\beta}}{\partial x^{\beta'}}\eta_{\alpha\beta}
++\delta^{\alpha}_{\phantom{\alpha}\alpha'}\delta^{\beta}_{\phantom{\beta}\beta'}h_{\alpha\beta}
++\text{2nd order corrections}\\
+&=\eta_{\alpha'\beta'}-\zeta_{\beta', \alpha'}-\zeta_{\alpha', \beta'}+h_{\alpha'\beta'}
+\end{align}
+where $\zeta_{\beta'}=\eta_{\beta'\gamma'}\zeta^{\gamma'}$, i.e. all raising and lowering is done with Minkowski metric.
+
+This is like an EM gauge transform, cf. $A_{\mu}\mapsto A_{\mu}+\frac{\partial \chi}{\partial x^{\mu}}$ except that our
+$\vec{\zeta}$ has 4 degrees of freedom, \underline{not} one (physically: we are free to choose 4 coordinates).
+
+We can now calculate Christoffel symbols, Riemann tensor etc. from this metric. Algebra is left as an exercise.
+
+\begin{equation}
+R_{\alpha\beta\mu\nu}=g_{\alpha \lambda} R^{\lambda}_{\phantom{\lambda}\beta\mu\nu}
+=\frac{1}{2}\left(h_{\alpha\nu,\beta\nu}+h_{\beta\mu,\alpha\nu}-h_{\alpha\mu,\beta,nu}-h_{\beta\nu,\alpha,mu}\right)
+\end{equation}
+noting that the derivatives of $\eta$ vanishes.
+
+\exercise{We can check that $R$ is invariant under gauge transform
+\begin{equation}
+\bar{h}_{\alpha\nu}=h_{\alpha\nu}-\zeta_{\alpha,\nu}-\zeta_{\nu,\alpha}
+\end{equation}
+
+We will get lots of pairwise cancellation because $\zeta_{\alpha,\beta \gamma\delta}$ is the same for all perumtations of $\{\beta,\gamma,\delta\}$. We can choose $\vec{\zeta}$ cleverly to simplify.
+}
+{}
+
+Considering the Ricci tensor,
+\begin{equation}
+R_{\beta\nu}=g^{\alpha\lambda} \underbrace{R_{\lambda\beta\alpha\nu}}_{\mathclap{\text{1st order only}}}
+\cong \eta^{\alpha\lambda} R_{\lambda\beta\alpha\nu},\quad\text{to 1st order}
+\end{equation}
+The Ricci scalar:
+\begin{equation}
+R = g^{\beta\nu} \underbrace{R_{\beta\nu}}_{\mathclap{\text{also 1st order}}} \cong \eta^{\beta\nu} R_{\beta\nu}+
+\text{quadratic bits}
+\end{equation}
+
+Collect eveerything in Einstein tensor:
+\begin{equation}
+G_{\beta\nu}=R_{\beta\nu}-\frac{1}{2}R g_{\beta\nu}
+\end{equation}
+The algebra is left as an exercise, but we get
+\begin{align}
+G_{\beta\nu}=&~\frac{1}{2}\left(h^{\alpha}_{\phantom{\alpha}\nu,\beta\alpha}+h_{\beta\alpha,\phantom{\alpha}\nu}
+^{\phantom{\beta\alpha,}\alpha} - h^{\alpha}_{\phantom{\alpha}\alpha,\beta\nu}- h_{\beta\nu,\phantom{\alpha}\alpha}
+^{\phantom{\beta\nu,}\alpha}\right)\\
+&-\frac{1}{2}\eta_{\beta\nu}
+\left( h^{\alpha\phantom{\lambda}\lambda}_{\phantom{\alpha}\lambda,\phantom{\lambda,}\alpha}
+- h^{\lambda\phantom{\lambda,}\alpha}_{\phantom{\lambda}\lambda,\phantom{\alpha}\alpha}\right)
+\end{align}
+Note, all raising and lowering is done with Minkowski metric.
+\begin{align}
+\text{e.g. } h^{\alpha}_{\phantom{\alpha}\nu,\beta\alpha}&
+=\eta^{\alpha\mu}\frac{\partial h_{\mu\nu}}{\partial x^{\beta}\partial x^{\alpha}}\\
+h_{\beta\alpha,\phantom{\alpha}\nu}^{\phantom{\beta\alpha,}\alpha}&=
+\frac{\partial h_{\beta\alpha}}{\partial x^{\mu} \partial x^{\nu}}\eta^{\alpha\mu}\quad\text{etc.}
+\end{align}
+
+Terms (2nd derivatives, since curvature) are mainly of the form 
+\begin{align}
+&(\underbrace{h_{\alpha \beta,}^{\phantom{\alpha\beta,}\alpha}}_{\mathclap{\div h}})_{,\text{ something}}\\
+\text{or }=& (\underbrace{h^{\alpha}_{\phantom{\alpha}}}_{\mathclap{\text{trace of $h$}}})_{,\text{ two somethings}}
+\end{align}
+
+This suggests a good gauge choice is something traceless and divergenceless (like Lorenz gauge in EM, divergenceless).
+
+We deifine a trace-reveresed metric
+\begin{equation}
+\bar{h}_{\beta\nu}=h_{\beta\nu}-\frac{1}{2}\eta_{\beta\nu}h^{\lambda}_{\phantom{\lambda}}
+\end{equation}
+Also impose the gauge condition
+\begin{equation}
+\bar{h}_{\beta\nu,}^{\phantom{\beta\nu,}\nu}=0\quad\text{(Lorenz)}
+\end{equation}
+
+Substitute (as an exercise)
+\begin{equation}
+G_{\beta\nu}=-\frac{1}{2}\Box \bar{h}_{\beta\nu}
+\end{equation}
+where $\Box$ is the D'Alembertian in flat space
+\begin{equation}
+\Box = \frac{\partial^2}{\partial t^2}+\nabla^2
+\end{equation}
+
+Einstein equation without cosmological constant is
+\begin{equation}
+\Box \bar{h}_{\mu\nu}=-16 \pi T_{\mu\nu},\quad\text{weak field}
+\end{equation}
+
+This is a wave equation wih source on RHS.
+
 
 
 %-----------------------------------------
 \pagebreak
 \part{Appendix}
+
+APPROX -> CONG
 
 
 Indices up = vector-like
