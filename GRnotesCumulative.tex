@@ -33,6 +33,8 @@
 
 \newcommand{\vect}[1]{\mathbf{#1}} %3D vector
 \renewcommand{\div}{\text{div}~}
+\newcommand{\diag}{\text{diag}~}
+
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
@@ -2620,7 +2622,7 @@ Terms (2nd derivatives, since curvature) are mainly of the form
 
 This suggests a good gauge choice is something traceless and divergenceless (like Lorenz gauge in EM, divergenceless).
 
-We deifine a trace-reveresed metric
+We define a trace-reveresed metric
 \begin{equation}
 \bar{h}_{\beta\nu}=h_{\beta\nu}-\frac{1}{2}\eta_{\beta\nu}h^{\lambda}_{\phantom{\lambda}}
 \end{equation}
@@ -2645,13 +2647,142 @@ Einstein equation without cosmological constant is
 
 This is a wave equation wih source on RHS.
 
+\review{Recall, in the weak field limit we express the metric as
+\begin{equation}
+g_{\mu\nu}=\eta_{\mu \nu}+h_{\mu \nu}
+\end{equation}
+where $h_{\mu\nu}$ is small. The trace-reversed version of $h$ is
+\begin{equation}
+\bar{h}_{\mu\nu}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h^{\lambda}_{\phantom{\lambda}\lambda}
+\end{equation}
+We choose our gauge so that
+\begin{equation}
+h_{\mu\nu,}^{\phantom{\mu\nu,}\nu}=0
+\end{equation}
+which is the Lorenz gauge. From this we get a wave equation,
+\begin{equation}
+\Box \bar{h}_{\mu\nu}=-16\pi T_{\mu\nu}\label{wave eqn}
+\end{equation}
+}
+
+\section{Applications of Einstein's Field Equations}
+We will consider how we can apply the wave equation~(\ref{wave eqn}) to terrestrial situations (e.g. gravity on Earth).
+
+To do this, we will have to neglect many components! (this is since we do not actually need 10 separate equations to describe, for example, the motion of a tennis ball).
+
+\subsection{Perfect fluid}
+
+For a perfect fluid, $T_{\mu\nu}=p g_{\mu\nu}+(p+\rho)u_{\mu} u_{\nu}$, so
+\begin{align}
+T_{00}&\sim \rho\\
+T_{0i}&\sim \rho\times \text{velocity}\\
+T_{ij}&\sim \rho\times\text{(velocity)}^2
+\end{align}
+where the last two are $\ll \rho$ if the velocity of the source is $\ll c$.
+
+Consider only
+\begin{align}
+\Box \bar{h}_{00}&=-16\pi T_{00}=-16\pi\rho
+\intertext{where}
+\Box &=-\frac{\partial^2}{\partial t^2}+\nabla^2\approx \nabla^2
+\intertext{because we want static gravity, not a wave}
+\end{align}
+Alternatively, 
+\begin{equation}
+\frac{\partial / \partial t}{\nabla}\sim\frac{\text{length}}{\text{time}}\sim\text{velocity}\ll 1
+\end{equation}
+\begin{equation}
+\text{i.e., } \nabla^2 \bar{h}_{00}=-16\pi \rho
+\end{equation}
+
+In the Newtonian limit (experimental):
+\begin{equation}
+\nabla^2 \Phi = 4\pi \underbrace{G}_{\mathclap{\text{we will set $G=1$}}} \rho
+\end{equation}
+That is,
+\begin{equation}
+\bar{h}_{00}=-4 \underbrace{\Phi}_{\mathclap{\text{Newtonian gravitational potential}}}
+\end{equation}
+and other $\bar{h}_{\mu\nu}$'s are tiny.
+
+Going back to the original metric involving $h_{\mu\nu}$:
+\begin{align}
+h_{00}&=\bar{h}_{00}+\frac{1}{2}\eta_{00} h^{\lambda}_{\phantom{\lambda}\lambda}\\
+&=\bar{h}_{00}+\frac{1}{2}\underbrace{\eta_{00}}_{-1}\underbrace{\eta^{\lambda\alpha}}
+_{\mathrlap{-1 \text{ for }\lambda=\alpha=0}} \overbrace{h_{\lambda\alpha}}
+^{\mathclap{\text{only significant for }\lambda=0,\alpha=0}}
+\end{align}
+NOTE: these is a minor error in the algebra above, according to Melatos.
+
+\begin{align}
+\text{i.e., } h_{00}&=\frac{1}{2}\bar{h}_{00}\\
+&=-2\Phi
+\end{align}
+Similarly for $h_{11}$, etc. (trace $\neq 0$).
+
+Put together we get the weak-field ``static'' metric:
+\begin{equation}
+g_{\mu\nu}=\diag (-1-2\Phi,1-2\Phi,1-2\Phi,1-2\Phi)
+\end{equation}
+
+
+\subsection{Pound-Rebka}
+
+We consider the Pound-Rebka experiment (PUT FIGURE HERE). What is the photon frequency at the top/bottom of the tower?
+\begin{align}
+E_{\text{photon}}&=-\vec{u}\cdot \vec{p}\\
+\vec{u}_{\text{top}}\cdot \vec{u}_{\text{top}}&=-1\\
+g_{00}\left(u^0_{\text{top}}\right)^2&=-1\\
+\text{i.e., } u^{0}_{\text{top}}&=\sqrt{1+2\Phi},\quad\text{$\Phi$ is small on Earth}\\
+&\approx 1+\Phi\text{ (at top)}
+\intertext{Simialrly stat. observation at bottom:}
+u^0_{\text{bottom}}&=1+\Phi \text{ (at bottom)}
+\end{align}
+
+Also note that the metric is independent of time.
+
+\begin{align}
+\text{i.e., } p_0&=\text{constant}\\
+E_{\text{top}}&=-u^0_{\text{top}}p_0\quad\text{and}\quad E_{\text{bottom}}
+=-u^0_{\text{bottom}}p_0\\
+\frac{E_{\text{top}}}{E_{\text{bottom}}}&=\frac{u^0_{\text{top}}}{u^0_{\text{bottom}}}
+=\frac{1+\Phi\text{ (top)}}{1+\Phi\text{ (bottom)}}\approx 1+gH
+\end{align}
+where $H$ is the altitude difference, give $\Phi(z)=gz$.
+
+\subsection{Gravity Probe B/Lense-Thirring precession}
+L-T precession arises because inertial frames are dragged into rotation by a rotating object, e.g., a Kerr black hole!
+
+Gravity Probe B is a test for precession of gyroscope (there are 4 probes) orbiting Earth ($\SI{650}{km}$ radius orbit). Launched in 2004-2005.
+
+Two types of precession where measured:
+\begin{itemize}
+\item geodetic
+\footnote{Gyroscope parallel transported in free fall, but space is curved by \underline{mass} of Earth (whether or not Earth rotates) $\Rightarrow$ spin doesn't return to original position} 
+$6601\pm 18.3~\text{mas~yr}^{-1}$
+\begin{itemize}
+\item cf. 6606~mas~yr$^{-1}$ predicted from GR (where mas = milli-arcsecond)
+\end{itemize}
+\item Lense-Thirring
+\footnote{We need Earth to rotate for Lense-Thirring precession. It is the angular momentum of Earth's contribution to $T^{\mu\nu}$}
+: $37.2 \pm 7.2~\text{mas~yr}^{-1}$
+\begin{itemize}
+\item cf. 39.2~mas~yr$^{-1}$ predicted from GR
+\end{itemize}
+\end{itemize}
+Beware stray electrostatic torques! This was an issue that took about a decade to work out.
+
+Analysis:
+\begin{enumerate}
+\item What is gyroscope spin in geometric language?
+\item How does Earth's mass \underline{and} rotation affect weak-field metric? (What we have done so far is not enough!)
+\item How does spin evolve as it falls freely around Earth? (related to the geodesic equation)
+\end{enumerate}
 
 
 %-----------------------------------------
 \pagebreak
 \part{Appendix}
-
-APPROX -> CONG
 
 
 Indices up = vector-like
