@@ -2779,7 +2779,226 @@ Analysis:
 \item How does spin evolve as it falls freely around Earth? (related to the geodesic equation)
 \end{enumerate}
 
-{\Huge 2+1/3 lectures missing (4/5/6 of May)}
+\subsection{Spin}
+\begin{equation}
+T^{\mu\nu}=\text{energy momentum tensor}
+\end{equation}
+Can we construct a geometric object containing angular momentum (AM) from $T^{\mu\nu}$? Recall 1st year:
+\begin{equation}
+\text{Angular momentum }I=\vect{x}\times \vect{p}
+\end{equation}
+We propose in GR that angular momentum is some osrt of vector and tensor. Specifically try
+\begin{equation}
+M^{\alpha\beta \gamma}=x^{\beta}T^{\gamma\alpha}-x^{\gamma}T^{\beta\alpha}
+\end{equation}
+Note this is antisymmetric in $\beta,\gamma$. Is it conserved?\footnote{We have local energy conservation, but there is energy and momentum in global curvature, etc.} Check divergence in local flatspace
+\begin{align}
+M^{\alpha\beta\gamma}_{\ph{\alpha\beta\gamma},\alpha}&=\delta^{\beta}_{\ph{\beta}\alpha}
+T^{\gamma\alpha}+x^{\beta}\underbrace{T^{\gamma\alpha}_{\ph{\gamma\alpha},\alpha}}
+_{\mathclap{=0\text{ because $\propto$ energy-momentum conversation}}}-\delta^{\gamma}_{\ph{\gamma}\alpha}T^{\beta\alpha}-
+\underbrace{x^{\gamma}T^{\beta\alpha}}_{=0}\\
+&=0\\
+&=M^{\alpha\beta\gamma}_{\ph{\alpha\beta\gamma};\alpha}
+\end{align}
+hence this is also true in curved space.
+
+Define
+\begin{align}
+J^{\beta\gamma}&=\int\text{d}^3\vect{x}~M^{0\beta\gamma}\\
+\Rightarrow \frac{\text{d}J^{\beta\gamma}}{\text{d}t}&=\int \vect{d}^3\vect{x}~
+\frac{\partial M^{0\beta\gamma}}{\partial t}\\
+&=-\int \text{d}^3\vect{x}\frac{\partial M^{i\beta\gamma}}{\partial x^i}
+\intertext{by conservation law, with $i=1,2,3$}
+&=-\int \text{d}S~n_i M^{i\beta\gamma}
+\end{align}
+by Gauss' law.
+
+
+Physically:
+\begin{itemize}
+\item $J^{0i}$ appears to depend on where you choose origin. We will ignore it.
+\item $J^{ij}=\text{angular momentum}$, (e.g. $J^{12}$ is ``3'' component of AM)
+\item $J^{\beta\gamma}$ is \underline{not} invariant under translation because it contains orbital AM.
+\end{itemize}
+
+We pull out just the spin:
+\begin{equation}
+S_{\alpha}=\frac{1}{2}\overbrace{\epsilon_{\alpha\beta\gamma\delta}}^{\mathclap{\text{Levi-Civita (anti-symmetric)}}}J^{\beta \gamma} \underbrace{u^{\delta}}_{\mathclap{4-\text{velocity}}}
+\end{equation}
+
+Check (as an exercise) physical meaning in components in MCRF (momentarily comoving reference frame) where $\vec{u}=(u^t,0,0,0)$
+\begin{align}
+S_0&=0\\
+S_1&=J^{23}=\text{``1'' component of angular momentum}\\
+\text{etc.}
+\end{align}
+
+Note: $S_{\alpha}u^{\alpha}=0$.
+
+Step 2 $\to$ weak field metric (can also get as limit of Kerr BH solution, which we will see later)
+
+Answer:
+
+Post-Newtonian approximation
+\begin{align}
+\Gamma^{0}_{\ph{0}i0}\rvert_{\text{2nd order}}&=\frac{\partial \Phi}{\partial x^i}
+\intertext{where $\Phi$ is the Newtonian potential.}
+\Phi&=-\int \text{d}^3\vect{x}'~\frac{T^{00}\rvert_{\text{0th order}}}{|\vect{x}-\vect{x}'|}\\
+\Gamma^{0}_{\ph{0}ij}\rvert_{\text{1st order}}&=0\\
+\Gamma^{k}_{\ph{k}i0}\rvert_{\text{3rd order}}&=\frac{1}{2}\left(\frac{\partial \zeta_i}
+{\partial x^k}-\frac{\partial \zeta^k}{\partial x^i}\right)-\delta^{k}_{\ph{k}i}\frac{\partial \Phi}
+{\partial t}
+\intertext{where}
+\zeta^i&=-4\int\text{d}^3\vect{x}'~\frac{T^{i0}\rvert_{\text{1st order}}}{|\vect{x}-\vect{x}'|}
+\intertext{We get $T^{i0}\neq 0$ if rotating Earth, eg. $\propto M_{\text{Earth}}\cdot \text{rotational speed of Earth}\sim v^3$}
+\Gamma^{k}_{\ph{k}ij}\rvert_{\text{2nd order}}&=-\delta_{ij}\Phi^{k}_{\ph{k},}
+-\delta^{k}_{\ph{k}i}\Phi_{,j}+\delta^{k}_{\ph{k}j}\Phi_{,i}
+\end{align}
+
+These orders are ``leading order' for each Christoffel symbol (i.e. all lower orders are zero). Also note $i,j=\{1,2,3\}$.
+
+So... we now use the metric.
+
+What are the equations of motion of $S_{\alpha}$? We consider freefall: local Lorentz invariance then gives equations of motion of spin; $\vec{u}$ is the 4-velocity along the geodesic of freefall.
+
+\begin{align}
+0&=\nabla_{\vec{u}}\tilde{S}\\
+u^{\beta} S_{\alpha;\beta}&=u^{\beta}\left(S_{\alpha,\beta}-\Gamma^{\lambda}_{\ph{\lambda}
+\alpha\beta}S_{\lambda}u^{\beta}\right)
+\end{align}
+
+We want $\frac{dS_{\alpha}}{d\tau}$, i.e. how the $\tilde{S}$ changes along the geodesic parametrised by the proper time $\tau$.
+
+We simplify: eliminate $S_0$ using $S_0 u^0 = -S_i u^i$ (see Weinberg for the algebra; we don't need to know the algebra, only the result).
+
+To leading order, we can define a 3-vector
+\begin{align}
+\vect{L}&=(1+\Phi)\vect{S}-\frac{1}{2}\vect{v}(\vect{v}\cdot\vect{S})
+\intertext{So we find}
+\frac{d\vect{L}}{dt}&=\left(-\underbrace{\frac{1}{2}\nabla\times\vect{S}}_{\text{Lense-Thirring}}
+-\frac{3}{2}\vect{v}\times \nabla\Phi \right)\times \vect{L}\label{dldt}
+\end{align}
+Geodetic $\vect{v}=\frac{d\vect{x}}{dt}$ where $\vect{v}$ is the 3-velocity of the spacecraft.
+
+Precession! c.f.~(\ref{dldt}) with
+\begin{equation}
+\frac{d\vect{L}}{dt}=\vect{\Omega}_{\text{precession}}\times \vect{L}
+\end{equation}
+
+Geodesic happens because we are parallel transported around a closed loop.
+
+
+\section{Gravitational waves}
+There are 3 points to consider regarding grav. waves:
+\begin{enumerate}
+\item Propagation
+\item Detection
+\item Generation
+\end{enumerate}
+
+\subsection{Waves}
+Some examples:
+\begin{itemize}
+\item \underline{Scalar}: sound (just need pressure, e.g. for space; or need density)
+\item \underline{Vector}: photon in EM (two directions, need a vector)
+\item \underline{Tensor}: grav. waves, elastic waves (displacements, not always same direction as force)
+\end{itemize}
+
+\underline{What do waves do?} They transport energy, momentum, angular momentum.
+\begin{align}
+\Rightarrow&\text{merging black holes}\Rightarrow\text{gravitational waves}\\
+\Rightarrow&\text{rotating (off axis) magnet}
+\end{align}
+
+Waves are launched by a localised source.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{images/waves-zones.png}
+\caption{Near and far zones of a wave}
+\end{figure}
+
+In the near zone, waves $\sim$ quasi-static (static field source) $e^{-i\omega t}$. Usually steeper than $r^{-1}$, but $E_{\text{flux}}\propto r^{-2}$.
+
+In far zone, we approximate a plane wave $\propto e^{i(kr-\omega t)}$; amplitude $\propto r^{-1}$, usually transverse energy $E \propto r^{-2}$.
+
+In general in GR, we need non-linear analysis in the near zone.
+
+\begin{align}
+\text{Propagation}:&&~\underbrace{\Box\bar{h}_{\mu\nu}}_{\mathclap{\partial^\lambda \partial_{\lambda};\text{ raise/lower $\bar{\omega}$ Minkowski for linear waves}}}
+&&=-16\pi T_{\mu\nu} = 0\quad\text{(in vacuum)}\\
+\text{Plane wave solutions}:&&~\bar{h}_{\mu\nu}&&=A_{\mu\nu}e^{ik_{\alpha}x^{\alpha}}
+\end{align}
+
+\begin{align}
+\Rightarrow \partial_{\lambda}\bar{h}_{\mu\nu}&=A_{\mu\nu}\partial_{\lambda}(ik_{\alpha}
+x^{\alpha})e^{ik_{\alpha}x^{\alpha}}\\
+&=A_{\mu\nu}ik_{\alpha}\delta^{\alpha}_{\ph{\alpha}\lambda}e^{ik_{\alpha}x^{\alpha}}\\
+&=ik_{\lambda}\bar{h}_{\mu\nu}\\
+\Box \bar{h}_{\mu\nu}&=-k^{\lambda}k_{\lambda}\bar{h}_{\mu\nu}=0\quad\text{(in vacuum)}
+\end{align}
+
+We have two possibilities:
+\begin{itemize}
+\item no wave ($\bar{h}_{\mu\nu}=0$)
+\item $k^{\lambda}k_{\lambda}=0$, i.e. $\vec{k}$ null vector (or equivalently $\tilde{k}$ is a null 1-form)
+\begin{itemize}
+\item[] $d\tilde{\phi}=i\tilde{k}$
+\end{itemize}
+\end{itemize}
+
+Local Minkowski:
+
+\begin{equation}
+\vec{k}=\left(\frac{\omega}{c},\vect{k}\right)\quad(c=1)
+\end{equation}
+
+i.e. $\omega^2 - |k|^2=0$ (use phase speed $=\frac{\omega}{k}=1$)
+
+i.e. grav. waves propagate at $c=1$!
+
+\begin{equation}
+\Box \bar{h}=-16T\quad\text{in Lorentz (harmonic) gauge}
+\end{equation}
+Harmonic $\Rightarrow 0 =\bar{h}_{\mu\nu,}^{\ph{\mu\nu,}\nu}$; i.e. 
+$\partial^{\nu}\bar{h}_{\mu\nu}=0$.
+
+This implies a constraint on $A_{\mu\nu}$
+
+Substitute in a plane wave,
+\begin{equation}
+0=ik^{\nu}A_{\mu\nu}e^{ik_{\alpha}x^{\alpha}}
+\end{equation}
+i.e. $ik^{\nu}A_{\mu\nu}=0 \Rightarrow \vec{k}$ orthogonal to tensor $A$.
+
+How many degrees of freedom in plane gravitational waves?
+\begin{equation}
+A_{\mu\nu}\text{ symmetric}\Rightarrow 10\text{ independent variables}
+\end{equation}
+By choosing coordinates wisely (gauge), we can reduce this by 4.
+\begin{equation}
+\Rightarrow 6\text{ independent variables}
+\end{equation}
+and $K^{\nu}A_{\mu\nu}=0$, 4 equations $\Rightarrow$ 4 less independent variables
+\begin{equation}
+\Rightarrow 2\text{ independent variables}
+\end{equation}
+
+These two independent variables are for \underline{polarisation}. Gravitational waves (linear, planar) have two independent polarisations called ``???'' and ``cross'' (this naming is explained later).
+
+Some side notes on ``good tensor equations'':
+
+For a \underline{good} tensor equation, e.g. $T^{\alpha}_{\ph{\alpha}\beta\gamma}=\text{something}$, $T=\text{something}$, we know
+\begin{enumerate}
+\item equations will hold for all coordinate systems
+\item tensor will be the same for all coordinate systems
+\item components of tensor \underline{won't} necessarily be the same (i.e. representation may change)
+\item if the LHS is scalar, its components won't change between coordinate systems
+\end{enumerate}
+
+
+
+\HRule
 
 Substitute (as an exercise):
 \begin{align}
@@ -2789,6 +3008,7 @@ A^{\text{(new)}}_{\mu\nu}&=A^{\text{(old)}}_{\mu\nu}-ik_{\nu}B_{\mu}
 0&=A^{\mu\text{(new)}}_{\ph{\mu}\mu}\\
 &=A^{\mu\text{(old)}}_{\ph{\mu}\mu}-ik^{\mu} B_{\mu}-ik_{\mu}B^{\mu}
 +4ik_{\lambda}B^{\lambda}\\
+&=0,\quad\text{if $T^{\mu\nu}=0$ on boundary of volume}
 \end{align}
 
 \HRule
