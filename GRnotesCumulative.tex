@@ -3015,7 +3015,7 @@ A^{\text{(new)}}_{\mu\nu}&=A^{\text{(old)}}_{\mu\nu}-ik_{\nu}B_{\mu}
 \section{Gravitational wave detection}
 Motion of test particle in wave.
 
-Consider a particle at rest in Mikowski spacetime before wave passes through. Orient our transverse traceless gauge such taht $\vec{U}=\vec{e}_0=$4-velocity of motionless particle initially. When wave passes through, particle is in free fall.
+Consider a particle at rest in Mikowski spacetime before wave passes through. Orient our transverse traceless gauge such that $\vec{U}=\vec{e}_0=$4-velocity of motionless particle initially. When wave passes through, particle is in free fall.
 
 \begin{align}
 0&=\nabla_{\vec{u}}\vec{u}\\
@@ -3031,10 +3031,183 @@ At $\tau=0$ (initially) we have $\vec{u}=(1,0,0,0)$. Initially:
 &=-\frac{1}{2}g^{\alpha\lambda}\left(g_{\lambda0,0}+g_{0\lambda,0}-g_{00,\lambda}\right)\\
 &=-\frac{1}{2}\eta^{\alpha\lambda}\left(h_{\lambda0,0}+h_{0\lambda,0}-h_{00,\lambda}\right)
 \intertext{to leading order in $h$.}
-&=0,quad\text{since $A_{\mu0}=0$.}
+&=0,\quad\text{since $A_{\mu0}=0$.}
 \end{align}
 
 i.e., nothing ``happens'', meaning $\vec{u}$ doesn't change. 
+
+\HRule 
+
+Many, many lectures missing (basically all of Week 10)
+
+\HRule
+
+\review{Last lecture: Einstein's equations for relativistic star (spherical ball of perfect fluid) hence energy-momentum is of a physical sort (has pressure and density)
+
+Today: 
+\begin{itemize}
+\item we solve this
+\item then consider exterior solution if star has finite extent
+\end{itemize}
+}
+
+\section{Relativistic stars}
+
+\subsection{Metric}
+Relativistic stars have the metric
+\begin{equation}
+ds^2=-e^{2\Phi(r)}dt^2 + e^{2\Lambda(r)}dr^2+r^2d\theta^2 + r^2\sin\theta d\phi^2
+\end{equation}
+Note $\Phi(r)$ is \underline{not} the Newtonian gravitational potential, but it does reduce to it in the weak field limit.
+
+Recall Einstein's equations\footnote{These are the equations of motions for the field (``curvature'').} gave 3 independent equations: $tt,rr,\theta\theta$. We will evaluate these.
+
+\begin{equation}
+tt:\quad\frac{1}{r^2}e^{2\Phi}\frac{d}{dr}\left[r(1-e^{-2\Lambda})\right]=8\pi\rho e^{2\Phi}
+\end{equation}
+For convenience we replace $\Lambda(r)$ with $m(r)=\frac{r}{2}(1-e^{-2\Lambda})$.
+\begin{equation}
+\Rightarrow \frac{dm}{dr}=4\pi\rho r^2\label{unknowns1}
+\end{equation}
+
+\begin{equation}
+rr:\quad -\frac{1}{r}e^{2\Lambda}(1-e^{-2\Lambda})+\frac{2}{r}\Phi'=8\pi p e^{2\Lambda}
+\end{equation}
+
+After some substitution and rearrangement,
+\begin{equation}
+\frac{d\Phi}{dr}=\frac{m+4\pi p r^3}{r(r-2m)}\label{unknowns2}
+\end{equation}
+
+The $\theta\theta$ term doesn't give anything extra.
+
+We can use the equation of motion for matter (given the fields, the matter responds and ``moves'' (this also includes motion in the $t$ direction; our star is static); this motion itself affects the fields!):
+\begin{equation}
+T^{\mu\nu}_{\ph{\mu\nu};\nu}=0
+\end{equation}
+i.e. energy-momentum conservation.
+
+Radial component: after algevra, with covariant derivative given assumed metric,
+\begin{equation}
+(\rho+p)\frac{d\Phi}{dr}=-\frac{dp}{dr}\label{unknowns3}
+\end{equation}
+The other components tell us nothing extra.
+
+We count the unknowns from equations~(\ref{unknowns1}),~(\ref{unknowns2}) and~(\ref{unknowns3}): $m(r),\Phi(r),\rho(r),p(r)$.
+
+So we have 4 unknowns but only 3 equations. However, we also need an equation of state relating $p$ and $\rho$ - this is neither from GR or energy conservation; it is a statistical mechanics property of the fluid.
+
+\subsection{The physics}
+
+(\ref{unknowns1}): ``Mass'' continuity relation, i.e. 
+\begin{align}
+m(r)&=\text{mass enclosed in radius $r$ if $\rho$ is density.}\\
+&=\int^r_0~dr'~4\pi r'^2\rho(r')
+\end{align}
+
+However,  
+\begin{align}
+\text{true mass enclosed} &=\int_V d^3\vect{x}~\rho\sqrt{-g}\\
+&=\int^r_0 dr'~4\pi r'^2 \rho(r') e^{\Phi(r')+\Lambda(r')} 
+\end{align}
+where $g$ is the determinant of the metric. This correction is because we must integrate over the \underline{proper volume}.
+
+The correction adjusts for gravitational binding energy.
+
+\HRule
+
+(\ref{unknowns2}): $\frac{d\Phi}{dr}\sim \frac{m}{r^2}$; just like Newton's law for gravitational acceleration, i.e. $\nabla^2 \Phi = 4\pi \rho$, and $\Phi\sim\frac{GM}{r^2}$
+
+However, pressure is also a source of intertia and hence curvature $\Rightarrow$ curvature of spacetime modifies $r^{-2}$ law of gravity.
+
+\HRule
+
+(\ref{unknowns3}): Hydrostatic equilibrium, e.g. Earth's atmosphere etc., $\rho\times\underbrace{\text{(gravitational acceleration)}}_{\mathclap{\text{vector}}}=-\nabla p$
+
+However, pressure also gravitates, i.e. inertia of fluid includes its pressure.
+
+\HRule
+
+We recall 
+\begin{align}
+\frac{dm}{dr}&=4\pi r^2 \rho\\
+\frac{d\Phi}{dr}&=\frac{m+4\pi \rho r^3}{r(r-2m)}
+\end{align}
+
+Suppose star has fininte extent: $\rho=p=0$ for $r\geq R$.
+
+Exterior: 
+\begin{itemize}
+\item $m=$ constant (call it $M$)
+\item $\frac{d\Phi}{dr}=\frac{m}{r(r-2m)}$
+\end{itemize}
+
+Integrate:
+\begin{equation}
+2\Phi=\ln \left(1-\frac{2m}{r}\right)
+\end{equation}
+
+Substitute for $\Phi$ and $\Lambda$ in original metric:
+\begin{equation}
+ds^2=-\left(1-\frac{2m}{r}\right)dt^2+\left(1-\frac{2m}{r}\right)^{-1}dr^2 + r^2 d\theta^2
++r^2\sin^2 \theta~d\phi^2
+\end{equation}
+
+This is the Schwarzchild metric! (which we have now derived). It is the exterior metric for \underline{any} spherically symmetric mass distribution (Birkhoff's therorem).
+
+What happens to an astronaut orbiting a BH?
+
+Assume free fall: solve geodesic equations $\nabla_{\vec{u}}\vec{u}=0$. \footnote{If not in free fall, i.e. rockets turned on, we solve $\nabla_{\vec{u}}\vec{u}=\vec{a}$ and infer $\vec{a}$ in terms of proper acceleration. We will not consider this case.}
+
+Note that  $\nabla_{\vec{u}}\vec{u}=0$ also implies $\nabla_{\vec{u}}\tilde{u}=0$.
+
+We already proved: $\frac{du_{\alpha}}{d\tau}=\frac{1}{2}g_{\mu\nu,\alpha}u^{\mu} u^{\nu}$.
+
+Schwarz: metric independent of $t$ and $\phi \Rightarrow u_t$ and $u_{\phi}$ are constants.
+
+We call
+\begin{itemize}
+\item $u_t=-E$\quad energy/mass at infinity
+\item $u_{\phi}=L$\quad angular momentum/mass at infinity (component along z-axis)
+\end{itemize}
+
+We can also prove (see various books) orbit of particle is confined to a plane (like Newtonian).
+
+i.e., 
+\begin{align}
+u^{\theta}&=\frac{d\theta}{d\tau}=0 \text{ and hence } u_{\theta}=g_{\theta\theta}u^{\theta}=0
+\intertext{Take $\theta=\frac{\pi}{2}$ (equatorial)}
+u^t&=g^{tt}u_t=E\left(1-\frac{2m}{r}\right)^{-1}\\
+u^{\phi}&=g^{\phi\phi}u_{\phi}=\frac{L}{r^2}
+\end{align}
+
+Equation of motion for $u^r$: equivalently takw $r$ component of $\nabla_{\vec{u}}\vec{u}=0$ \underline{or} recall normalisation $\vec{u}\cdot\vec{u}=-1$.
+
+\begin{align}
+-1&=g_{tt}(u^t)^2+g_{rr}(u^r)^2+0+g_{\phi\phi}(u^{\phi})^2\\
+&=-\left(1-\frac{2m}{r}\right)\cdot E^2 \left(1-\frac{2m}{r}\right)^{-2}+\left(1-\frac{2m}{r}\right)^{-1}(u^r)^2+r^2\cdot \left(\frac{L}{r^2}\right)^2\\
+\text{i.e., }\left(\frac{dr}{d\tau}\right)^2&=E^2-
+\underbrace{\left(\frac{L^2}{r^2}+1\right)\left(1-\frac{2M}{r}\right)}_{\mathclap{V_{\text{eff}}(r)^2}}
+\end{align}
+Orbit only exists if $E \geq V_{\text{eff}}$
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/v_eff-orbit.png}
+\caption{Various orbit types}
+\end{figure}
+
+Circular: $\frac{dV_{\text{eff}}}{dr}=0$.
+\begin{equation}
+r=\frac{L^2}{2M}\left(1+\sqrt{1-\frac{12M^2}{L^2}}\right)
+\end{equation}
+
+Unlike Newtonian mechniacs, a circular orbit only exists for $L^2 12M^2$. Small circular orbit:
+\begin{equation}
+r=\frac{12M^2}{2M}=6M.
+\end{equation}
+$\Rightarrow$ ISCO = innermost stable circular orbit.
 
 %-------------------------------------------------------
 \pagebreak
