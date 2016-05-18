@@ -2986,6 +2986,8 @@ and $K^{\nu}A_{\mu\nu}=0$, 4 equations $\Rightarrow$ 4 less independent variable
 
 These two independent variables are for \underline{polarisation}. Gravitational waves (linear, planar) have two independent polarisations called ``???'' and ``cross'' (this naming is explained later).
 
+
+\begin{framed}
 Some side notes on ``good tensor equations'':
 
 For a \underline{good} tensor equation, e.g. $T^{\alpha}_{\ph{\alpha}\beta\gamma}=\text{something}$, $T=\text{something}$, we know
@@ -2995,10 +2997,43 @@ For a \underline{good} tensor equation, e.g. $T^{\alpha}_{\ph{\alpha}\beta\gamma
 \item components of tensor \underline{won't} necessarily be the same (i.e. representation may change)
 \item if the LHS is scalar, its components won't change between coordinate systems
 \end{enumerate}
+\end{framed}
 
 
+Linearised Einstein equations:
+\begin{equation}
+\Box\bar{h}_{\mu\nu}=-16\pi T_{\mu\nu}=0\quad\text{in a vacuum}
+\end{equation}
 
-\HRule
+Plane waves:
+\begin{equation}
+\bar{h}_{\mu\nu}=A_{\mu\nu}e^{ik_{\alpha}x^{\alpha}}
+\end{equation}
+This implies
+\begin{equation}
+k_{\lambda}k^{\lambda}=0 \underbrace{\Rightarrow}_{\mathclap{\text{local Minkowski}}} -\omega^2+|\vect{k}|^2=0
+\end{equation}
+
+Light doesn't travel $c$ in the large scale ????. We can omly compare the large scale speed of light on a global sense (can't compare vectors) $\Rightarrow$ want to get $c$ globally in general.
+
+Gauge is
+\begin{equation}
+\bar{h}_{\mu\nu,}^{\ph{\mu\nu,}\nu}=0\Rightarrow A_{\mu\nu}k^{\nu}=0
+\end{equation}
+
+\subsection{Gauge Freedom}
+This lets us impose any 4 constraints on $A_{\mu\nu}$.
+
+We choose the following:
+
+{\quad\Large (1) $A$ is traceless}
+i.e. $A^{\alpha}_{\alpha}=0$
+How do we know we can do this? Gauage transformation
+\begin{equation}
+\bar{h}_{\mu\nu}\to \bar{h}_{\mu\nu}^{\text{old}}-\xi_{\mu,\nu}-\xi_{\nu,\mu}+\eta_{\mu\nu}\xi^{\lambda}
+_{\ph{\lambda},\lambda}
+\end{equation}
+Try $\vec{\xi}=\vec{B}e^{ik_{\alpha}x^{\alpha}}$.
 
 Substitute (as an exercise):
 \begin{align}
@@ -3008,8 +3043,53 @@ A^{\text{(new)}}_{\mu\nu}&=A^{\text{(old)}}_{\mu\nu}-ik_{\nu}B_{\mu}
 0&=A^{\mu\text{(new)}}_{\ph{\mu}\mu}\\
 &=A^{\mu\text{(old)}}_{\ph{\mu}\mu}-ik^{\mu} B_{\mu}-ik_{\mu}B^{\mu}
 +4ik_{\lambda}B^{\lambda}\\
+&=A^{\mu(\text{old})}_{\ph{\mu}\mu}+2ik_{\lambda}B^{\lambda}\\
 &=0,\quad\text{if $T^{\mu\nu}=0$ on boundary of volume}
 \end{align}
+
+Given an $A^{\text{(old)}}$ with non-zero trace, we can choose one component of $\vec{B}$ to remove trace.
+
+{\quad\Large (2) $A$ is transverse to some vector $\vec{u}$}
+$\vec{u}$ is not necessarily $\vec{k}$.
+
+We could 
+
+
+\begin{equation}
+\Rightarrow A_{\mu\nu}k^{\nu}=0
+\end{equation}
+similar to condition in Lorentz gauge. We could say that this is 4 equations. The above one is 1 equation. Now we have 5 choices! And we had 4 degrees of freedom. But we have that one of the equations is a linear combination of that from requirement (1) (not independent).
+
+\subsection{Specific implementation}
+
+Choose $\vec{u}=\vec{e}_0$ (time-like basis vector for Minkowski space.
+
+Then $A_{\mu 0}=0 \forall \mu$.
+
+Now we orient $\vec{k}$ along $\vec{e}_3$ axis, i.e. $k^0 \neq 0$, $k^3\neq 0$. Then,
+\begin{equation}
+A_{\mu\nu}k^0 = 0 \Rightarrow A_{\mu 0}k^0 + A_{\mu 3}k^3 = 0
+\end{equation}
+but $A_{\mu 0}=0$ (from above) $\Rightarrow A_{\mu 3} = 0$ also!
+
+So, $A$ has the form
+\begin{equation}
+A=\pmx{0&0&0&0\\0& A_{11} & A_{12} & 0\\ 0 & A_{21} & A_{22} & 0\\ 0 & 0&0&0}
+\end{equation}
+with $A_{12}=A_{21}$. Morever, $A^{\alpha}_{\ph{\alpha}}=0 \Rightarrow A_{11}+A_{22}=0$
+\begin{equation}
+\Rightarrow A=\pmx{0&0&0&0\\0& h_+ & h_{\times} & 0\\ 0 & h_{\times} & h_+ & 0\\ 0 & 0&0&0}
+\end{equation}
+where we have defines 
+\begin{align}
+h_+ &\equiv A_{11}\\
+h_{\times} &\equiv A_{12}
+\end{align}
+
+So we have two independent amplitudes $\Rightarrow$ two polarisations! (like in EM).
+
+Note: stricly speaking $\vec{k}\leftrightarrow \vec{e}_3$; $\vec{k}$ depends on orientation of axis.
+
 
 \HRule
 \section{Gravitational wave detection}
