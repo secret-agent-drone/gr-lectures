@@ -77,13 +77,17 @@
 \contentsline {subsection}{\numberline {10.4}Spin}{63}{subsection.10.4}
 \contentsline {section}{\numberline {11}Gravitational waves}{65}{section.11}
 \contentsline {subsection}{\numberline {11.1}Waves}{65}{subsection.11.1}
-\contentsline {section}{\numberline {12}Gravitational wave detection}{68}{section.12}
-\contentsline {section}{\numberline {13}Relativistic stars}{69}{section.13}
-\contentsline {subsection}{\numberline {13.1}Metric}{69}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}The physics}{70}{subsection.13.2}
-\contentsline {part}{III\hspace {1em}Appendix}{73}{part.3}
-\contentsline {subsection}{\numberline {13.3}Covariant derviative notation}{73}{subsection.13.3}
-\contentsline {subsubsection}{\numberline {13.3.1}Vectors}{73}{subsubsection.13.3.1}
-\contentsline {subsubsection}{\numberline {13.3.2}One-forms}{73}{subsubsection.13.3.2}
-\contentsline {subsubsection}{\numberline {13.3.3}General tensors}{73}{subsubsection.13.3.3}
-\contentsline {subsubsection}{\numberline {13.3.4}Metric}{74}{subsubsection.13.3.4}
+\contentsline {subsection}{\numberline {11.2}Gravitational wave detection}{68}{subsection.11.2}
+\contentsline {section}{\numberline {12}Orbits}{69}{section.12}
+\contentsline {subsection}{\numberline {12.1}Relativistic stars}{69}{subsection.12.1}
+\contentsline {subsubsection}{\numberline {12.1.1}Metric}{69}{subsubsection.12.1.1}
+\contentsline {subsubsection}{\numberline {12.1.2}The physics}{70}{subsubsection.12.1.2}
+\contentsline {subsection}{\numberline {12.2}Perihelion advance of Mercury}{72}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Kerr blackholes}{74}{subsection.12.3}
+\contentsline {subsubsection}{\numberline {12.3.1}Kerr ergosphere and horizon}{75}{subsubsection.12.3.1}
+\contentsline {part}{III\hspace {1em}Appendix}{76}{part.3}
+\contentsline {subsection}{\numberline {12.4}Covariant derviative notation}{76}{subsection.12.4}
+\contentsline {subsubsection}{\numberline {12.4.1}Vectors}{76}{subsubsection.12.4.1}
+\contentsline {subsubsection}{\numberline {12.4.2}One-forms}{76}{subsubsection.12.4.2}
+\contentsline {subsubsection}{\numberline {12.4.3}General tensors}{76}{subsubsection.12.4.3}
+\contentsline {subsubsection}{\numberline {12.4.4}Metric}{77}{subsubsection.12.4.4}

@@ -3012,7 +3012,7 @@ A^{\text{(new)}}_{\mu\nu}&=A^{\text{(old)}}_{\mu\nu}-ik_{\nu}B_{\mu}
 \end{align}
 
 \HRule
-\section{Gravitational wave detection}
+\subsection{Gravitational wave detection}
 Motion of test particle in wave.
 
 Consider a particle at rest in Mikowski spacetime before wave passes through. Orient our transverse traceless gauge such that $\vec{U}=\vec{e}_0=$4-velocity of motionless particle initially. When wave passes through, particle is in free fall.
@@ -3051,9 +3051,10 @@ Today:
 \end{itemize}
 }
 
-\section{Relativistic stars}
+\section{Orbits}
+\subsection{Relativistic stars}
 
-\subsection{Metric}
+\subsubsection{Metric}
 Relativistic stars have the metric
 \begin{equation}
 ds^2=-e^{2\Phi(r)}dt^2 + e^{2\Lambda(r)}dr^2+r^2d\theta^2 + r^2\sin\theta d\phi^2
@@ -3097,7 +3098,7 @@ We count the unknowns from equations~(\ref{unknowns1}),~(\ref{unknowns2}) and~(\
 
 So we have 4 unknowns but only 3 equations. However, we also need an equation of state relating $p$ and $\rho$ - this is neither from GR or energy conservation; it is a statistical mechanics property of the fluid.
 
-\subsection{The physics}
+\subsubsection{The physics}
 
 (\ref{unknowns1}): ``Mass'' continuity relation, i.e. 
 \begin{align}
@@ -3208,6 +3209,131 @@ Unlike Newtonian mechniacs, a circular orbit only exists for $L^2 12M^2$. Small 
 r=\frac{12M^2}{2M}=6M.
 \end{equation}
 $\Rightarrow$ ISCO = innermost stable circular orbit.
+
+\subsection{Perihelion advance of Mercury}
+
+
+``You may not know this, but Mercury really is a potato."
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{images/perihelion-of-mercury.png}
+\caption{Perihelion precession}
+\end{figure}
+
+Where could this come from? 
+\begin{itemize}
+\item torques from other planets
+\item spin-orbit coupling (Mercury is a potato; 2:3 resonance
+\item change in 43'' per century; unexplainined in early 1900's (a planet ``Vulcan'' was predicted)
+\end{itemize}
+
+GR (Einstein) predicted: gravitational acceleration around mass $M$ is \underline{not} simply $-\frac{M}{r^2}$; correction like $-\frac{M}{r^2}\frac{1}{1-\frac{2M}{r}}$ (approx.).
+
+Special case: potential $\propto r^2$ \underline{or} $r^{-1}$ leads to \underline{closed} bound orbits. All other potentials do not!
+
+i.e., GR corrections leads to precession.
+
+To calculate this, we need $r(\phi)$ or equivalently $\phi(r)$. From previous lectures we have $\frac{dr}{d\tau},\frac{d\phi}{d\tau}$.
+
+\begin{align}
+\Rightarrow \frac{dr}{d\phi}&=\frac{dr}{d\tau}\times\left(\frac{d\phi}{d\tau}\right)^{-1}\\
+\text{Let } u&=\frac{1}{r}\quad\text{(just for convenience)}\\
+\left(\frac{du}{d\phi}\right)^2&=\frac{E^2}{L^2}-(1-2Mu(\left(\frac{1}{L^2}+u^2\right)\label{du dphi}
+\end{align}
+In the Newtonian case: ignore $y^3$ term (GR).
+
+Circular orbit has $u=\dfrac{M}{L^2}=$ constant.
+
+So we have deviation from circularity as:
+\begin{equation}
+y=u-\frac{M}{L^2}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{images/dev-from-circularity.png}
+\caption{Deviation from circularity of an orbit}
+\end{figure}
+
+Substituting this into~(\ref{du dphi});
+\begin{equation}
+\left(\frac{dy}{d\phi}\right)^2=\frac{E^2-1}{L^2}+\frac{M^2}{L^4}-y^2
++\underbrace{\frac{2M^4}{L^6}+\frac{6M^3 y}{L^2}+\frac{6M^2}{L^2}y^2}_{GR}
+\end{equation}
+
+The non-GR bit has a colution
+\begin{equation}
+y=A\cos(\phi+\phi_0)
+\end{equation}
+This has period $2\pi$.
+
+GR bit has solution:
+\begin{equation}
+y=A\cos\left[\left(1-\frac{6M^2}{L^2}\right)\phi + \phi_0\right]
+\end{equation}
+
+There is a mismatch between the period of $y$ and orbitial period ($2\pi$).
+\begin{equation}
+\text{Perihelion shift per orbit}=2\pi - \frac{2\pi}{1-\frac{6M^2}{L^2}}
+\end{equation}
+
+\exercise{Show that this equals the expected 43'' per century.}{}
+
+
+\subsection{Kerr blackholes}
+
+
+A Kerr blackhole is a source with mass $M$ and angular momentum $J=aM$ ($a< 1$).
+
+Metric is given in Schutz. It is distinguished by $g_{t\phi}=g_{\phi t}\neq 0$ (off-diagonal element). The metric is independent of $t$ and $\phi \Rightarrow u_t$ and $u_{\phi}$ are constants on any free-fall orbit.
+
+\begin{align}
+u^t&=g^{tt} u_t + g^{t\phi}u_{\phi}\\
+u^{\phi}&= g^{t\phi}u_t + g^{\phi\phi} u_{\phi}
+\end{align}
+
+Suppose we drop a particle from $\infty$ directly (radially) into the centre of a Kerr BH (free-fall). Zero angular momentum at infinity $\Rightarrow u_{\phi}=0=\text{ constant}$.
+
+At radius $r<\infty$:
+\begin{equation}
+\text{Angular velocity in global coordinates}=\frac{d\phi}{dt}=\frac{u^{\phi}}{u^t}
+=\frac{g^{t\phi}u_t}{g^{tt}u_t}=\frac{g^{t\phi}}{g^{tt}}\neq 0
+\end{equation}
+
+i.e., a particle is dragged into rotation by the rotating spacetime around a BH. This \textbf{frame dragging} leads to Lense-Thirring precession of a gyroscope.
+
+\subsubsection{Kerr ergosphere and horizon}
+
+Suppose we have a photon on a circular orbit in equatorial plane (in a Schwarzchild, and also Kerr, space: circular orbit is unstable for photons; we need mirrors!).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{images/photon-BH-mirrors.png}
+\caption{Mirrors around a BH to maintain photon orbit}
+\end{figure}
+
+\begin{align}
+ds^2&=0 \quad\text{(null ray)}\\
+&=g_{tt}dt^2 + 2g_{t\phi} dt~d\phi + g_{\phi\phi} d\phi^2
+\intertext{noting that $dr=d\theta=0$ on a null ray.}
+\Rightarrow \frac{d\phi}{dt}&=\frac{-2g_{t\phi}\pm \sqrt{4g_{t\phi}^2-4g_{tt}g_{\phi\phi}}}{2}
+\end{align}
+This means that for our photon, two angular velocities (in global coordinates) are possible. This is due to frame dragging (prograde - rotating with BH - and retrograde - rotating against the BH - are not symmetric).
+
+Like with Schwarzchild: a radius exists where $g_{tt}=0$. This radius is the \underline{horizon}. At this radius:
+\begin{equation}
+\frac{d\phi}{dt}=-2g_{t\phi}\text{ \underline{or} zero!}
+\end{equation}
+depending on whether motion is with or against BH rotation. A retrograde photon makes no ``headway'' against frame dragging (while a prograde photon would be ``helped along'')!
+
+Schutz gives the radius of the ergosphere as
+\begin{equation}
+r_{\text{ergo}}=M+\sqrt{M^2+a^2\cos^2\theta}
+\end{equation}
+
+Note: this is all in global coordinates! If instead we were in a local reference frame, the photon would be travel at $c$.
+
 
 %-------------------------------------------------------
 \pagebreak
