@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.10)  20 MAY 2016 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.10)  20 MAY 2016 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1365,7 +1365,7 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (845.04684pt) is ignored.
 
-(./GRnotesCumulative.aux)
+No file GRnotesCumulative.aux.
 \openout1 = `GRnotesCumulative.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
@@ -1386,7 +1386,7 @@ LaTeX Font Info:    Checking defaults for LY/yfrak/m/n on input line 115.
 LaTeX Font Info:    ... okay on input line 115.
 LaTeX Font Info:    Checking defaults for LYG/ygoth/m/n on input line 115.
 LaTeX Font Info:    ... okay on input line 115.
- ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count194
@@ -2688,8 +2688,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 115.
 LaTeX Info: Redefining \pageref on input line 115.
 LaTeX Info: Redefining \nameref on input line 115.
-
-(./GRnotesCumulative.out) (./GRnotesCumulative.out)
 \@outlinefile=\write4
 \openout4 = `GRnotesCumulative.out'.
 
@@ -2745,20 +2743,18 @@ Normal \count register pool exhausted, switching to extended pool.
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./GRnotesCumulative.tocpdfTeX warning (ext4): destination with the same identi
-fier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.26 ...ions of a vector}{15}{subsubsection.4.1.1}
-                                                   [1] [2] [3])
 \tf@toc=\write5
 \openout5 = `GRnotesCumulative.toc'.
 
- [4]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.151 \newpage
+               [1]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 166.
 
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -2769,13 +2765,7 @@ been already used, duplicate ignored
                    \relax 
 l.211 \item G
              PS, Mercury's orbit, gravitational lensing, gravitational redsh...
-[1]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.242 
-       [2]
-<images/cavendish-torsion-balance.png, id=524, 2007.5pt x 2196.205pt>
+[1] [2] <images/cavendish-torsion-balance.png, id=47, 2007.5pt x 2196.205pt>
 File: images/cavendish-torsion-balance.png Graphic file (type png)
 
 <use images/cavendish-torsion-balance.png>
@@ -2796,18 +2786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--286
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.286 }
-        [3]pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.307 \item c
-             haracteristic speed of body in free fall: $v^2\sim \frac{GM}{r}$
-[4 <./images/cavendish-torsion-balance.png>]
+[3] [4 <./images/cavendish-torsion-balance.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 345--345
 
  []
@@ -2837,7 +2816,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 453--453
 
  []
 
-[9] [10] <images/eotvos.png, id=601, 231.86626pt x 197.98969pt>
+[9] [10] <images/eotvos.png, id=139, 231.86626pt x 197.98969pt>
 File: images/eotvos.png Graphic file (type png)
 
 <use images/eotvos.png>
@@ -2849,7 +2828,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 581--581
  []
 
 [11 <./images/eotvos.png>]
-<images/einstein-cross.jpg, id=610, 158.09062pt x 139.57144pt>
+<images/einstein-cross.jpg, id=151, 158.09062pt x 139.57144pt>
 File: images/einstein-cross.jpg Graphic file (type jpg)
 
 <use images/einstein-cross.jpg>
@@ -2859,7 +2838,7 @@ Package pdftex.def Info: images/einstein-cross.jpg used on input line 614.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] <images/pound-rebka.png, id=616, 572.1375pt x 357.335pt>
+[12] <images/pound-rebka.png, id=160, 572.1375pt x 357.335pt>
 File: images/pound-rebka.png Graphic file (type png)
 
 <use images/pound-rebka.png>
@@ -2870,7 +2849,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 696--696
 
  []
 
+
+LaTeX Warning: Reference `vector projection' on page 15 undefined on input line
+ 708.
+
 [15] [16]
+
+LaTeX Warning: Reference `vector transform' on page 17 undefined on input line 
+792.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 792--792
 
  []
@@ -2880,7 +2868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 792--792
 
  []
 
-<images/contour.png, id=656, 159.59625pt x 122.4575pt>
+<images/contour.png, id=204, 159.59625pt x 122.4575pt>
 File: images/contour.png Graphic file (type png)
 
 <use images/contour.png>
@@ -2895,7 +2883,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 909--909
 
  []
 
-[20] <images/minkowski_boost.png, id=688, 370.38374pt x 160.6pt>
+[20] <images/minkowski_boost.png, id=241, 370.38374pt x 160.6pt>
 File: images/minkowski_boost.png Graphic file (type png)
 
 <use images/minkowski_boost.png>
@@ -2906,14 +2894,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 997--997
 
  []
 
-[22] <images/lightcone.png, id=704, 339.2675pt x 289.08pt>
+[22] <images/lightcone.png, id=259, 339.2675pt x 289.08pt>
 File: images/lightcone.png Graphic file (type png)
 
 <use images/lightcone.png>
 Package pdftex.def Info: images/lightcone.png used on input line 1038.
 (pdftex.def)             Requested size: 219.08623pt x 186.67351pt.
 
-<images/propertime_path.png, id=705, 325.215pt x 235.88126pt>
+<images/propertime_path.png, id=260, 325.215pt x 235.88126pt>
 File: images/propertime_path.png Graphic file (type png)
 
 <use images/propertime_path.png>
@@ -2933,7 +2921,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1158--1158
 
  []
 
-<images/mirror.png, id=730, 344.28625pt x 234.8775pt>
+<images/mirror.png, id=291, 344.28625pt x 234.8775pt>
 File: images/mirror.png Graphic file (type png)
  <use images/mirror.png>
 Package pdftex.def Info: images/mirror.png used on input line 1161.
@@ -2942,22 +2930,27 @@ Package pdftex.def Info: images/mirror.png used on input line 1161.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] [27 <./images/mirror.png>]
-<images/rocket_hyperbola.png, id=752, 295.1025pt x 259.97125pt>
+[26]
+
+LaTeX Warning: Reference `4-accel diff' on page 27 undefined on input line 1175
+.
+
+[27 <./images/mirror.png>]
+<images/rocket_hyperbola.png, id=311, 295.1025pt x 259.97125pt>
 File: images/rocket_hyperbola.png Graphic file (type png)
 
 <use images/rocket_hyperbola.png>
 Package pdftex.def Info: images/rocket_hyperbola.png used on input line 1214.
 (pdftex.def)             Requested size: 131.45306pt x 115.80386pt.
 
-<images/tangent-spaces.png, id=753, 313.17pt x 123.46124pt>
+<images/tangent-spaces.png, id=312, 313.17pt x 123.46124pt>
 File: images/tangent-spaces.png Graphic file (type png)
 
 <use images/tangent-spaces.png>
 Package pdftex.def Info: images/tangent-spaces.png used on input line 1230.
 (pdftex.def)             Requested size: 219.08623pt x 86.37328pt.
  [28 <./images/rocket_hyperbola.png> <./images/tangent-spaces.png>] <images/wor
-ld-line.png, id=764, 314.17375pt x 262.9825pt>
+ld-line.png, id=325, 314.17375pt x 262.9825pt>
 File: images/world-line.png Graphic file (type png)
 
 <use images/world-line.png>
@@ -2968,14 +2961,39 @@ Package pdftex.def Info: images/world-line.png used on input line 1250.
 LaTeX Warning: Reference `diff eqn1' on page 29 undefined on input line 1262.
 
 [29 <./images/world-line.png>]
-<images/vectors-v.png, id=775, 364.36125pt x 238.8925pt>
+
+LaTeX Warning: Reference `de dx with chris' on page 30 undefined on input line 
+1285.
+
+
+LaTeX Warning: Reference `tensor Chris' on page 30 undefined on input line 1297
+.
+
+<images/vectors-v.png, id=335, 364.36125pt x 238.8925pt>
 File: images/vectors-v.png Graphic file (type png)
 
 <use images/vectors-v.png>
 Package pdftex.def Info: images/vectors-v.png used on input line 1305.
 (pdftex.def)             Requested size: 219.08623pt x 143.64279pt.
- [30 <./images/vectors-v.png>] [31] [32] [33]
-[34] [35] [36] [37] <images/polar.png, id=881, 257.96375pt x 258.9675pt>
+ [30 <./images/vectors-v.png>]
+
+LaTeX Warning: Reference `Christoffel image' on page 31 undefined on input line
+ 1332.
+
+[31] [32]
+
+LaTeX Warning: Reference `Valph' on page 33 undefined on input line 1424.
+
+
+LaTeX Warning: Reference `chris to mem' on page 33 undefined on input line 1456
+.
+
+[33] [34] [35]
+
+LaTeX Warning: Reference `freefall crit' on page 36 undefined on input line 159
+5.
+
+[36] [37] <images/polar.png, id=445, 257.96375pt x 258.9675pt>
 File: images/polar.png Graphic file (type png)
 
 <use images/polar.png>
@@ -2986,6 +3004,10 @@ Package pdftex.def Info: images/polar.png used on input line 1667.
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1668.
 See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `polar coords fig' on page 38 undefined on input line 
+1672.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1690--1690
@@ -3012,7 +3034,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1756--1756
 
  []
 
-<images/freely-falling-observers.png, id=910, 178.6675pt x 329.23pt>
+<images/freely-falling-observers.png, id=472, 178.6675pt x 329.23pt>
 File: images/freely-falling-observers.png Graphic file (type png)
 
 <use images/freely-falling-observers.png>
@@ -3020,7 +3042,7 @@ Package pdftex.def Info: images/freely-falling-observers.png used on input line
  1765.
 (pdftex.def)             Requested size: 70.09987pt x 129.17354pt.
  [40]
-<images/extrinsic-curvature.png, id=919, 356.33125pt x 148.555pt>
+<images/extrinsic-curvature.png, id=481, 356.33125pt x 148.555pt>
 File: images/extrinsic-curvature.png Graphic file (type png)
 
 <use images/extrinsic-curvature.png>
@@ -3028,7 +3050,7 @@ Package pdftex.def Info: images/extrinsic-curvature.png used on input line 1775
 .
 (pdftex.def)             Requested size: 219.08623pt x 91.33698pt.
 
-<images/intrinsic-curvature.png, id=920, 373.395pt x 192.72pt>
+<images/intrinsic-curvature.png, id=482, 373.395pt x 192.72pt>
 File: images/intrinsic-curvature.png Graphic file (type png)
 
 <use images/intrinsic-curvature.png>
@@ -3038,7 +3060,7 @@ Package pdftex.def Info: images/intrinsic-curvature.png used on input line 1782
  [41 <./images/freely-falling-observers.png> <./images/extrinsic-curvature.png>
  <./images/intrinsic-curvature.png>]
 [42] [43] [44] [45]
-<images/parallel_transport_example.png, id=987, 545.03625pt x 389.455pt>
+<images/parallel_transport_example.png, id=559, 545.03625pt x 389.455pt>
 File: images/parallel_transport_example.png Graphic file (type png)
 
 <use images/parallel_transport_example.png>
@@ -3046,7 +3068,7 @@ Package pdftex.def Info: images/parallel_transport_example.png used on input li
 ne 1985.
 (pdftex.def)             Requested size: 219.08623pt x 156.54582pt.
 
-<images/small_patch.png, id=988, 369.38pt x 194.7275pt>
+<images/small_patch.png, id=560, 369.38pt x 194.7275pt>
 File: images/small_patch.png Graphic file (type png)
 
 <use images/small_patch.png>
@@ -3054,7 +3076,7 @@ Package pdftex.def Info: images/small_patch.png used on input line 1997.
 (pdftex.def)             Requested size: 219.08623pt x 115.49733pt.
  [46 <./images/parallel_transport_example.png> <./images/small_patch.png>] [47]
 
-<images/quadrilateral.png, id=1015, 247.92625pt x 191.71625pt>
+<images/quadrilateral.png, id=590, 247.92625pt x 191.71625pt>
 File: images/quadrilateral.png Graphic file (type png)
 
 <use images/quadrilateral.png>
@@ -3065,7 +3087,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2136--2136
 
  []
 
-[49] [50] [51] [52] [53] [54] [55]
+[49] [50] [51] [52] [53] [54]
+
+LaTeX Warning: Reference `random motion' on page 55 undefined on input line 241
+3.
+
+[55]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 2476.
 
@@ -3089,8 +3116,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 2583--2583
 
  []
 
-[59] [60] [61] [62] [63] [64]
-<images/waves-zones.png, id=1281, 465.74pt x 254.9525pt>
+[59]
+
+LaTeX Warning: Reference `wave eqn' on page 60 undefined on input line 2669.
+
+[60] [61] [62] [63] [64]
+
+LaTeX Warning: Reference `dldt' on page 65 undefined on input line 2883.
+
+<images/waves-zones.png, id=867, 465.74pt x 254.9525pt>
 File: images/waves-zones.png Graphic file (type png)
 
 <use images/waves-zones.png>
@@ -3100,78 +3134,112 @@ Package pdftex.def Info: images/waves-zones.png used on input line 2917.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[65] [66 <./images/waves-zones.png>] [67] [68] [69] [70] [71]
-<images/v_eff-orbit.png, id=1377, 417.56pt x 390.45876pt>
+[65] [66 <./images/waves-zones.png>] [67] [68] [69] [70]
+
+LaTeX Warning: Reference `unknowns1' on page 71 undefined on input line 3177.
+
+
+LaTeX Warning: Reference `unknowns2' on page 71 undefined on input line 3177.
+
+
+LaTeX Warning: Reference `unknowns3' on page 71 undefined on input line 3177.
+
+
+LaTeX Warning: Reference `unknowns1' on page 71 undefined on input line 3183.
+
+
+LaTeX Warning: Reference `unknowns2' on page 71 undefined on input line 3200.
+
+[71]
+
+LaTeX Warning: Reference `unknowns3' on page 72 undefined on input line 3206.
+
+[72] <images/v_eff-orbit.png, id=981, 417.56pt x 390.45876pt>
 File: images/v_eff-orbit.png Graphic file (type png)
 
 <use images/v_eff-orbit.png>
-Package pdftex.def Info: images/v_eff-orbit.png used on input line 3198.
+Package pdftex.def Info: images/v_eff-orbit.png used on input line 3278.
 (pdftex.def)             Requested size: 262.90614pt x 245.85327pt.
 
-<images/perihelion-of-mercury.png, id=1378, 322.20375pt x 410.53375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/perihelion-of-mercury.png, id=982, 322.20375pt x 410.53375pt>
 File: images/perihelion-of-mercury.png Graphic file (type png)
 
 <use images/perihelion-of-mercury.png>
-Package pdftex.def Info: images/perihelion-of-mercury.png used on input line 32
-20.
+Package pdftex.def Info: images/perihelion-of-mercury.png used on input line 33
+00.
 (pdftex.def)             Requested size: 175.2663pt x 223.31989pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[72 <./images/v_eff-orbit.png>]
-<images/dev-from-circularity.png, id=1390, 238.8925pt x 211.79124pt>
+[73] [74 <./images/v_eff-orbit.png>]
+<images/dev-from-circularity.png, id=1005, 238.8925pt x 211.79124pt>
 File: images/dev-from-circularity.png Graphic file (type png)
 
 <use images/dev-from-circularity.png>
-Package pdftex.def Info: images/dev-from-circularity.png used on input line 325
+Package pdftex.def Info: images/dev-from-circularity.png used on input line 333
 5.
 (pdftex.def)             Requested size: 131.45306pt x 116.54048pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `du dphi' on page 75 undefined on input line 3339.
 
-[73 <./images/perihelion-of-mercury.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3281--3281
+[75 <./images/perihelion-of-mercury.png> <./images/dev-from-circularity.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3361--3361
 
  []
 
-[74 <./images/dev-from-circularity.png>]
-<images/photon-BH-mirrors.png, id=1415, 207.77625pt x 189.70876pt>
+<images/photon-BH-mirrors.png, id=1017, 207.77625pt x 189.70876pt>
 File: images/photon-BH-mirrors.png Graphic file (type png)
 
 <use images/photon-BH-mirrors.png>
-Package pdftex.def Info: images/photon-BH-mirrors.png used on input line 3312.
+Package pdftex.def Info: images/photon-BH-mirrors.png used on input line 3392.
 (pdftex.def)             Requested size: 131.45306pt x 120.02661pt.
- [75 <./images/photon-BH-mirrors.png>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[76] [77 <./images/photon-BH-mirrors.png>]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3347.
+(hyperref)                than one, level fixed on input line 3427.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3348.
+(hyperref)                than one, level fixed on input line 3428.
 
-[76] [77]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3395.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3395.
+[78] [79]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3475.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3475.
  (./GRnotesCumulative.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3395.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3395.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3475.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3475.
 
-Package rerunfilecheck Info: File `GRnotesCumulative.out' has not changed.
-(rerunfilecheck)             Checksum: 3C27F2EB20E6F16745BF2F0C05282F92;6810.
 
+
+Package rerunfilecheck Warning: File `GRnotesCumulative.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `GRnotesCumulative.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3BB391BE14A5F3232F9FAB77E4CBBFA5;6950.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3395.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3475.
  ) 
 Here is how much of TeX's memory you used:
- 37173 strings out of 493117
- 856461 string characters out of 6135433
- 1034064 words of memory out of 5000000
- 39372 multiletter control sequences out of 15000+600000
+ 37087 strings out of 493117
+ 854933 string characters out of 6135433
+ 1034089 words of memory out of 5000000
+ 39278 multiletter control sequences out of 15000+600000
  26420 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,21n,76p,10405b,999s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3185,31 +3253,32 @@ r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on GRnotesCumulative.pdf (82 pages, 907331 bytes).
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on GRnotesCumulative.pdf (81 pages, 914097 bytes).
 PDF statistics:
- 1680 PDF objects out of 1728 (max. 8388607)
- 1506 compressed objects within 16 object streams
- 687 named destinations out of 1000 (max. 500000)
- 882 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1303 PDF objects out of 1440 (max. 8388607)
+ 1133 compressed objects within 12 object streams
+ 703 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
