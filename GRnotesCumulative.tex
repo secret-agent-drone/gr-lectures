@@ -3262,7 +3262,7 @@ u^t&=g^{tt}u_t=E\left(1-\frac{2m}{r}\right)^{-1}\\
 u^{\phi}&=g^{\phi\phi}u_{\phi}=\frac{L}{r^2}
 \end{align}
 
-Equation of motion for $u^r$: equivalently takw $r$ component of $\nabla_{\vec{u}}\vec{u}=0$ \underline{or} recall normalisation $\vec{u}\cdot\vec{u}=-1$.
+Equation of motion for $u^r$: equivalently take $r$ component of $\nabla_{\vec{u}}\vec{u}=0$ \underline{or} recall normalisation $\vec{u}\cdot\vec{u}=-1$.
 
 \begin{align}
 -1&=g_{tt}(u^t)^2+g_{rr}(u^r)^2+0+g_{\phi\phi}(u^{\phi})^2\\
@@ -3361,7 +3361,8 @@ There is a mismatch between the period of $y$ and orbitial period ($2\pi$).
 \exercise{Show that this equals the expected 43'' per century.}{}
 
 
-\subsection{Kerr blackholes}
+\section{Black holes}
+\subsection{Kerr black holes}
 
 
 A Kerr blackhole is a source with mass $M$ and angular momentum $J=aM$ ($a< 1$).
@@ -3413,6 +3414,142 @@ r_{\text{ergo}}=M+\sqrt{M^2+a^2\cos^2\theta}
 \end{equation}
 
 Note: this is all in global coordinates! If instead we were in a local reference frame, the photon would be travel at $c$.
+
+\subsection{Black hole coordinates}
+We will use a Schwarzchild example, using the standard $(t,r,\theta,\phi)$.
+
+Define new coordinates: stretch radial coordinates
+\begin{equation}
+(r,t)\mapsto (r,\tilde{V})
+\end{equation}
+with
+\begin{equation}
+\tilde{V}=t+\underbrace{r^{\ast}}_{\mathclap{\text{tortoise coordinate}}}=t+r+2M\ln\left|\frac{r}{2M}-1\right|
+\end{equation}
+
+Why is this form useful?
+\begin{align}
+\frac{dr^{\ast}}{d\tau}&=\frac{dr}{d\tau}+\frac{2M}{\frac{r}{2M}-1}
+\cdot\frac{1}{2M}\frac{dr}{d\tau}\\
+\text{i.e.,}\quad dr^{\ast}&=\frac{dr}{1-\frac{2M}{r}}
+\end{align}
+This is useful for ``killing'' (removing) the divergent factor (as $r\to 2M$) in standard Schwarzchild.
+
+We also transform the metric (left as exercise):
+\begin{equation}
+ds^2 = -\left(1-\frac{2M}{r}\right) d\tilde{V}^2 + 2d\tilde{V}~dr+r^2~d\Omega^2
+\end{equation}
+called Eddington-Finkelstein coordinates.
+
+Considering the light-cone now: $ds^2=0$. Fix $d\Omega^2=0$.
+\begin{equation}
+\therefore \frac{d\tilde{V}}{dr}=0\quad\text{and}\quad \frac{2}{1-\frac{2M}{r}}
+\end{equation}
+Two edges of the light cone.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/ef-lightcone.png}
+\caption{EF lightcone}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/schwarz-lightcone.png}
+\caption{Schwarzchild lightcone}
+\end{figure}
+
+
+Also exists: Eddington-Finkelstein \underline{outgoing}
+
+\begin{equation}
+(r,t)\mapsto (r,\tilde{U})\quad\text{with }\tilde{U}=t-r^{\ast}
+\end{equation}
+\exercise{?}{Calculate the light cone}.
+
+\HRule
+
+Can we combine these so that the event horizon is regularised for \underline{all} (both going in \underline{or} out) particles?
+
+Let's try:
+\begin{align}
+(t,r) &\mapsto (\tilde{U},\tilde{V})\\
+\tilde{V}-\tilde{U}&=2r^{\ast}\\
+\tilde{V}+\tilde{U}&= 2t
+\end{align}
+
+We transform the metric as usual (do this as an exercise):
+\begin{equation}
+ds^2 = -\left(1-\frac{2M}{r}\right) d\tilde{U}~d\tilde{V}+r^2~d\Omega^2
+\end{equation}
+Sadly this still leads to an event horizon at $r=2m$. e.g. consider a stationary observer and use $\vec{u}\cdot \vec{u}=-1$ to show that the component blows up.
+
+But luckily, we see form the definition:
+\begin{align}
+e^{r^{\ast}/2M}&=e^{r/2M}\left(\frac{r}{2M}-1\right)\\
+\text{i.e.,}\quad e^{(\tilde{V}-\tilde{U})/4M}&= e^{r/2M}\left(\frac{r}{2M}-1\right)
+\end{align}
+
+We try relabelling:
+\begin{equation}
+\tilde{u}=-e^{-\tilde{U}/4M}\quad\text{and}\quad \tilde{v}=e^{\tilde{V}/4M}
+\end{equation}
+Transform metric (as usual):
+\begin{equation}
+ds^2 = -\frac{32M^3}{r}e^{-r/2M}~d\tilde{u}~d\tilde{v}+r^2~d\Omega^2
+\end{equation}
+i.e.
+\begin{equation}
+g_{\tilde{u}\tilde{u}}=0=g_{\tilde{v}\tilde{v}}
+\end{equation}
+Now looking at this, we have no event horizon at $r=2M$! Only the essential singularity is left! (at $r=0$; this is singularity is unavoidable and cannot be removed by clever methods)
+
+The ``singularity'' we had at the event horizon is not actually physical - an astronaut passing through it would not feel anything ``singular''!
+
+\subsubsection{Kruskal-Szekeres}
+\begin{align}
+\text{Let }u&=\frac{1}{2}(\tilde{v}-\tilde{u})\\
+v&=\frac{1}{2}(\tilde{v}+\tilde{u})\\
+ds^2&=-\frac{32M^3}{r}e^{-r(u,v)/2M)}(dv^2 - du^2) + r^2~d\Omega^2
+\end{align}
+
+In these coordinates, the lightcone is: $v = \pm u$, which is just like in Minkowski!
+
+The central singularity ($r=0$) corresponds to $v^2 - u^2 = 1$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ks-coords.png}
+\caption{Kruskal-Szekeres coordinates}
+\end{figure}
+Standard Schwarz = I union II, \underline{or} III union IV.
+
+i.e. Schwarzchild standfard coordinatec over only \underline{half} the manifold!! (cf. twin paradox).
+
+\section{Global methods}
+MTW ch. 34 as starting point.
+
+Aim: ``compactify'' the manifold, i.e. introduce coordinatrs with fininte values at $\infty$.
+
+e.g., flat: 
+\begin{equation}
+ds^2 = -dt^2 + dr^2 + r^2~d\Omega^2
+\end{equation}
+
+\begin{align}
+\text{Let } t+r&=\tan\frac{\psi+\xi}{2}\\
+t-r&= \tan \frac{\psi-\xi}{2}
+\end{align}
+So that the transformed metric becomes
+\begin{equation}
+ds^2=\frac{-d\psi^2 + d\xi^2}{4\cos^2\frac{\psi+\xi}{2}\cos^2\frac{\psi-\xi}{2}}+r^2~d\Omega^2
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/global-methods.png}
+\caption{Global methods}
+\end{figure}
 
 
 %-------------------------------------------------------
