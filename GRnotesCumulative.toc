@@ -80,20 +80,24 @@
 \contentsline {subsection}{\numberline {11.2}Gauge Freedom}{68}{subsection.11.2}
 \contentsline {subsection}{\numberline {11.3}Specific implementation}{68}{subsection.11.3}
 \contentsline {subsection}{\numberline {11.4}Gravitational wave detection}{69}{subsection.11.4}
-\contentsline {section}{\numberline {12}Orbits}{70}{section.12}
-\contentsline {subsection}{\numberline {12.1}Relativistic stars}{70}{subsection.12.1}
-\contentsline {subsubsection}{\numberline {12.1.1}Metric}{70}{subsubsection.12.1.1}
-\contentsline {subsubsection}{\numberline {12.1.2}The physics}{71}{subsubsection.12.1.2}
-\contentsline {subsection}{\numberline {12.2}Perihelion advance of Mercury}{74}{subsection.12.2}
-\contentsline {section}{\numberline {13}Black holes}{76}{section.13}
-\contentsline {subsection}{\numberline {13.1}Kerr black holes}{76}{subsection.13.1}
-\contentsline {subsubsection}{\numberline {13.1.1}Kerr ergosphere and horizon}{76}{subsubsection.13.1.1}
-\contentsline {subsection}{\numberline {13.2}Black hole coordinates}{77}{subsection.13.2}
-\contentsline {subsubsection}{\numberline {13.2.1}Kruskal-Szekeres}{80}{subsubsection.13.2.1}
-\contentsline {section}{\numberline {14}Global methods}{81}{section.14}
-\contentsline {part}{III\hspace {1em}Appendix}{82}{part.3}
-\contentsline {subsection}{\numberline {14.1}Covariant derviative notation}{82}{subsection.14.1}
-\contentsline {subsubsection}{\numberline {14.1.1}Vectors}{82}{subsubsection.14.1.1}
-\contentsline {subsubsection}{\numberline {14.1.2}One-forms}{82}{subsubsection.14.1.2}
-\contentsline {subsubsection}{\numberline {14.1.3}General tensors}{82}{subsubsection.14.1.3}
-\contentsline {subsubsection}{\numberline {14.1.4}Metric}{83}{subsubsection.14.1.4}
+\contentsline {section}{\numberline {12}LIGO and gravitational wave detection}{72}{section.12}
+\contentsline {subsection}{\numberline {12.1}Noise spectral density}{72}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}LIGO noise sources}{72}{subsection.12.2}
+\contentsline {section}{\numberline {13}Relativistic stars}{73}{section.13}
+\contentsline {subsection}{\numberline {13.1}Orbits}{75}{subsection.13.1}
+\contentsline {subsubsection}{\numberline {13.1.1}Metric}{75}{subsubsection.13.1.1}
+\contentsline {subsubsection}{\numberline {13.1.2}The physics}{76}{subsubsection.13.1.2}
+\contentsline {section}{\numberline {14}Photons}{78}{section.14}
+\contentsline {subsection}{\numberline {14.1}Perihelion advance of Mercury}{79}{subsection.14.1}
+\contentsline {section}{\numberline {15}Black holes}{81}{section.15}
+\contentsline {subsection}{\numberline {15.1}Kerr black holes}{81}{subsection.15.1}
+\contentsline {subsubsection}{\numberline {15.1.1}Kerr ergosphere and horizon}{81}{subsubsection.15.1.1}
+\contentsline {subsection}{\numberline {15.2}Black hole coordinates}{82}{subsection.15.2}
+\contentsline {subsubsection}{\numberline {15.2.1}Kruskal-Szekeres}{85}{subsubsection.15.2.1}
+\contentsline {section}{\numberline {16}Global methods}{85}{section.16}
+\contentsline {part}{III\hspace {1em}Appendix}{87}{part.3}
+\contentsline {subsection}{\numberline {16.1}Covariant derviative notation}{87}{subsection.16.1}
+\contentsline {subsubsection}{\numberline {16.1.1}Vectors}{87}{subsubsection.16.1.1}
+\contentsline {subsubsection}{\numberline {16.1.2}One-forms}{87}{subsubsection.16.1.2}
+\contentsline {subsubsection}{\numberline {16.1.3}General tensors}{87}{subsubsection.16.1.3}
+\contentsline {subsubsection}{\numberline {16.1.4}Metric}{88}{subsubsection.16.1.4}

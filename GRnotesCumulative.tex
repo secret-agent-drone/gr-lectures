@@ -3118,7 +3118,191 @@ i.e., nothing ``happens'', meaning $\vec{u}$ doesn't change.
 
 \HRule 
 
-Many, many lectures missing (basically all of Week 10)
+Lecture 9/5/16:
+
+From last time, we recall
+\begin{align}
+\nabla_{\vec{u}}\vec{u}&=0\\
+\frac{du^{\alpha}}{d\tau}&=-\Gamma^{\alpha}_{\ph{\alpha}\lambda\beta}u^{\lambda}u^{\beta}
+\intertext{Initially we have $\vec{u}=(1,0,0,0)$,}
+\Rightarrow -\Gamma^{\alpha}_{\ph{\alpha}00}&=0\quad\text{in TT gauge}
+\end{align}
+
+Note: remember Artemis and Diana! Even though they were stationary with respect to each other, there was still a Doppler shift.
+
+Let's consider neighbouring particles in freefall (geodesic trajectories)
+
+FIGURE
+
+Note that each particle satisfies
+\begin{align}
+\frac{du^{\alpha}}{d\tau}&=-\Gamma^{\alpha}_{\ph{\alpha}\lambda\beta}u^{\lambda}u^{\beta}\\
+\text{\underline{and}}\quad \vec{x}_{B}(\tau	)&=\vec{x}_{A}(\tau)+\vec{\xi}(\tau)\\
+\therefore \vec{u}_B=\vec{u}_A+\underbrace{\frac{d\vec{\xi}}{d\tau}}_{\text{small}}
+\end{align}
+
+Geodesic derivation:
+\begin{equation}
+\frac{d^2\xi^{\alpha}}{d\tau^2}=R^{\alpha}_{\ph{\alpha}\beta\gamma\delta}u^{\beta}u^{\gamma}u^{\delta}
+\end{equation}
+The Riemann tensor is just a derivative of $\Gamma$!
+
+Curvature: is already 1st order in gravitational wave amplitude $h$. To leading leading, we only need $\vec{u}$ to 0th order, i.e.
+\begin{equation}
+\vec{u}_A=(1,0,0,0)
+\end{equation}
+
+We initially say that particles are separated by a small distance $\epsilon$ in the ``1'' direction. i.e.
+\begin{align}
+\vec{\xi}&=(0,\epsilon, 0,0)\\
+\Rightarrow \frac{d^2\xi}{d\tau^2}&=R^{\alpha}_{\ph{\alpha}001}\cdot \epsilon
+\end{align}
+IN $TT$ gauge, $R^{\alpha}_{\ph{\alpha}001}\neq 0$ only for $\alpha = 1,2$.
+
+\begin{align}
+\frac{d^2\xi^1}{d\tau^2}&=\frac{1}{2}\epsilon \frac{d^2h^{TT}_{xx}}{dt^2}\\
+\frac{d^2\xi^2}{d\tau^2}&=\frac{1}{2}\epsilon \underbrace{\frac{d^2 h^{TT}_{xy}}{dt^2}}_
+{\mathclap{\text{initially $t=\tau$, Minkowski intially}}}
+\end{align}
+
+If initially $\vec{\xi}=(0,0,\epsilon,0)$,
+\begin{align}
+\frac{d^2\xi^{1}}{dt^2}&=\frac{1}{2}\epsilon\frac{\partial^2 h^{TT}_{xy}}{\partial t^2}\\
+\frac{d^2\xi^{2}}{dt^2}&=-\frac{1}{2}\epsilon \frac{\partial h^{TT}_{xx}}{\partial t^2}
+\end{align}
+
+There are two scenarioes:
+\begin{align}
+h^{TT}_{xx}&=0\quad\text{($x$ separation)}
+\intertext{or}
+h^{TT}_{xy}&=0\quad\text{($y$ separation)}
+\end{align}
+(and other linear combinations).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{images/polarisations.png}
+\caption{Polarisations}
+\end{figure}
+
+Lecture 11/5/16:
+
+\section{LIGO and gravitational wave detection}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ligo-arms.png}
+\caption{LIGO arms}
+\end{figure}
+
+Strain is given by
+\begin{equation}
+\frac{\Delta L}{L}=h
+\end{equation}
+which is unitless (note: $L$ is the length of an arm). This $h$ is a component of $h_{\mu\nu}$; it is a linear combination of $h_{+}$ and $h_{\times}$, ``cross-polarisation''.
+
+Take $h(t)=\text{strain as a function of time}$;
+\begin{align}
+h(t)\xrightarrow{\text{Fourier}} h(f)&= \int e^{-2\pi i f(t)}h(t)~dt\\
+\underbrace{\text{SNR}}_{\mathllap{\text{signal-to-noise ratio}}}&= \int^{\infty}_{-\infty}df~\frac{|h(f)|^2}{S_n(f)}
+\end{align} 
+where $|h(f)|^2$ is the power of signal, and $S_n(f)$ is the power of signal noise.
+
+\subsection{Noise spectral density}
+An alternative:
+\begin{equation}
+S_n(f)=(\text{strain noise})^2
+\end{equation}
+
+Alternative: let $n(t)$ be noise amplitude vs. time.
+
+Autocorrelation function: $S(\tau)=<n(f)\cap (t+\tau)>$
+
+Then $S_n(f)$ is Fourier transform of $S(\tau)$!
+
+\subsection{LIGO noise sources}
+\begin{itemize}
+\item Low $f$ - seismic/Newtonian
+\item Mid $f$ - thermal
+\item High $f$ - shot noise
+\item Spikes - resonances
+\end{itemize}
+
+
+\HRule
+
+Lecture 12-5-16 missing
+
+\HRule
+
+\section{Relativistic stars}
+
+We consider relativistic stars to be perfect fluids, spherical and spherically symmetric, static and isotropic. Recall that $ds^2$ is given in terms of $g$ as
+
+\begin{equation}
+ds^2=g(d\vec{x},d\vec{x})
+\end{equation}
+\begin{itemize}
+\item function of ``radius'' $\vect{x}\cdot \vect{x}=r^2$
+\item function of $d\vec{x}$ in an isotropic sense (independent of rotation)
+\end{itemize}
+
+i.e.,
+\begin{equation}
+ds^2 = -F(r)dt^2 + 2E(r)dt~\vect{x}\cdot d\vect{x}'+D(r)(\vect{x}\cdot d\vect{x})^2
++C(r)~d\vect{x}\cdot \vect{x}
+\end{equation}
+where we find
+\begin{equation}
+d\vect{x}\cdot d\vect{x}= dr^2+r^2~d\theta^2 + r^2\sin^2\theta \sin^\phi
+\end{equation}
+
+Simplify by transformations:
+\begin{enumerate}
+\item Redefine clocks so $t'=t+\Phi(r)$ (tangle $t$ and $r$ tp get rid of off-diagonal terms)
+\item Remove the $dt~dr$ term; choose $\Phi(r)=-\int^r_0 \frac{dr'~r'C(r')}{F(r')}$
+\item Redefine radius $r'^2=r^2 C(r)$
+\end{enumerate}
+
+We should check that our spacetime interval becomes
+\begin{equation}
+ds^2=-\underbrace{B(r')}_{\mathclap{e^{2\Phi(r)}}}dt'^2+\underbrace{A(r')}_{\mathclap{e^{2\Lambda(r)}}}dr'^2
++r'^2\left(d\theta^2 + \sin^2\theta~d\phi^2\right)
+\end{equation}
+
+We can drop the primes, since only $r'$ terms exist (no $r$ terms).
+
+Substituting into the Einstein field equations:
+\begin{align}
+G_{tt}&=\frac{1}{r^2}e^{2\Phi}\frac{d}{dr}\left[r\left(1-e^{-2\Lambda}\right)\right]\\
+G_{rr}&=-\frac{1}{r^2}e^{2\Lambda}\left(1-e^{-2\Lambda}\right)-\frac{2}{r}\Phi'\\
+G_{\theta\theta}&= r^2 e^{-2\Lambda}\left(\Phi''+(\Phi')^2+\frac{\Phi'}{r}-\Phi' \Lambda - \frac{\Lambda'}{r}\right)\\
+G_{\phi\phi}&=\sin^2\theta G_{\theta\theta}
+\end{align}
+where the primes represent derivatives with respect to $r$ (i.e. $\frac{d}{dr}$).
+
+The RHS is stress-energy. Assume a perfect fluid,
+\begin{equation}
+T=pg + (p+\rho)\vec{u}\otimes \vec{u}
+\end{equation}
+
+If star's fluid is static, then $\vec{u}=(u^t,0,0,0)$ and hence $\vec{u}\cdot\vec{u}=-1$ implies $-e^{2\Phi}(u^t)^2=-1$, $u^t = e^{-\Phi}$.
+
+\begin{align}
+T_{tt}&=pg_{tt}+(p+\rho)u_t u_t\\
+&=-pe^{2\Phi}+(p+\rho)e^{\lambda\Phi}\\
+&=\rho e^{2\Phi}
+\intertext{note $\rho$ is only present in velocity terms. Remember $\vec{u}=(u^t,0,0,0)$.}
+T_{rr}&=rg_{rr}\\
+&=p e^{2\lambda}\\
+T_{\theta\theta}&=r^2 p\\
+T_{\phi\phi}&=r^2 \sin^2 \theta \cdot p
+\end{align}
+
+
+\HRule
+
+Lecture 16-5-16 missing
 
 \HRule
 
@@ -3131,8 +3315,7 @@ Today:
 \end{itemize}
 }
 
-\section{Orbits}
-\subsection{Relativistic stars}
+\subsection{Orbits}
 
 \subsubsection{Metric}
 Relativistic stars have the metric
@@ -3284,11 +3467,40 @@ Circular: $\frac{dV_{\text{eff}}}{dr}=0$.
 r=\frac{L^2}{2M}\left(1+\sqrt{1-\frac{12M^2}{L^2}}\right)
 \end{equation}
 
-Unlike Newtonian mechniacs, a circular orbit only exists for $L^2 12M^2$. Small circular orbit:
+Unlike Newtonian mechanics, a circular orbit only exists for $L^2 12M^2$. Small circular orbit:
 \begin{equation}
 r=\frac{12M^2}{2M}=6M.
 \end{equation}
 $\Rightarrow$ ISCO = innermost stable circular orbit.
+
+\HRule
+
+Lecture 19-5-16:
+
+\section{Photons}
+
+Consider the 4-momentum of a photon
+\begin{equation}
+\vec{p} \propto \frac{d\vec{x}(\lambda)}{d\lambda}
+\end{equation}
+where $\lambda$ is the affine parameter.
+
+\begin{equation}
+p_\tau = -E,\quad p_{\phi}=L,\quad p_{\theta}=0
+\end{equation}
+all constants.
+
+We have the normalisation $\vec{p}\cdot \vec{p}=0$ for a null ray.
+
+Consider:
+\begin{equation}
+\left(\frac{dr}{d\lambda}\right)^2=E^2 - \underbrace{\frac{L^2}{r^2}\left(1-\frac{2M}{r}\right)}_{V_{\text{eff}}^2}
+\end{equation}
+where $L$ is angular momentum. To find $R$, we maximise $V_{\text{eff}}$ then can solve for $R$.
+
+
+\HRule
+
 
 \subsection{Perihelion advance of Mercury}
 
