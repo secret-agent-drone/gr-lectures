@@ -95,9 +95,11 @@
 \contentsline {subsection}{\numberline {15.2}Black hole coordinates}{82}{subsection.15.2}
 \contentsline {subsubsection}{\numberline {15.2.1}Kruskal-Szekeres}{85}{subsubsection.15.2.1}
 \contentsline {section}{\numberline {16}Global methods}{85}{section.16}
-\contentsline {part}{III\hspace {1em}Appendix}{87}{part.3}
-\contentsline {subsection}{\numberline {16.1}Covariant derviative notation}{87}{subsection.16.1}
-\contentsline {subsubsection}{\numberline {16.1.1}Vectors}{87}{subsubsection.16.1.1}
-\contentsline {subsubsection}{\numberline {16.1.2}One-forms}{87}{subsubsection.16.1.2}
-\contentsline {subsubsection}{\numberline {16.1.3}General tensors}{87}{subsubsection.16.1.3}
-\contentsline {subsubsection}{\numberline {16.1.4}Metric}{88}{subsubsection.16.1.4}
+\contentsline {section}{\numberline {17}Cosmology}{86}{section.17}
+\contentsline {subsection}{\numberline {17.1}Metric}{87}{subsection.17.1}
+\contentsline {part}{III\hspace {1em}Appendix}{89}{part.3}
+\contentsline {section}{\numberline {1}Covariant derviative notation}{89}{section.1}
+\contentsline {subsection}{\numberline {1.1}Vectors}{89}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}One-forms}{89}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}General tensors}{89}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Metric}{90}{subsection.1.4}

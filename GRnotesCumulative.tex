@@ -2538,13 +2538,13 @@ where $h_{\bar{\alpha}\bar{\beta}}$ means ``via background Lorentz''.
 The gauge transformation we use is:
 
 \begin{equation}
-\vec{x} \mapsto \vec{x} + \underbrace{\vec{\zeta}(\vec{x})}_{\text{small}}
+\vec{x} \mapsto \vec{x} + \underbrace{\vec{\xi}(\vec{x})}_{\text{small}}
 \end{equation}
-By small we mean $\lvert \zeta \rvert \ll \lvert \vec{x} \rvert$.
+By small we mean $\lvert \xi \rvert \ll \lvert \vec{x} \rvert$.
 
 The transform matrix is then
 \begin{equation}
-x^{\alpha} \mapsto x^{\alpha'} = x^{\alpha} + \underbrace{\zeta^{\alpha}(\vec{x})}_{\text{small}}
+x^{\alpha} \mapsto x^{\alpha'} = x^{\alpha} + \underbrace{\xi^{\alpha}(\vec{x})}_{\text{small}}
 \end{equation}
 where ``small'' is as previous, though evaluated element-wise.
 
@@ -2554,16 +2554,16 @@ So now, our metric in primed coordinates is:
 g_{\alpha'\beta'}&=\Lambda^{\alpha}_{\phantom{\alpha}\alpha'} \Lambda^{\beta}_{\phantom{\beta}\beta'}
 (\eta_{\alpha\beta}+h_{\alpha\beta})\\
 &=\delta^{\alpha}_{\phantom{\alpha}\alpha'}\delta^{\beta}_{\phantom{\beta}\beta'}\eta_{\alpha\beta}
--\frac{\partial \zeta^{\alpha}}{\partial x^{\alpha'}} \delta^{\beta}_{\phantom{\beta}\beta'}\eta_{\alpha \beta}
--\delta^{\alpha}_{\phantom{\alpha}\alpha'}\frac{\partial \zeta^{\beta}}{\partial x^{\beta'}}\eta_{\alpha\beta}
+-\frac{\partial \xi^{\alpha}}{\partial x^{\alpha'}} \delta^{\beta}_{\phantom{\beta}\beta'}\eta_{\alpha \beta}
+-\delta^{\alpha}_{\phantom{\alpha}\alpha'}\frac{\partial \xi^{\beta}}{\partial x^{\beta'}}\eta_{\alpha\beta}
 +\delta^{\alpha}_{\phantom{\alpha}\alpha'}\delta^{\beta}_{\phantom{\beta}\beta'}h_{\alpha\beta}
 +\text{2nd order corrections}\\
-&=\eta_{\alpha'\beta'}-\zeta_{\beta', \alpha'}-\zeta_{\alpha', \beta'}+h_{\alpha'\beta'}
+&=\eta_{\alpha'\beta'}-\xi_{\beta', \alpha'}-\xi_{\alpha', \beta'}+h_{\alpha'\beta'}
 \end{align}
-where $\zeta_{\beta'}=\eta_{\beta'\gamma'}\zeta^{\gamma'}$, i.e. all raising and lowering is done with Minkowski metric.
+where $\xi_{\beta'}=\eta_{\beta'\gamma'}\xi^{\gamma'}$, i.e. all raising and lowering is done with Minkowski metric.
 
 This is like an EM gauge transform, cf. $A_{\mu}\mapsto A_{\mu}+\frac{\partial \chi}{\partial x^{\mu}}$ except that our
-$\vec{\zeta}$ has 4 degrees of freedom, \underline{not} one (physically: we are free to choose 4 coordinates).
+$\vec{\xi}$ has 4 degrees of freedom, \underline{not} one (physically: we are free to choose 4 coordinates).
 
 We can now calculate Christoffel symbols, Riemann tensor etc. from this metric. Algebra is left as an exercise.
 
@@ -2575,10 +2575,10 @@ noting that the derivatives of $\eta$ vanishes.
 
 \exercise{We can check that $R$ is invariant under gauge transform
 \begin{equation}
-\bar{h}_{\alpha\nu}=h_{\alpha\nu}-\zeta_{\alpha,\nu}-\zeta_{\nu,\alpha}
+\bar{h}_{\alpha\nu}=h_{\alpha\nu}-\xi_{\alpha,\nu}-\xi_{\nu,\alpha}
 \end{equation}
 
-We will get lots of pairwise cancellation because $\zeta_{\alpha,\beta \gamma\delta}$ is the same for all perumtations of $\{\beta,\gamma,\delta\}$. We can choose $\vec{\zeta}$ cleverly to simplify.
+We will get lots of pairwise cancellation because $\xi_{\alpha,\beta \gamma\delta}$ is the same for all perumtations of $\{\beta,\gamma,\delta\}$. We can choose $\vec{\xi}$ cleverly to simplify.
 }
 {}
 
@@ -2845,11 +2845,11 @@ Post-Newtonian approximation
 \intertext{where $\Phi$ is the Newtonian potential.}
 \Phi&=-\int \text{d}^3\vect{x}'~\frac{T^{00}\rvert_{\text{0th order}}}{|\vect{x}-\vect{x}'|}\\
 \Gamma^{0}_{\ph{0}ij}\rvert_{\text{1st order}}&=0\\
-\Gamma^{k}_{\ph{k}i0}\rvert_{\text{3rd order}}&=\frac{1}{2}\left(\frac{\partial \zeta_i}
-{\partial x^k}-\frac{\partial \zeta^k}{\partial x^i}\right)-\delta^{k}_{\ph{k}i}\frac{\partial \Phi}
+\Gamma^{k}_{\ph{k}i0}\rvert_{\text{3rd order}}&=\frac{1}{2}\left(\frac{\partial \xi_i}
+{\partial x^k}-\frac{\partial \xi^k}{\partial x^i}\right)-\delta^{k}_{\ph{k}i}\frac{\partial \Phi}
 {\partial t}
 \intertext{where}
-\zeta^i&=-4\int\text{d}^3\vect{x}'~\frac{T^{i0}\rvert_{\text{1st order}}}{|\vect{x}-\vect{x}'|}
+\xi^i&=-4\int\text{d}^3\vect{x}'~\frac{T^{i0}\rvert_{\text{1st order}}}{|\vect{x}-\vect{x}'|}
 \intertext{We get $T^{i0}\neq 0$ if rotating Earth, eg. $\propto M_{\text{Earth}}\cdot \text{rotational speed of Earth}\sim v^3$}
 \Gamma^{k}_{\ph{k}ij}\rvert_{\text{2nd order}}&=-\delta_{ij}\Phi^{k}_{\ph{k},}
 -\delta^{k}_{\ph{k}i}\Phi_{,j}+\delta^{k}_{\ph{k}j}\Phi_{,i}
@@ -3763,18 +3763,100 @@ ds^2=\frac{-d\psi^2 + d\xi^2}{4\cos^2\frac{\psi+\xi}{2}\cos^2\frac{\psi-\xi}{2}}
 \caption{Global methods}
 \end{figure}
 
+\section{Cosmology}
+(the last lecture, apparently)
+
+The universe is homogenous and isotropic.
+
+\begin{itemize}
+\item Homogenous - (the geometry of spacetime is the) same at every point
+\item Isotropic - same in every direction, as viewed from every point
+\end{itemize}
+
+These qualities are empirical! There is no reason for the universe to have these properties.
+\begin{itemize}
+\item only true at the largest scales
+\item cosmic microwave background (blackbody temperature is smooth to $\sim 10^{-6}$
+\item large-scale strcutre - maps of galaxy distribution in sku
+\item inhomoegenous models
+\begin{itemize}
+\item Swiss Cheese model
+\item recent papers by Bolejko et. al.
+\item David Wiltshire's papers
+\end{itemize}
+\end{itemize}
+
+\subsection{Metric}
+Divide spacetime into constant-$t$ 3D hypersurfaces. Define $t$ to be the proper time at any 3D point (associated co-moving volume) (``galaxy'').
+
+In each hypersurface:
+\begin{align}
+d\l^2_{\text{3D}}&= h_{ij}(t)~dx^i ~ dx^j , \quad\text{homogeneous}\\
+&=\underbrace{R(t)^2}_{\mathclap{\text{scale factor}}} h_{ij}(t=0)~dx^i ~ dx^j
+\intertext{To \underline{maintain} isotropy (not to establish isotropy in the first place). A spatial interval of \underline{any} orientation expands/contracts with $t$ at the same rate.}
+&= R(t)^2 \left[e^{2\Lambda(r)}dr^2 + r^2~d\Omega\right]
+\end{align}
+
+Isotropy (symmetric w.r.t. point rotations like Schwarzschild).
+
+Also,
+\begin{itemize}
+\item $t$ proper time (at $dx^i ~ dx^j = 0$) $\Rightarrow$ $-dy^2$ term
+\item no cross terms $dt~dx^i$ because:
+\begin{enumerate}
+\item proper time $t$ = coordinate time $t$
+\item time reversal symmetry
+\item reflection symmetry $\vect{x}\mapsto -\vect{x}$
+\end{enumerate}
+\end{itemize}
+
+\begin{equation}
+ds^2 = -dt^2 + R(t)^2 \left[e^{2\Lambda(r)}~dr^2 + r^2~d\Omega\right]
+\end{equation}
+
+Homogenous means, among other things, that the Ricci scalar is uniform. Form previous lectures on relativistic stars (check as an exercise)
+\begin{equation}
+\frac{1}{r^2}\frac{d}{dr}\left[r(1-e^{-2\Lambda})\right]=\text{constant}
+\end{equation}
+from $G_{tt}$ components. Integrating this,
+\begin{equation}
+e^{2\Lambda}=\frac{1}{1-kr^2}
+\end{equation}
+where $k$ is a constant. Boundary condition: metric is flat (i.e. $e^{2\Lambda(r)}=1$) at $r=0$). This looks like it is bad (i.e. we have chosen a ``special point'' and requiring space to be flat at one point, but no constraint elsehwere). However, $r=0$ is \underline{not} a special point! We can arbitrarily choose any point.
+
+We can always rescale $r$ so that
+\begin{equation}
+k = \begin{cases}
+-1 & \text{open}\\
+0 & \text{flat} \\
+1 & \text{closed}
+\end{cases}
+\end{equation}
+
+The Friedman-Robertson-Walker metric is:
+\begin{equation}
+ds^2 = -dt^2 + R(t)^2 \left[\frac{dr^2}{1-kr^2}+r^2~d\Omega\right]
+\end{equation}
+
+Substitute into Einstein's equations (LHS) and get derivatives of $R(t)$. 
+
+RHS of Einstein: $T^{\mu\nu}$ includes $\underbrace{\text{baryons, photons, leptons, $\ldots$}}_{\text{different equations of state $p=p(\rho)$}}$
+
+Solve this to get $R(t)$. This gives the history and future of the Universe!
+
+
 
 %-------------------------------------------------------
 \pagebreak
 \part{Appendix}
 
-
+\setcounter{section}{0}
 Indices up = vector-like
 
 Indices down = 1-form-like
 
-\subsection{Covariant derviative notation}
-\subsubsection{Vectors}
+\section{Covariant derviative notation}
+\subsection{Vectors}
 We realise that the component form of $\nabla \vec{V}$ can be written as $(\nabla \vec{V})^{\alpha}_{\beta}$.
 
 \begin{equation}
@@ -3789,14 +3871,14 @@ V^{\alpha}_{,\beta}&:=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\\
 (\nabla \vec{V})^{\alpha}_{\beta}\equiv V^{\alpha}_{;\beta}&:=V^{\alpha}_{,\beta}+\Gamma^{\alpha}_{\lambda\beta}V^{\lambda}
 \end{align}
 
-\subsubsection{One-forms}
+\subsection{One-forms}
 Components of $\nabla\tilde{p}$, i.e. $(\nabla\tilde{p})_{\alpha\beta}$ is notationally $p_{\alpha;\beta}$
 
 \begin{equation}
 p_{\alpha;\beta}=\frac{\partial p_{\alpha}}{\partial x^{\beta}}-\Gamma^{\lambda}_{\alpha\beta} p_{\lambda}
 \end{equation}
 
-\subsubsection{General tensors}
+\subsection{General tensors}
 For general tensor: add correction term $\pm \Gamma$ tensor for each tensor index; $+$ is index is up; $-$ if index is down.
 
 \begin{equation}
@@ -3811,7 +3893,7 @@ For general tensor: add correction term $\pm \Gamma$ tensor for each tensor inde
 ...probably?
 
 
-\subsubsection{Metric}
+\subsection{Metric}
 In flat space, $g_{\alpha\beta , \gamma}=0$ \underline{and} $\Gamma$'s are zero because $\frac{\partial\vec{e}_{\alpha}}{\partial x^{\beta}}=0$
 \begin{align}
 \Rightarrow g_{\alpha\beta;\gamma}&=g_{\alpha\beta,\gamma}-(\text{two terms involving Christoffel symbols})\\
