@@ -29,77 +29,79 @@
 \BOOKMARK [2][-]{subsection.4.2}{1-forms}{section.4}% 29
 \BOOKMARK [3][-]{subsubsection.4.2.1}{How do 1-forms transform?}{subsection.4.2}% 30
 \BOOKMARK [2][-]{subsection.4.3}{1-forms, basis 1-forms and gradients}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.4}{Tensors}{section.4}% 32
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Metric tensor}{subsection.4.4}% 33
-\BOOKMARK [2][-]{subsection.4.5}{Correspondence between vectors and 1-forms}{section.4}% 34
-\BOOKMARK [1][-]{section.5}{Kinematics}{part.1}% 35
-\BOOKMARK [2][-]{subsection.5.1}{4-velocity}{section.5}% 36
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Example 1: Momentarily comoving reference frame}{subsection.5.1}% 37
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Example 2}{subsection.5.1}% 38
-\BOOKMARK [2][-]{subsection.5.2}{Energy measurements}{section.5}% 39
-\BOOKMARK [2][-]{subsection.5.3}{4-acceleration}{section.5}% 40
-\BOOKMARK [1][-]{section.6}{Calculus in curved space}{part.1}% 41
-\BOOKMARK [2][-]{subsection.6.1}{Differentiation in curved space}{section.6}% 42
-\BOOKMARK [2][-]{subsection.6.2}{Covariant derivative of 1-form}{section.6}% 43
-\BOOKMARK [2][-]{subsection.6.3}{Covariant derivative of metric}{section.6}% 44
-\BOOKMARK [2][-]{subsection.6.4}{Christoffel Symbols and Metric and Acceleration}{section.6}% 45
-\BOOKMARK [3][-]{subsubsection.6.4.1}{Covariant derivative}{subsection.6.4}% 46
-\BOOKMARK [2][-]{subsection.6.5}{The 4-acceleration}{section.6}% 47
-\BOOKMARK [2][-]{subsection.6.6}{Fermi-Walker Transport}{section.6}% 48
-\BOOKMARK [2][-]{subsection.6.7}{Constants of motion}{section.6}% 49
-\BOOKMARK [2][-]{subsection.6.8}{Polar coordinates}{section.6}% 50
-\BOOKMARK [1][-]{section.7}{Curved space}{part.1}% 51
-\BOOKMARK [2][-]{subsection.7.1}{Curved manifold}{section.7}% 52
-\BOOKMARK [2][-]{subsection.7.2}{Local flatness}{section.7}% 53
-\BOOKMARK [2][-]{subsection.7.3}{Miscellaneous practical results}{section.7}% 54
-\BOOKMARK [3][-]{subsubsection.7.3.1}{Proper length}{subsection.7.3}% 55
-\BOOKMARK [3][-]{subsubsection.7.3.2}{Volume}{subsection.7.3}% 56
-\BOOKMARK [3][-]{subsubsection.7.3.3}{Divergence of a vector}{subsection.7.3}% 57
-\BOOKMARK [3][-]{subsubsection.7.3.4}{Gauss Law in integral form}{subsection.7.3}% 58
-\BOOKMARK [3][-]{subsubsection.7.3.5}{Angles}{subsection.7.3}% 59
-\BOOKMARK [3][-]{subsubsection.7.3.6}{Geodesics}{subsection.7.3}% 60
-\BOOKMARK [2][-]{subsection.7.4}{Curvature and Einstein's Field Equations}{section.7}% 61
-\BOOKMARK [3][-]{subsubsection.7.4.1}{Rules}{subsection.7.4}% 62
-\BOOKMARK [3][-]{subsubsection.7.4.2}{Symmetrics of the Riemann tensor}{subsection.7.4}% 63
-\BOOKMARK [2][-]{subsection.7.5}{Constructing new tensors from Riemann on the way to Einstein's field equations}{section.7}% 64
-\BOOKMARK [3][-]{subsubsection.7.5.1}{Contractions of Riemann}{subsection.7.5}% 65
-\BOOKMARK [2][-]{subsection.7.6}{Einstein's field equations}{section.7}% 66
-\BOOKMARK [0][-]{part.2}{II Terrestrial and astronomical applications}{}% 67
-\BOOKMARK [1][-]{section.8}{Stress energy}{part.2}% 68
-\BOOKMARK [1][-]{section.9}{Gauges}{part.2}% 69
-\BOOKMARK [2][-]{subsection.9.1}{Weak fields}{section.9}% 70
-\BOOKMARK [3][-]{subsubsection.9.1.1}{Background Lorentz transformations}{subsection.9.1}% 71
-\BOOKMARK [3][-]{subsubsection.9.1.2}{Gauge transformation: small coordinate change}{subsection.9.1}% 72
-\BOOKMARK [1][-]{section.10}{Applications of Einstein's Field Equations}{part.2}% 73
-\BOOKMARK [2][-]{subsection.10.1}{Perfect fluid}{section.10}% 74
-\BOOKMARK [2][-]{subsection.10.2}{Pound-Rebka}{section.10}% 75
-\BOOKMARK [2][-]{subsection.10.3}{Gravity Probe B/Lense-Thirring precession}{section.10}% 76
-\BOOKMARK [2][-]{subsection.10.4}{Spin}{section.10}% 77
-\BOOKMARK [1][-]{section.11}{Gravitational waves}{part.2}% 78
-\BOOKMARK [2][-]{subsection.11.1}{Waves}{section.11}% 79
-\BOOKMARK [2][-]{subsection.11.2}{Gauge Freedom}{section.11}% 80
-\BOOKMARK [2][-]{subsection.11.3}{Specific implementation}{section.11}% 81
-\BOOKMARK [2][-]{subsection.11.4}{Gravitational wave detection}{section.11}% 82
-\BOOKMARK [1][-]{section.12}{LIGO and gravitational wave detection}{part.2}% 83
-\BOOKMARK [2][-]{subsection.12.1}{Noise spectral density}{section.12}% 84
-\BOOKMARK [2][-]{subsection.12.2}{LIGO noise sources}{section.12}% 85
-\BOOKMARK [1][-]{section.13}{Relativistic stars}{part.2}% 86
-\BOOKMARK [2][-]{subsection.13.1}{Orbits}{section.13}% 87
-\BOOKMARK [3][-]{subsubsection.13.1.1}{Metric}{subsection.13.1}% 88
-\BOOKMARK [3][-]{subsubsection.13.1.2}{The physics}{subsection.13.1}% 89
-\BOOKMARK [1][-]{section.14}{Photons}{part.2}% 90
-\BOOKMARK [2][-]{subsection.14.1}{Perihelion advance of Mercury}{section.14}% 91
-\BOOKMARK [1][-]{section.15}{Black holes}{part.2}% 92
-\BOOKMARK [2][-]{subsection.15.1}{Kerr black holes}{section.15}% 93
-\BOOKMARK [3][-]{subsubsection.15.1.1}{Kerr ergosphere and horizon}{subsection.15.1}% 94
-\BOOKMARK [2][-]{subsection.15.2}{Black hole coordinates}{section.15}% 95
-\BOOKMARK [3][-]{subsubsection.15.2.1}{Kruskal-Szekeres}{subsection.15.2}% 96
-\BOOKMARK [1][-]{section.16}{Global methods}{part.2}% 97
-\BOOKMARK [1][-]{section.17}{Cosmology}{part.2}% 98
-\BOOKMARK [2][-]{subsection.17.1}{Metric}{section.17}% 99
-\BOOKMARK [0][-]{part.3}{III Appendix}{}% 100
-\BOOKMARK [1][-]{section.1}{Covariant derviative notation}{part.3}% 101
-\BOOKMARK [2][-]{subsection.1.1}{Vectors}{section.1}% 102
-\BOOKMARK [2][-]{subsection.1.2}{One-forms}{section.1}% 103
-\BOOKMARK [2][-]{subsection.1.3}{General tensors}{section.1}% 104
-\BOOKMARK [2][-]{subsection.1.4}{Metric}{section.1}% 105
+\BOOKMARK [2][-]{subsection.4.4}{Gradiants}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.5}{Tensors}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Metric tensor}{subsection.4.5}% 34
+\BOOKMARK [2][-]{subsection.4.6}{Correspondence between vectors and 1-forms}{section.4}% 35
+\BOOKMARK [1][-]{section.5}{Kinematics}{part.1}% 36
+\BOOKMARK [2][-]{subsection.5.1}{4-velocity}{section.5}% 37
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Example 1: Momentarily comoving reference frame}{subsection.5.1}% 38
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Example 2}{subsection.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.2}{Energy measurements}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.3}{4-acceleration}{section.5}% 41
+\BOOKMARK [1][-]{section.6}{Calculus in curved space}{part.1}% 42
+\BOOKMARK [2][-]{subsection.6.1}{Differentiation in curved space}{section.6}% 43
+\BOOKMARK [2][-]{subsection.6.2}{Covariant derivative of 1-form}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.3}{Covariant derivative of metric}{section.6}% 45
+\BOOKMARK [2][-]{subsection.6.4}{Christoffel Symbols and Metric and Acceleration}{section.6}% 46
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Covariant derivative}{subsection.6.4}% 47
+\BOOKMARK [2][-]{subsection.6.5}{The 4-acceleration}{section.6}% 48
+\BOOKMARK [2][-]{subsection.6.6}{Fermi-Walker Transport}{section.6}% 49
+\BOOKMARK [2][-]{subsection.6.7}{Constants of motion}{section.6}% 50
+\BOOKMARK [2][-]{subsection.6.8}{Polar coordinates}{section.6}% 51
+\BOOKMARK [1][-]{section.7}{Curved space}{part.1}% 52
+\BOOKMARK [2][-]{subsection.7.1}{Curved manifold}{section.7}% 53
+\BOOKMARK [2][-]{subsection.7.2}{Local flatness}{section.7}% 54
+\BOOKMARK [2][-]{subsection.7.3}{Miscellaneous practical results}{section.7}% 55
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Proper length}{subsection.7.3}% 56
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Volume}{subsection.7.3}% 57
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Divergence of a vector}{subsection.7.3}% 58
+\BOOKMARK [3][-]{subsubsection.7.3.4}{Gauss Law in integral form}{subsection.7.3}% 59
+\BOOKMARK [3][-]{subsubsection.7.3.5}{Angles}{subsection.7.3}% 60
+\BOOKMARK [3][-]{subsubsection.7.3.6}{Geodesics}{subsection.7.3}% 61
+\BOOKMARK [2][-]{subsection.7.4}{Curvature and Einstein's Field Equations}{section.7}% 62
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Rules}{subsection.7.4}% 63
+\BOOKMARK [3][-]{subsubsection.7.4.2}{Symmetrics of the Riemann tensor}{subsection.7.4}% 64
+\BOOKMARK [2][-]{subsection.7.5}{Constructing new tensors from Riemann on the way to Einstein's field equations}{section.7}% 65
+\BOOKMARK [3][-]{subsubsection.7.5.1}{Contractions of Riemann}{subsection.7.5}% 66
+\BOOKMARK [2][-]{subsection.7.6}{Einstein's field equations}{section.7}% 67
+\BOOKMARK [0][-]{part.2}{II Terrestrial and astronomical applications}{}% 68
+\BOOKMARK [1][-]{section.8}{Stress energy}{part.2}% 69
+\BOOKMARK [1][-]{section.9}{Gauges}{part.2}% 70
+\BOOKMARK [2][-]{subsection.9.1}{Weak fields}{section.9}% 71
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Background Lorentz transformations}{subsection.9.1}% 72
+\BOOKMARK [3][-]{subsubsection.9.1.2}{Gauge transformation: small coordinate change}{subsection.9.1}% 73
+\BOOKMARK [1][-]{section.10}{Applications of Einstein's Field Equations}{part.2}% 74
+\BOOKMARK [2][-]{subsection.10.1}{Perfect fluid}{section.10}% 75
+\BOOKMARK [2][-]{subsection.10.2}{Pound-Rebka}{section.10}% 76
+\BOOKMARK [2][-]{subsection.10.3}{Gravity Probe B/Lense-Thirring precession}{section.10}% 77
+\BOOKMARK [2][-]{subsection.10.4}{Spin}{section.10}% 78
+\BOOKMARK [1][-]{section.11}{Gravitational waves}{part.2}% 79
+\BOOKMARK [2][-]{subsection.11.1}{Waves}{section.11}% 80
+\BOOKMARK [2][-]{subsection.11.2}{Gauge Freedom}{section.11}% 81
+\BOOKMARK [2][-]{subsection.11.3}{Specific implementation}{section.11}% 82
+\BOOKMARK [2][-]{subsection.11.4}{Gravitational wave detection}{section.11}% 83
+\BOOKMARK [1][-]{section.12}{LIGO and gravitational wave detection}{part.2}% 84
+\BOOKMARK [2][-]{subsection.12.1}{Noise spectral density}{section.12}% 85
+\BOOKMARK [2][-]{subsection.12.2}{LIGO noise sources}{section.12}% 86
+\BOOKMARK [2][-]{subsection.12.3}{Detection}{section.12}% 87
+\BOOKMARK [1][-]{section.13}{Relativistic stars}{part.2}% 88
+\BOOKMARK [2][-]{subsection.13.1}{Einstein's equations for relativistic star}{section.13}% 89
+\BOOKMARK [3][-]{subsubsection.13.1.1}{Metric}{subsection.13.1}% 90
+\BOOKMARK [3][-]{subsubsection.13.1.2}{The physics}{subsection.13.1}% 91
+\BOOKMARK [1][-]{section.14}{Photons}{part.2}% 92
+\BOOKMARK [2][-]{subsection.14.1}{Perihelion advance of Mercury}{section.14}% 93
+\BOOKMARK [1][-]{section.15}{Black holes}{part.2}% 94
+\BOOKMARK [2][-]{subsection.15.1}{Kerr black holes}{section.15}% 95
+\BOOKMARK [3][-]{subsubsection.15.1.1}{Kerr ergosphere and horizon}{subsection.15.1}% 96
+\BOOKMARK [2][-]{subsection.15.2}{Black hole coordinates}{section.15}% 97
+\BOOKMARK [3][-]{subsubsection.15.2.1}{Kruskal-Szekeres}{subsection.15.2}% 98
+\BOOKMARK [1][-]{section.16}{Global methods}{part.2}% 99
+\BOOKMARK [1][-]{section.17}{Cosmology}{part.2}% 100
+\BOOKMARK [2][-]{subsection.17.1}{Metric}{section.17}% 101
+\BOOKMARK [0][-]{part.3}{III Appendix}{}% 102
+\BOOKMARK [1][-]{section.1}{Covariant derviative notation}{part.3}% 103
+\BOOKMARK [2][-]{subsection.1.1}{Vectors}{section.1}% 104
+\BOOKMARK [2][-]{subsection.1.2}{One-forms}{section.1}% 105
+\BOOKMARK [2][-]{subsection.1.3}{General tensors}{section.1}% 106
+\BOOKMARK [2][-]{subsection.1.4}{Metric}{section.1}% 107

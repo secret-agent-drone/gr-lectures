@@ -527,8 +527,8 @@ Here $E=$ ``binding energy''/potential energy of interaction $A$.
 \underline{Tests:}
 \begin{enumerate}
 \item E{\"o}tv{\"o}s-type torsion balance experiments: two different materials may fall at difference rates (see Dicke, Braginsky)
-\item Colorado: U, Cu laser interferometer $\Rightarrow relativite acceleration$
-\item E{\"o}t-Wash experiments: fancy version of 1)
+\item Colorado: U, Cu laser interferometer $\Rightarrow$ relativite acceleration
+\item E{\"o}t-Wash experiments: fancy version of (1)
 \end{enumerate}
 
 Result:
@@ -708,7 +708,7 @@ $\Rightarrow$ we have 4, special, linearly independent vectors which ``point alo
 As $\vec{e}_{0}$ is itself a vector, using \ref{vector projection}
 \begin{equation}
 \vec{e}_{0}=(\vec{e}_{0})^{0}\vec{e}_{0}+(\vec{e}_{0})^{1}\vec{e}_{1}+(\vec{e}_{0})^{2}\vec{e}_{2}
-+\underbrace{(\vec{e}_{0})^{3}}_{\text{3rd component of }\vec{e}_{0}}\vec{e}_{3}
++\underbrace{(\vec{e}_{0})^{3}}_{\mathclap{\text{3rd component of }\vec{e}_{0}}}\vec{e}_{3}
 \end{equation}
 
 By linear independence, as $\vec{e}_0$ is linearly independent to $\vec{e}_{1},\vec{e}_{2},\vec{e}_{3}$
@@ -739,7 +739,7 @@ In general,
 
 \begin{equation}
 \Lambda^{\alpha}_{\beta'}=\frac{\partial (x^{0},x^{1},x^{2},x^{3})}{\partial (x^{0'},x^{1'},x^{2'},x^{3'})}
-=\frac{\partial x^{\alpha}}{x^{\beta'}}\quad \text{16 elements!}
+=\frac{\partial x^{\alpha}}{\partial x^{\beta'}}\quad \text{16 elements!}
 \end{equation}
 
 If the transform is linear (e.g. Lorentz transform), we can consider
@@ -751,9 +751,9 @@ where $\Lambda^{\alpha}$ is not necessarily a constant. But if the transform is 
 dx^{\alpha}=\Lambda^{\alpha}_{\beta'}~dx^{\beta'}
 \end{equation}
 
-Why? If we define $\vec{x}$ as a displacement from origin to the point in a curved space, there are multiple different path. We would need more than 4 numbers to define this, therefor we no longer have a meaningful vector. 
+Why? If we define $\vec{x}$ as a displacement from origin to the point in a curved space, there are multiple different path. We would need more than 4 numbers to define this, therefore we no longer have a meaningful vector. 
 
-Vectors are defined localling an tangent space, \textbf{and} transformations of vectors are also restricted locally to tangent space. If $\vec{A}$ is a vector,
+Vectors are defined locally in tangent space, \textbf{and} transformations of vectors are also restricted locally to tangent space. If $\vec{A}$ is a vector,
 \begin{equation}
 A^{\alpha}=\Lambda^{\alpha}_{\beta'}A^{\beta'}
 \end{equation}
@@ -766,7 +766,7 @@ Components $A^\alpha$: $\vec{A}=A^\alpha \vec{e}_{\alpha}$ where $\vec{e}_{\alph
 
 Transform like infinitesimal displacements:
 \begin{equation}
-\underbrace{A^{\alpha'}}_{\text{primed}}=\overbrace{\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}}^{\text{transform matrix}}\underbrace{A^{\alpha}}_{\text{unprimed}}\label{vector transform}
+\underbrace{A^{\alpha'}}_{\text{primed}}=\overbrace{\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}}^{\mathclap{\text{transform matrix}}}\underbrace{A^{\alpha}}_{\text{unprimed}}\label{vector transform}
 \end{equation}
 
 How do basis vectors transform?
@@ -788,6 +788,47 @@ Note this is the opposite of transformation law for vector components \ref{vecto
 
 \exercise{Try for Lorentz transformations.}{}
 \exercise{(later) Try for 2 types of Schwarz black hole coordinates.}{}
+
+\example{}{
+Lorentz transformation: frame $\bar{\mathcal{O}}$ moving with speed $v$ in the $x$-direction as seen from frame $\mathcal{O}$
+
+\begin{equation}
+\frac{\partial x^{\bar{\beta}}}{\partial x^{\alpha}}=\pmx{\gamma&-\gamma v&0&0\\
+-\gamma v&\gamma & 0&0\\ 0&0&1&0\\0&0&0&1}
+\end{equation}
+Consider vector $\vec{A}=(5,0,0,2)$ in $\mathcal{O}$, i.e.
+\begin{equation}
+\vec{A}=5\vec{e}_0 + 2\vec{e}_3
+\end{equation}
+
+What is $A^{\bar{0}}$?
+\begin{align}
+A^{\bar{0}}&=\frac{\partial x^{\bar{0}}}{\partial x^0}A^0 + \frac{\partial x^{\bar{0}}}{\partial x^1}A^1
++\frac{\partial x^{\bar{0}}}{\partial x^2}A^2 + \frac{\partial x^{\bar{0}}}{\partial x^3}A^3\\
+&=\gamma A^0 - \gamma v\cdot 0 + 0\cdot 0 + 0\cdot 2\\
+&=5\gamma\\
+\text{Similarly, }A^{\bar{1}}&=-5\gamma v\\
+A^{\bar{2}}&=0\\
+A^{\bar{3}}&=2
+\end{align}
+
+Now determining the basis vectors for $\bar{O}$,
+\begin{align}
+\vec{e}_{\bar{\alpha}}&=\Lambda^{\alpha}_{\ph{\alpha}\bar{\alpha}}(-v)\vec{e}_{\alpha}
+\intertext{Note since we are taking the inverse Lorentz transform, we replace $v$ by $-v$.}
+&=\frac{\partial x^0}{\partial x^{\bar{0}}}\vec{e}_0 + \frac{\partial x^1}{\partial x^{\bar{0}}}\vec{e}_1
++\frac{\partial x^2}{\partial x^{\bar{0}}}\vec{e}_2 + \frac{\partial x^3}{\partial x^{\bar{0}}}\vec{e}_3\\
+&=\gamma \vec{e}_0 + \gamma v \vec{e}_1\\
+\vec{e}_{\bar{1}}&=\gamma v \vec{e}_0 + \gamma \vec{e}_1\\
+\vec{e}_{\bar{2}}&=\vec{e}_2\\
+\vec{e}_{\bar{3}}&=\vec{e}_3
+\end{align}
+Likewise, we can determine the basis vectors for $\mathcal{O}$ in terms of $\bar{\mathcal{O}}$'s basis vectors,
+\begin{align}
+\vec{e}_0&=\gamma \vec{e}_{\bar{0}}-\gamma v \vec{e}_{\bar{1}}\\
+\vec{e}_1 &= -\gamma v \vec{e}_{\bar{0}}+\gamma \vec{e}_{\bar{1}}
+\end{align}
+}
 
 }
 
@@ -842,14 +883,52 @@ p_{\alpha'}&=\tilde{p}(\vec{e}_{\alpha'})\\
 \end{align*}
 i.e. components of $\tilde{p}$ transform like basis vectors (\underline{not} components of basis vectors)
 
-\review{Last lecture missing
-
-1-forms and their relation to gradients defined
-}
+We can now prove that contraction is independent of coordinates.
+\begin{align}
+<\tilde{p},\vec{A}>&=p_{\alpha'}A^{\alpha'},\quad\text{components in primed coordinates}\\
+&=\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}p_{\alpha}\frac{\partial x^{\alpha'}}{\partial x^{\beta}A^{\beta}}
+\intertext{noting $\frac{\partial x^{\alpha}}{\partial x^{\alpha'}}\times \frac{\partial x^{\alpha'}}{\partial x^{\beta}A^{\beta}}=\delta^{\alpha}_{\ph{\alpha}\beta}$; it is the transform matrix $\Lambda^{\alpha}_{\ph{\alpha}\alpha'}$ multiplied by its inverse.}
+&=p_{\alpha}A^{\alpha}
+\end{align}
+i.e. the inner product is the same in both coordinates!
 
 \subsection{1-forms, basis 1-forms and gradients}
 
-\begin{table}
+
+
+Given components of a 1-form $p_0,p_1,p_2,p_3$, how do we recreate the geometric object $\tilde{p}$?
+
+Naively, we could say
+\begin{equation*}
+\tilde{p}=p_0\vec{e}_0 + p_1 \vec{e}_1 + p_2\vec{e}_2 + p_3\vec{e}_3
+\end{equation*}This is \underline{wrong}. ``All indices down.... bad''. A 1-form is not a vector (so we cannot simply construct them from basis vectors)!
+
+We need 1-form basis $\tilde{\omega}^0, \tilde{\omega}^1, \tilde{\omega}^2, \tilde{\omega}^3$. We write
+\begin{equation}
+\tilde{p}=p_{\alpha}\tilde{\omega}^\alpha
+\end{equation}
+
+How do we construct the 1-form basis? Use contraction which relates objects in the dual space. Take any $\tilde{p},\vec{A}$,
+\begin{align}
+p_{\alpha}A^\alpha &\langle \tilde{p},\vec{A} \rangle\\
+&=\langle p_{\beta}\tilde{\omega}^\beta,A^\gamma \vec{e}_\gamma \rangle\\
+&=p_\beta A^\gamma \langle \tilde{\omega}^\beta,\vec{e}_\gamma \rangle
+\end{align}
+which is true for any $\tilde{p},\vec{A}$. Obviously this is only possible if
+\begin{equation}
+\langle \tilde{\omega}^\beta,\vec{e}_\gamma \rangle=\delta^{\beta}_{\ph{\beta}\gamma}
+\end{equation}
+
+If $e$'s have 1,0 inside, so do $\omega$'s, e.g. $\tilde{\omega}^2 = (0,0,1,0)$.
+
+\exercise{Show that 1-form bases transform as
+\begin{equation}
+\tilde{\omega}^{\alpha'}=\frac{\partial x^{\alpha'}}{\partial x^{\alpha}}\tilde{\omega}^{\alpha}
+\end{equation}
+i.e. basis 1-forms transform just like vectors.}
+{}
+
+\begin{table}[h]
 \centering
 \begin{tabular}{l  | c | c}
 \renewcommand\arraystretch{1}
@@ -864,6 +943,24 @@ $\vec{e}_{\alpha'}=\dfrac{\partial x_{\alpha'}}{\partial x_{\alpha}}\vec{e}_{\al
 $\tilde{\omega}^{\alpha'}=\dfrac{\partial x^{\alpha'}}{\partial x^{\alpha}}\tilde{\omega}^{\alpha}$
 \end{tabular}
 \end{table}
+
+\subsection{Gradiants}
+
+The spacetime derivatives of a sclar function (i.e. $\frac{\partial \phi}{\partial x^\alpha}$ form a 1-form, e.g. frequency and wavenumber make a 1-form. This is because:
+\begin{itemize}
+\item if we combine with $\vec{x}=(t,\vect{x})$ then we get the number of peaks and troughs in waves
+\item (equivalently) frequency $=\frac{\partial}{\partial t}$(phase), wavenumber $=\nabla($phase) ($\nabla$ is the 3D gradient)
+\end{itemize}
+
+Consider a particle moving on a worldline $\vec{x}(\tau)$, where $\tau$ is the \emph{proper time}. Consider also a scalar filed $\phi(\vec{x})$. How does a particle see $\phi$ changing on its worldline?
+
+\begin{equation}
+\underbrace{\frac{d\phi}{d\tau}}_{\mathclap{\text{number}}}
+=\frac{\partial \phi}{\partial x^\alpha}\underbrace{\frac{dx^\alpha}{d\tau}}_{\mathclap{\text{vector 4-velocity}}},
+\quad\text{chain rule}
+\end{equation}
+i.e. $\frac{\partial \phi}{\partial x^{\alpha}}$ must be a 1-form. Notation: $\tilde{d\phi}$ is a geometric object, $\frac{\partial \phi}{\partial x^\alpha}$ is its components.
+
 
 \review{Given a scalar field $\phi(\vec{x})$ we define a 1-form $\tilde{d\phi}$, with components $(\tilde{d\phi})_{\alpha}=\frac{\partial\phi}{\partial x^{\alpha}}$
 
@@ -901,7 +998,7 @@ Takes two 1-forms as arguments: $T(\tilde{p},\tilde{q}) \equiv^{\text{def}}\vec{
 \end{equation}
 \item Can't write a general $\pmx{M\\N}$ tensor as an outer product necessarily, but can write as a linear combination of outer products
 \begin{equation}
-\underbrace{T}_{\text{geometric object}}=T^{\alpha_{1},\ldots,\alpha_{M}}_{\beta_{1},\ldots,\beta_{N}}\vec{e}_{\alpha_{1}}\otimes\ldots\otimes \vec{e}_{\alpha_{M}}\otimes \tilde{\omega}^{\beta_{1}}\otimes\ldots\otimes\tilde{\omega}^{\beta_{N}}
+\underbrace{T}_{\mathclap{\text{geometric object}}}=T^{\alpha_{1},\ldots,\alpha_{M}}_{\beta_{1},\ldots,\beta_{N}}\vec{e}_{\alpha_{1}}\otimes\ldots\otimes \vec{e}_{\alpha_{M}}\otimes \tilde{\omega}^{\beta_{1}}\otimes\ldots\otimes\tilde{\omega}^{\beta_{N}}
 \end{equation}
 \item even though we use M 1-forms and N vectors, we take the outer product over N 1-forms and M vectors
 \end{itemize}
@@ -2467,7 +2564,7 @@ This is clearly not true - the symmetry and anti-symmetry of the indices leads e
 Luckily our maths \cancel{friends} frenemies :) have shown that there exists Ricci decomposition for Riemann
 \begin{align}
 R_{\alpha\beta\gamma\delta}&=\frac{R}{6}\underbrace{g_{\alpha[\gamma}g_{\delta]\beta}}_{\text{scalar}}
-+\underbrace{•g_{\alpha[\gamma} S_{\delta]\beta}- g_{\beta[\gamma} S_{\delta]\alpha}}_{\text{semi-traceless}}
++\underbrace{g_{\alpha[\gamma} S_{\delta]\beta}- g_{\beta[\gamma} S_{\delta]\alpha}}_{\text{semi-traceless}}
  + \underbrace{C_{\alpha\beta\gamma\delta}}_{\text{traceless}}
 \intertext{}
 \text{where }[\ldots]&=\text{antisymmetrisation}\\
@@ -3229,11 +3326,16 @@ Then $S_n(f)$ is Fourier transform of $S(\tau)$!
 \end{itemize}
 
 
-\HRule
 
-Lecture 12-5-16 missing
+\subsection{Detection}
 
-\HRule
+This section is missing; however it only talks about the black hole merger from which they detected gravitational waves, and hence I don't care.
+
+\url{http://arxiv.org/abs/1602.03840}
+
+
+
+
 
 \section{Relativistic stars}
 
@@ -3299,23 +3401,15 @@ T_{\theta\theta}&=r^2 p\\
 T_{\phi\phi}&=r^2 \sin^2 \theta \cdot p
 \end{align}
 
+\subsection{Einstein's equations for relativistic star}
 
-\HRule
-
-Lecture 16-5-16 missing
-
-\HRule
-
-\review{Last lecture: Einstein's equations for relativistic star (spherical ball of perfect fluid) hence energy-momentum is of a physical sort (has pressure and density)
+Recall, a relativistic star is a spherical ball of perfect fluid, hence its energy-momentum is of a physical sort (has pressure and density).
 
 Today: 
 \begin{itemize}
 \item we solve this
 \item then consider exterior solution if star has finite extent
 \end{itemize}
-}
-
-\subsection{Orbits}
 
 \subsubsection{Metric}
 Relativistic stars have the metric
