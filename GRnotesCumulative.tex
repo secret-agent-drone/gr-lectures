@@ -24,7 +24,7 @@
 \usepackage{subcaption}
 \usepackage{geometry}
 \usepackage{yfonts}
-\usepackage{calc}
+\usepackage{calc}	
 \usepackage{cite}
 \usepackage{siunitx}
 \usepackage{mathtools} %for underbraces without whitespace (\mathclap{})
@@ -510,8 +510,8 @@ Implications:
 Why is space curved? Locally straight trajectory in free yet \underline{yet} gravity produces curved trajectory (observed) $\Rightarrow$ only possible if coordinates change from one point to next
 }
 
-\section{Experimental tests}
-\subsection{Experimental tests of free fall}
+\subsection{Experimental tests}
+\subsubsection{Experimental tests of free fall}
 Inertial mass $m_i=\frac{\text{applied non-gravitational force}}{\text{measured acceleration}}$
 
 Gravitational mass $m_g=$ ``passive'' mass appearing in weight
@@ -540,7 +540,7 @@ We test this, for example, with aluminium (Al) and gold (Au) weights on a torsio
 
 \picture{images/eotvos.png}
 
-\subsection{Tests of local Lorentz invariance}
+\subsubsection{Tests of local Lorentz invariance}
 \begin{itemize}
 \item Michelson-Morley experiment (the aether)
 \item Rossi-Hall tests for lifetime of muons (time dilation $\Leftrightarrow$ LLI)
@@ -587,13 +587,13 @@ k_y\\
 \end{itemize}
 }
 
-\subsection{Gravitational redshift}
+\subsubsection{Gravitational redshift}
 \begin{equation}
 \frac{h\nu'-h\nu}{h\nu}=\frac{(m_A g_A - m_B g_B)H}{(m_A-m_B)c^2}
 \end{equation}
 If $g_A=g_B$ (universal free-fall), then gravitational redshift is $gH/c^2$
 
-\subsection{Observation of GR in experiments}
+\subsubsection{Observation of GR in experiments}
 There are situations where GR makes measurable difference \underline{today}
 
 \begin{itemize}
@@ -1348,20 +1348,20 @@ e.g. if T is a vector, say $\vec{V}$: in general consider two points $P_A$, $P_B
 \caption{World line connecting points $P_A$ and $P_B$}
 \end{figure}
 
-\begin{align*}
+\begin{align}
 \frac{d\vec{V}}{d\tau}(\vec{x}(\tau))&=\frac{d}{d\tau}\left[V^{\alpha}(\vec{x}(\tau))\vec{e}_{\alpha}
 (\vec{x}(\tau))\right]\\
 &=\frac{\partial V^{\alpha}}{\partial x^{\beta}}\frac{dx^{\beta}}{d\tau}\vec{e}_{\alpha}(\vec{x}(\tau))
 +V^{\alpha}\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}\frac{dx^{\beta}}{d\tau}\qquad\text{product rule}\\
 &=\left(\frac{\partial V^{\alpha}}{dx^{\beta}}\vec{e}_{\alpha}+V^{\alpha}\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}\right)u^{\beta}\qquad\text{4-velocity}\label{diff eqn1}
-\end{align*}
+\end{align}
 
 The parts inside the brackets of (\ref{diff eqn1}), denoted as $(\ldots)$, are contracted with $\vec{u}$ to give the LHS, which is a vector. So $(\ldots)$ is type $\pmx{1\\1}$.
 
 $\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}$ are vectors, so can be written as a linear combination of basis vectors. 
 
 \begin{equation}
-\text{Define: } \frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}=\Gamma^{\mu}_{\alpha\beta} \vec{e}_{\mu}\label{de dx with chris}
+\text{Define: } \frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}}=\Gamma^{\mu}_{\ph{\mu}\alpha\beta} \vec{e}_{\mu}\label{de dx with chris}
 \end{equation}
 
 Then,
@@ -2049,7 +2049,7 @@ This is Gauss' law (also applies to the covariant derivative).
 \subsubsection{Geodesics}
 Curves that continue to progress in the same direction they were progressing in; i.e. the tangent is parallel to the tangent at the previous point.
 \begin{equation}
-\nabla_{\frac{d\vec{x}}{d\lambda}}{d\vec{x}}{d\lambda}=0
+\nabla_{\frac{d\vec{x}}{d\lambda}}\frac{d\vec{x}}{d\lambda}=0
 \end{equation}
 Covariant derivative of tangent along its own direction is zero.
 
@@ -2072,7 +2072,7 @@ Generally, geometric objects like vectors as different points live in different 
 \subsubsection{Rules}
 If $T$ is a geometric object, then we can parallel transport along $\vec{x}(\lambda)$ by requiring that
 \begin{equation}
-\nabla\frac{d\vec{x}}{d\lambda}T=0
+\nabla\frac{d_{\vec{x}}{d\lambda}}T=0
 \end{equation}
 $\Rightarrow T$ remains constant along tangent vector (is zero ???)
 
@@ -2373,6 +2373,7 @@ G^{\beta}_{\lambda;\beta}&=0
 \end{align}
 The diveregence of the Einstein curvature tensor vanishes!
 
+\section{Einstein's gravity}
 \subsection{Einstein's field equations}
 These cannot be derived; they are experimental laws. We shall motivate them heuristically.
 

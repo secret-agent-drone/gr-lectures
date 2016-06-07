@@ -12,59 +12,60 @@
 \contentsline {section}{\numberline {2}Einstein equivalence principle}{9}{section.2}
 \contentsline {subsection}{\numberline {2.1}Weak equivalence principle}{9}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Strong equivalence principle}{9}{subsection.2.2}
-\contentsline {section}{\numberline {3}Experimental tests}{10}{section.3}
-\contentsline {subsection}{\numberline {3.1}Experimental tests of free fall}{10}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Tests of local Lorentz invariance}{11}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Gravitational redshift}{12}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Observation of GR in experiments}{12}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Pound-Rebka experiment}{12}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Lunar ranging}{13}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Deflection of light (gravitational lensing)}{14}{subsubsection.3.4.3}
-\contentsline {subsubsection}{\numberline {3.4.4}Shapiro delay}{14}{subsubsection.3.4.4}
-\contentsline {section}{\numberline {4}Geometric Objects}{14}{section.4}
-\contentsline {subsection}{\numberline {4.1}Vectors}{14}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Definitions of a vector}{15}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}What is a basis vector?}{15}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}Transformations}{16}{subsubsection.4.1.3}
-\contentsline {subsection}{\numberline {4.2}1-forms}{18}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}How do 1-forms transform?}{19}{subsubsection.4.2.1}
-\contentsline {subsection}{\numberline {4.3}1-forms, basis 1-forms and gradients}{20}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Gradiants}{20}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Tensors}{21}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Metric tensor}{22}{subsubsection.4.5.1}
-\contentsline {subsection}{\numberline {4.6}Correspondence between vectors and 1-forms}{23}{subsection.4.6}
-\contentsline {section}{\numberline {5}Kinematics}{24}{section.5}
-\contentsline {subsection}{\numberline {5.1}4-velocity}{26}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Example 1: Momentarily comoving reference frame}{26}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Example 2}{27}{subsubsection.5.1.2}
-\contentsline {subsection}{\numberline {5.2}Energy measurements}{27}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}4-acceleration}{28}{subsection.5.3}
-\contentsline {section}{\numberline {6}Calculus in curved space}{30}{section.6}
-\contentsline {subsection}{\numberline {6.1}Differentiation in curved space}{30}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Covariant derivative of 1-form}{33}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Covariant derivative of metric}{34}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Christoffel Symbols and Metric and Acceleration}{35}{subsection.6.4}
-\contentsline {subsubsection}{\numberline {6.4.1}Covariant derivative}{35}{subsubsection.6.4.1}
-\contentsline {subsection}{\numberline {6.5}The 4-acceleration}{36}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Fermi-Walker Transport}{38}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}Constants of motion}{38}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}Polar coordinates}{39}{subsection.6.8}
-\contentsline {section}{\numberline {7}Curved space}{43}{section.7}
-\contentsline {subsection}{\numberline {7.1}Curved manifold}{43}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Local flatness}{44}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Miscellaneous practical results}{44}{subsection.7.3}
-\contentsline {subsubsection}{\numberline {7.3.1}Proper length}{45}{subsubsection.7.3.1}
-\contentsline {subsubsection}{\numberline {7.3.2}Volume}{45}{subsubsection.7.3.2}
-\contentsline {subsubsection}{\numberline {7.3.3}Divergence of a vector}{45}{subsubsection.7.3.3}
-\contentsline {subsubsection}{\numberline {7.3.4}Gauss Law in integral form}{46}{subsubsection.7.3.4}
-\contentsline {subsubsection}{\numberline {7.3.5}Angles}{47}{subsubsection.7.3.5}
-\contentsline {subsubsection}{\numberline {7.3.6}Geodesics}{47}{subsubsection.7.3.6}
-\contentsline {subsection}{\numberline {7.4}Curvature and Einstein's Field Equations}{48}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Rules}{48}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}Symmetrics of the Riemann tensor}{51}{subsubsection.7.4.2}
-\contentsline {subsection}{\numberline {7.5}Constructing new tensors from Riemann on the way to Einstein's field equations}{52}{subsection.7.5}
-\contentsline {subsubsection}{\numberline {7.5.1}Contractions of Riemann}{53}{subsubsection.7.5.1}
-\contentsline {subsection}{\numberline {7.6}Einstein's field equations}{54}{subsection.7.6}
+\contentsline {subsection}{\numberline {2.3}Experimental tests}{10}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Experimental tests of free fall}{10}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Tests of local Lorentz invariance}{11}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Gravitational redshift}{12}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Observation of GR in experiments}{12}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Pound-Rebka experiment}{12}{subsubsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.6}Lunar ranging}{13}{subsubsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.7}Deflection of light (gravitational lensing)}{14}{subsubsection.2.3.7}
+\contentsline {subsubsection}{\numberline {2.3.8}Shapiro delay}{14}{subsubsection.2.3.8}
+\contentsline {section}{\numberline {3}Geometric Objects}{14}{section.3}
+\contentsline {subsection}{\numberline {3.1}Vectors}{14}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Definitions of a vector}{15}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}What is a basis vector?}{15}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Transformations}{16}{subsubsection.3.1.3}
+\contentsline {subsection}{\numberline {3.2}1-forms}{18}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}How do 1-forms transform?}{19}{subsubsection.3.2.1}
+\contentsline {subsection}{\numberline {3.3}1-forms, basis 1-forms and gradients}{20}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Gradiants}{20}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Tensors}{21}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Metric tensor}{22}{subsubsection.3.5.1}
+\contentsline {subsection}{\numberline {3.6}Correspondence between vectors and 1-forms}{23}{subsection.3.6}
+\contentsline {section}{\numberline {4}Kinematics}{24}{section.4}
+\contentsline {subsection}{\numberline {4.1}4-velocity}{26}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Example 1: Momentarily comoving reference frame}{26}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Example 2}{27}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Energy measurements}{27}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}4-acceleration}{28}{subsection.4.3}
+\contentsline {section}{\numberline {5}Calculus in curved space}{30}{section.5}
+\contentsline {subsection}{\numberline {5.1}Differentiation in curved space}{30}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Covariant derivative of 1-form}{33}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Covariant derivative of metric}{34}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Christoffel Symbols and Metric and Acceleration}{35}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Covariant derivative}{35}{subsubsection.5.4.1}
+\contentsline {subsection}{\numberline {5.5}The 4-acceleration}{36}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Fermi-Walker Transport}{38}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Constants of motion}{38}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Polar coordinates}{39}{subsection.5.8}
+\contentsline {section}{\numberline {6}Curved space}{43}{section.6}
+\contentsline {subsection}{\numberline {6.1}Curved manifold}{43}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Local flatness}{44}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Miscellaneous practical results}{44}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Proper length}{45}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Volume}{45}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Divergence of a vector}{45}{subsubsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.4}Gauss Law in integral form}{46}{subsubsection.6.3.4}
+\contentsline {subsubsection}{\numberline {6.3.5}Angles}{47}{subsubsection.6.3.5}
+\contentsline {subsubsection}{\numberline {6.3.6}Geodesics}{47}{subsubsection.6.3.6}
+\contentsline {subsection}{\numberline {6.4}Curvature and Einstein's Field Equations}{48}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Rules}{48}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Symmetrics of the Riemann tensor}{51}{subsubsection.6.4.2}
+\contentsline {subsection}{\numberline {6.5}Constructing new tensors from Riemann on the way to Einstein's field equations}{52}{subsection.6.5}
+\contentsline {subsubsection}{\numberline {6.5.1}Contractions of Riemann}{53}{subsubsection.6.5.1}
+\contentsline {section}{\numberline {7}Einstein's gravity}{54}{section.7}
+\contentsline {subsection}{\numberline {7.1}Einstein's field equations}{54}{subsection.7.1}
 \contentsline {part}{II\hspace {1em}Terrestrial and astronomical applications}{56}{part.2}
 \contentsline {section}{\numberline {8}Stress energy}{56}{section.8}
 \contentsline {section}{\numberline {9}Gauges}{57}{section.9}
